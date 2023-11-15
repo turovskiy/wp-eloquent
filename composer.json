@@ -1,17 +1,17 @@
 {
-    "name": "as247/wp-eloquent",
+    "name": "prappo/wp-eloquent",
     "description": "Eloquent ORM for wordpress.",
     "license": "MIT",
-    "homepage": "https://github.com/as247/wp-eloquent",
+    "homepage": "https://github.com/prappo/wp-eloquent",
     "support": {
-        "issues": "https://github.com/as247/wp-eloquent/issues",
-        "source": "https://github.com/as247/wp-eloquent"
+        "issues": "https://github.com/prappo/wp-eloquent/issues",
+        "source": "https://github.com/prappo/wp-eloquent"
     },
-    "keywords": ["laravel", "database", "sql", "orm", "as247","wp-eloquent"],
+    "keywords": ["laravel", "database", "sql", "orm", "prappo","wp-eloquent","wordpress"],
     "authors": [
         {
-            "name": "As247",
-            "email": "as247@vui360.com"
+            "name": "prappo",
+            "email": "prappo.prince@gmail.com"
         }
     ],
     "require": {
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "As247\\WpEloquent\\": "src"
+            "Prappo\\WpEloquent\\": "src"
         },
         "files":[
             "src/Support/helpers.php"
