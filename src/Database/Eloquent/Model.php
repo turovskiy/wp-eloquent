@@ -1,22 +1,22 @@
 <?php
 
-namespace As247\WpEloquent\Database\Eloquent;
+namespace Prappo\WpEloquent\Database\Eloquent;
 
 use ArrayAccess;
 use Exception;
-use As247\WpEloquent\Contracts\Queue\QueueableCollection;
-use As247\WpEloquent\Contracts\Queue\QueueableEntity;
-use As247\WpEloquent\Contracts\Support\Arrayable;
-use As247\WpEloquent\Contracts\Support\Jsonable;
-use As247\WpEloquent\Database\ConnectionResolverInterface as Resolver;
-use As247\WpEloquent\Database\Eloquent\Relations\BelongsToMany;
-use As247\WpEloquent\Database\Eloquent\Relations\Concerns\AsPivot;
-use As247\WpEloquent\Database\Eloquent\Relations\HasManyThrough;
-use As247\WpEloquent\Database\Eloquent\Relations\Pivot;
-use As247\WpEloquent\Support\Arr;
-use As247\WpEloquent\Support\Collection as BaseCollection;
-use As247\WpEloquent\Support\Str;
-use As247\WpEloquent\Support\Traits\ForwardsCalls;
+use Prappo\WpEloquent\Contracts\Queue\QueueableCollection;
+use Prappo\WpEloquent\Contracts\Queue\QueueableEntity;
+use Prappo\WpEloquent\Contracts\Support\Arrayable;
+use Prappo\WpEloquent\Contracts\Support\Jsonable;
+use Prappo\WpEloquent\Database\ConnectionResolverInterface as Resolver;
+use Prappo\WpEloquent\Database\Eloquent\Relations\BelongsToMany;
+use Prappo\WpEloquent\Database\Eloquent\Relations\Concerns\AsPivot;
+use Prappo\WpEloquent\Database\Eloquent\Relations\HasManyThrough;
+use Prappo\WpEloquent\Database\Eloquent\Relations\Pivot;
+use Prappo\WpEloquent\Support\Arr;
+use Prappo\WpEloquent\Support\Collection as BaseCollection;
+use Prappo\WpEloquent\Support\Str;
+use Prappo\WpEloquent\Support\Traits\ForwardsCalls;
 use JsonSerializable;
 
 abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializable, QueueableEntity
@@ -103,14 +103,14 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * The connection resolver instance.
      *
-     * @var \As247\WpEloquent\Database\ConnectionResolverInterface
+     * @var \Prappo\WpEloquent\Database\ConnectionResolverInterface
      */
     protected static $resolver;
 
     /**
      * The event dispatcher instance.
      *
-     * @var \As247\WpEloquent\Contracts\Events\Dispatcher
+     * @var \Prappo\WpEloquent\Contracts\Events\Dispatcher
      */
     protected static $dispatcher;
 
@@ -337,7 +337,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
      * @param  array  $attributes
      * @return $this
      *
-     * @throws \As247\WpEloquent\Database\Eloquent\MassAssignmentException
+     * @throws \Prappo\WpEloquent\Database\Eloquent\MassAssignmentException
      */
     public function fill(array $attributes)
     {
@@ -439,7 +439,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
      * Begin querying the model on a given connection.
      *
      * @param  string|null  $connection
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     public static function on($connection = null)
     {
@@ -456,7 +456,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Begin querying the model on the write connection.
      *
-     * @return \As247\WpEloquent\Database\Query\Builder
+     * @return \Prappo\WpEloquent\Database\Query\Builder
      */
     public static function onWriteConnection()
     {
@@ -467,7 +467,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
      * Get all of the models from the database.
      *
      * @param  array|mixed  $columns
-     * @return \As247\WpEloquent\Database\Eloquent\Collection|static[]
+     * @return \Prappo\WpEloquent\Database\Eloquent\Collection|static[]
      */
     public static function all($columns = ['*'])
     {
@@ -480,7 +480,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
      * Begin querying a model with eager loading.
      *
      * @param  array|string  $relations
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     public static function with($relations)
     {
@@ -769,7 +769,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Perform a model update operation.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
      * @return bool
      */
     protected function performUpdate(Builder $query)
@@ -807,8 +807,8 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Set the keys for a save update query.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $query
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     protected function setKeysForSaveQuery($query)
     {
@@ -831,7 +831,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Perform a model insert operation.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
      * @return bool
      */
     protected function performInsert(Builder $query)
@@ -882,7 +882,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Insert the given attributes and set the ID on the model.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
      * @param  array  $attributes
      * @return void
      */
@@ -896,7 +896,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Destroy the models for the given IDs.
      *
-     * @param  \As247\WpEloquent\Support\Collection|array|int|string  $ids
+     * @param  \Prappo\WpEloquent\Support\Collection|array|int|string  $ids
      * @return int
      */
     public static function destroy($ids)
@@ -994,7 +994,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Begin querying the model.
      *
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     public static function query()
     {
@@ -1004,7 +1004,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Get a new query builder for the model's table.
      *
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     public function newQuery()
     {
@@ -1014,7 +1014,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Get a new query builder that doesn't have any global scopes or eager loading.
      *
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function newModelQuery()
     {
@@ -1026,7 +1026,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Get a new query builder with no relationships loaded.
      *
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     public function newQueryWithoutRelationships()
     {
@@ -1036,8 +1036,8 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Register the global scopes for this builder instance.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $builder
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $builder
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     public function registerGlobalScopes($builder)
     {
@@ -1051,7 +1051,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Get a new query builder that doesn't have any global scopes.
      *
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function newQueryWithoutScopes()
     {
@@ -1063,8 +1063,8 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Get a new query instance without a given scope.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Scope|string  $scope
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Scope|string  $scope
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     public function newQueryWithoutScope($scope)
     {
@@ -1075,7 +1075,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
      * Get a new query to restore one or more models by their queueable IDs.
      *
      * @param  array|int  $ids
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     public function newQueryForRestoration($ids)
     {
@@ -1087,8 +1087,8 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Create a new Eloquent query builder for the model.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function newEloquentBuilder($query)
     {
@@ -1098,7 +1098,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Get a new query builder instance for the connection.
      *
-     * @return \As247\WpEloquent\Database\Query\Builder
+     * @return \Prappo\WpEloquent\Database\Query\Builder
      */
     protected function newBaseQueryBuilder()
     {
@@ -1109,7 +1109,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
      * Create a new Eloquent Collection instance.
      *
      * @param  array  $models
-     * @return \As247\WpEloquent\Database\Eloquent\Collection
+     * @return \Prappo\WpEloquent\Database\Eloquent\Collection
      */
     public function newCollection(array $models = [])
     {
@@ -1119,12 +1119,12 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Create a new pivot model instance.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Model  $parent
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
      * @param  array  $attributes
      * @param  string  $table
      * @param  bool  $exists
      * @param  string|null  $using
-     * @return \As247\WpEloquent\Database\Eloquent\Relations\Pivot
+     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\Pivot
      */
     public function newPivot(self $parent, array $attributes, $table, $exists, $using = null)
     {
@@ -1171,7 +1171,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
      * @param  int  $options
      * @return string
      *
-     * @throws \As247\WpEloquent\Database\Eloquent\JsonEncodingException
+     * @throws \Prappo\WpEloquent\Database\Eloquent\JsonEncodingException
      */
     public function toJson($options = 0)
     {
@@ -1268,7 +1268,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Determine if two models have the same ID and belong to the same table.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Model|null  $model
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Model|null  $model
      * @return bool
      */
     public function is($model)
@@ -1282,7 +1282,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Determine if two models are not the same.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Model|null  $model
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Model|null  $model
      * @return bool
      */
     public function isNot($model)
@@ -1293,7 +1293,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Get the database connection for the model.
      *
-     * @return \As247\WpEloquent\Database\Connection
+     * @return \Prappo\WpEloquent\Database\Connection
      */
     public function getConnection()
     {
@@ -1327,7 +1327,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
      * Resolve a connection instance.
      *
      * @param  string|null  $connection
-     * @return \As247\WpEloquent\Database\Connection
+     * @return \Prappo\WpEloquent\Database\Connection
      */
     public static function resolveConnection($connection = null)
     {
@@ -1337,7 +1337,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Get the connection resolver instance.
      *
-     * @return \As247\WpEloquent\Database\ConnectionResolverInterface
+     * @return \Prappo\WpEloquent\Database\ConnectionResolverInterface
      */
     public static function getConnectionResolver()
     {
@@ -1347,7 +1347,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     /**
      * Set the connection resolver instance.
      *
-     * @param  \As247\WpEloquent\Database\ConnectionResolverInterface  $resolver
+     * @param  \Prappo\WpEloquent\Database\ConnectionResolverInterface  $resolver
      * @return void
      */
     public static function setConnectionResolver(Resolver $resolver)
@@ -1554,7 +1554,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
      *
      * @param  mixed  $value
      * @param  string|null  $field
-     * @return \As247\WpEloquent\Database\Eloquent\Model|null
+     * @return \Prappo\WpEloquent\Database\Eloquent\Model|null
      */
     public function resolveRouteBinding($value, $field = null)
     {
@@ -1567,7 +1567,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
      * @param  string  $childType
      * @param  mixed  $value
      * @param  string|null  $field
-     * @return \As247\WpEloquent\Database\Eloquent\Model|null
+     * @return \Prappo\WpEloquent\Database\Eloquent\Model|null
      */
     public function resolveChildRouteBinding($childType, $value, $field)
     {

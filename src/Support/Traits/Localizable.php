@@ -1,8 +1,8 @@
 <?php
 
-namespace As247\WpEloquent\Support\Traits;
+namespace Prappo\WpEloquent\Support\Traits;
 
-use As247\WpEloquent\Container\Container;
+use Prappo\WpEloquent\Container\Container;
 
 trait Localizable
 {

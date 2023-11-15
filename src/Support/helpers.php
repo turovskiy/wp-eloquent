@@ -1,8 +1,8 @@
 <?php
 
-use As247\WpEloquent\Support\Arr;
-use As247\WpEloquent\Support\HigherOrderTapProxy;
-use As247\WpEloquent\Support\Collection;
+use Prappo\WpEloquent\Support\Arr;
+use Prappo\WpEloquent\Support\HigherOrderTapProxy;
+use Prappo\WpEloquent\Support\Collection;
 
 
 if (! function_exists('asdb_class_basename')) {
@@ -101,7 +101,7 @@ if (! function_exists('asdb_collect')) {
 	 * Create a collection from the given value.
 	 *
 	 * @param  mixed  $value
-	 * @return \As247\WpEloquent\Support\Collection
+	 * @return \Prappo\WpEloquent\Support\Collection
 	 */
 	function asdb_collect($value = null)
 	{

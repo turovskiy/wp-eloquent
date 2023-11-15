@@ -1,8 +1,8 @@
 <?php
 
-namespace As247\WpEloquent\Database\Schema;
+namespace Prappo\WpEloquent\Database\Schema;
 
-use As247\WpEloquent\Support\Fluent;
+use Prappo\WpEloquent\Support\Fluent;
 
 /**
  * @method ForeignKeyDefinition deferrable(bool $value = true) Set the foreign key as deferrable (PostgreSQL)

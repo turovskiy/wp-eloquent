@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Contracts\Database\Eloquent;
+namespace Prappo\WpEloquent\Contracts\Database\Eloquent;
 
 interface Castable
 {
@@ -9,7 +9,7 @@ interface Castable
      *
      * @param  array  $arguments
      * @return string
-     * @return string|\As247\WpEloquent\Contracts\Database\Eloquent\CastsAttributes|\As247\WpEloquent\Contracts\Database\Eloquent\CastsInboundAttributes
+     * @return string|\Prappo\WpEloquent\Contracts\Database\Eloquent\CastsAttributes|\Prappo\WpEloquent\Contracts\Database\Eloquent\CastsInboundAttributes
      */
     public static function castUsing(array $arguments);
 }

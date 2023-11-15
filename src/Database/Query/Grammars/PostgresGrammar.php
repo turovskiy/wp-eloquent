@@ -1,10 +1,10 @@
 <?php
 
-namespace As247\WpEloquent\Database\Query\Grammars;
+namespace Prappo\WpEloquent\Database\Query\Grammars;
 
-use As247\WpEloquent\Database\Query\Builder;
-use As247\WpEloquent\Support\Arr;
-use As247\WpEloquent\Support\Str;
+use Prappo\WpEloquent\Database\Query\Builder;
+use Prappo\WpEloquent\Support\Arr;
+use Prappo\WpEloquent\Support\Str;
 
 class PostgresGrammar extends Grammar
 {
@@ -24,7 +24,7 @@ class PostgresGrammar extends Grammar
     /**
      * {@inheritdoc}
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $where
      * @return string
      */
@@ -45,7 +45,7 @@ class PostgresGrammar extends Grammar
     /**
      * Compile a "where date" clause.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $where
      * @return string
      */
@@ -59,7 +59,7 @@ class PostgresGrammar extends Grammar
     /**
      * Compile a "where time" clause.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $where
      * @return string
      */
@@ -74,7 +74,7 @@ class PostgresGrammar extends Grammar
      * Compile a date based where clause.
      *
      * @param  string  $type
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $where
      * @return string
      */
@@ -88,7 +88,7 @@ class PostgresGrammar extends Grammar
     /**
      * Compile the "select *" portion of the query.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $columns
      * @return string|null
      */
@@ -144,7 +144,7 @@ class PostgresGrammar extends Grammar
     /**
      * Compile the lock into SQL.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  bool|string  $value
      * @return string
      */
@@ -160,7 +160,7 @@ class PostgresGrammar extends Grammar
     /**
      * Compile an insert ignore statement into SQL.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $values
      * @return string
      */
@@ -172,7 +172,7 @@ class PostgresGrammar extends Grammar
     /**
      * Compile an insert and get ID statement into SQL.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $values
      * @param  string  $sequence
      * @return string
@@ -185,7 +185,7 @@ class PostgresGrammar extends Grammar
     /**
      * Compile an update statement into SQL.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $values
      * @return string
      */
@@ -201,7 +201,7 @@ class PostgresGrammar extends Grammar
     /**
      * Compile the columns for an update statement.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $values
      * @return string
      */
@@ -239,7 +239,7 @@ class PostgresGrammar extends Grammar
     /**
      * Compile an update statement with joins or limit into SQL.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $values
      * @return string
      */
@@ -281,7 +281,7 @@ class PostgresGrammar extends Grammar
     /**
      * Compile a delete statement into SQL.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @return string
      */
     public function compileDelete(Builder $query)
@@ -296,7 +296,7 @@ class PostgresGrammar extends Grammar
     /**
      * Compile a delete statement with joins or limit into SQL.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @return string
      */
     protected function compileDeleteWithJoinsOrLimit(Builder $query)
@@ -313,7 +313,7 @@ class PostgresGrammar extends Grammar
     /**
      * Compile a truncate table statement into SQL.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @return array
      */
     public function compileTruncate(Builder $query)

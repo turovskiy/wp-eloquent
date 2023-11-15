@@ -1,8 +1,8 @@
 <?php
 
-namespace As247\WpEloquent\Pagination;
+namespace Prappo\WpEloquent\Pagination;
 
-use As247\WpEloquent\Support\ServiceProvider;
+use Prappo\WpEloquent\Support\ServiceProvider;
 
 class PaginationServiceProvider extends ServiceProvider
 {

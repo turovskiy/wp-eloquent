@@ -1,9 +1,9 @@
 <?php
 
-namespace As247\WpEloquent\Support;
+namespace Prappo\WpEloquent\Support;
 
 use ArrayAccess;
-use As247\WpEloquent\Support\Traits\Macroable;
+use Prappo\WpEloquent\Support\Traits\Macroable;
 use InvalidArgumentException;
 
 class Arr

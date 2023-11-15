@@ -1,11 +1,11 @@
 <?php
 
-namespace As247\WpEloquent\Support;
+namespace Prappo\WpEloquent\Support;
 
-use As247\WpEloquent\Doctrine\Inflector\CachedWordInflector;
-use As247\WpEloquent\Doctrine\Inflector\Inflector;
-use As247\WpEloquent\Doctrine\Inflector\Rules\English;
-use As247\WpEloquent\Doctrine\Inflector\RulesetInflector;
+use Prappo\WpEloquent\Doctrine\Inflector\CachedWordInflector;
+use Prappo\WpEloquent\Doctrine\Inflector\Inflector;
+use Prappo\WpEloquent\Doctrine\Inflector\Rules\English;
+use Prappo\WpEloquent\Doctrine\Inflector\RulesetInflector;
 
 class Pluralizer
 {
@@ -125,7 +125,7 @@ class Pluralizer
     /**
      * Get the inflector instance.
      *
-     * @return \As247\WpEloquent\Doctrine\Inflector\Inflector
+     * @return \Prappo\WpEloquent\Doctrine\Inflector\Inflector
      */
     public static function inflector()
     {

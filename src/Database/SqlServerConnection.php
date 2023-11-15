@@ -1,14 +1,14 @@
 <?php
 
-namespace As247\WpEloquent\Database;
+namespace Prappo\WpEloquent\Database;
 
 use Closure;
 use Doctrine\DBAL\Driver\PDOSqlsrv\Driver as DoctrineDriver;
-use As247\WpEloquent\Database\Query\Grammars\SqlServerGrammar as QueryGrammar;
-use As247\WpEloquent\Database\Query\Processors\SqlServerProcessor;
-use As247\WpEloquent\Database\Schema\Grammars\SqlServerGrammar as SchemaGrammar;
-use As247\WpEloquent\Database\Schema\SqlServerBuilder;
-use As247\WpEloquent\Filesystem\Filesystem;
+use Prappo\WpEloquent\Database\Query\Grammars\SqlServerGrammar as QueryGrammar;
+use Prappo\WpEloquent\Database\Query\Processors\SqlServerProcessor;
+use Prappo\WpEloquent\Database\Schema\Grammars\SqlServerGrammar as SchemaGrammar;
+use Prappo\WpEloquent\Database\Schema\SqlServerBuilder;
+use Prappo\WpEloquent\Filesystem\Filesystem;
 use RuntimeException;
 use Throwable;
 
@@ -57,7 +57,7 @@ class SqlServerConnection extends Connection
     /**
      * Get the default query grammar instance.
      *
-     * @return \As247\WpEloquent\Database\Query\Grammars\SqlServerGrammar
+     * @return \Prappo\WpEloquent\Database\Query\Grammars\SqlServerGrammar
      */
     protected function getDefaultQueryGrammar()
     {
@@ -67,7 +67,7 @@ class SqlServerConnection extends Connection
     /**
      * Get a schema builder instance for the connection.
      *
-     * @return \As247\WpEloquent\Database\Schema\SqlServerBuilder
+     * @return \Prappo\WpEloquent\Database\Schema\SqlServerBuilder
      */
     public function getSchemaBuilder()
     {
@@ -81,7 +81,7 @@ class SqlServerConnection extends Connection
     /**
      * Get the default schema grammar instance.
      *
-     * @return \As247\WpEloquent\Database\Schema\Grammars\SqlServerGrammar
+     * @return \Prappo\WpEloquent\Database\Schema\Grammars\SqlServerGrammar
      */
     protected function getDefaultSchemaGrammar()
     {
@@ -91,7 +91,7 @@ class SqlServerConnection extends Connection
     /**
      * Get the schema state for the connection.
      *
-     * @param  \As247\WpEloquent\Filesystem\Filesystem|null  $files
+     * @param  \Prappo\WpEloquent\Filesystem\Filesystem|null  $files
      * @param  callable|null  $processFactory
      *
      * @throws \RuntimeException
@@ -104,7 +104,7 @@ class SqlServerConnection extends Connection
     /**
      * Get the default post processor instance.
      *
-     * @return \As247\WpEloquent\Database\Query\Processors\SqlServerProcessor
+     * @return \Prappo\WpEloquent\Database\Query\Processors\SqlServerProcessor
      */
     protected function getDefaultPostProcessor()
     {

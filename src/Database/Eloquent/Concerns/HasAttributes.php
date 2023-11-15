@@ -1,20 +1,20 @@
 <?php
 
-namespace As247\WpEloquent\Database\Eloquent\Concerns;
+namespace Prappo\WpEloquent\Database\Eloquent\Concerns;
 
 use Carbon\CarbonInterface;
 use DateTimeInterface;
-use As247\WpEloquent\Contracts\Database\Eloquent\Castable;
-use As247\WpEloquent\Contracts\Database\Eloquent\CastsInboundAttributes;
-use As247\WpEloquent\Contracts\Support\Arrayable;
-use As247\WpEloquent\Database\Eloquent\InvalidCastException;
-use As247\WpEloquent\Database\Eloquent\JsonEncodingException;
-use As247\WpEloquent\Database\Eloquent\Relations\Relation;
-use As247\WpEloquent\Support\Arr;
-use As247\WpEloquent\Support\Carbon;
-use As247\WpEloquent\Support\Collection as BaseCollection;
-use As247\WpEloquent\Support\Facades\Date;
-use As247\WpEloquent\Support\Str;
+use Prappo\WpEloquent\Contracts\Database\Eloquent\Castable;
+use Prappo\WpEloquent\Contracts\Database\Eloquent\CastsInboundAttributes;
+use Prappo\WpEloquent\Contracts\Support\Arrayable;
+use Prappo\WpEloquent\Database\Eloquent\InvalidCastException;
+use Prappo\WpEloquent\Database\Eloquent\JsonEncodingException;
+use Prappo\WpEloquent\Database\Eloquent\Relations\Relation;
+use Prappo\WpEloquent\Support\Arr;
+use Prappo\WpEloquent\Support\Carbon;
+use Prappo\WpEloquent\Support\Collection as BaseCollection;
+use Prappo\WpEloquent\Support\Facades\Date;
+use Prappo\WpEloquent\Support\Str;
 use InvalidArgumentException;
 use LogicException;
 
@@ -884,7 +884,7 @@ trait HasAttributes
      * Return a timestamp as DateTime object with time set to 00:00:00.
      *
      * @param  mixed  $value
-     * @return \As247\WpEloquent\Support\Carbon
+     * @return \Prappo\WpEloquent\Support\Carbon
      */
     protected function asDate($value)
     {
@@ -895,7 +895,7 @@ trait HasAttributes
      * Return a timestamp as DateTime object.
      *
      * @param  mixed  $value
-     * @return \As247\WpEloquent\Support\Carbon
+     * @return \Prappo\WpEloquent\Support\Carbon
      */
     protected function asDateTime($value)
     {
@@ -1114,7 +1114,7 @@ trait HasAttributes
      * @param  string  $key
      * @return bool
      *
-     * @throws \As247\WpEloquent\Database\Eloquent\InvalidCastException
+     * @throws \Prappo\WpEloquent\Database\Eloquent\InvalidCastException
      */
     protected function isClassSerializable($key)
     {

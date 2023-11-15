@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Contracts\Queue;
+namespace Prappo\WpEloquent\Contracts\Queue;
 
 interface Factory
 {
@@ -8,7 +8,7 @@ interface Factory
      * Resolve a queue connection instance.
      *
      * @param  string|null  $name
-     * @return \As247\WpEloquent\Contracts\Queue\Queue
+     * @return \Prappo\WpEloquent\Contracts\Queue\Queue
      */
     public function connection($name = null);
 }

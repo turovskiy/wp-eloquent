@@ -1,8 +1,8 @@
 <?php
 
-namespace As247\WpEloquent\Database\Connectors;
+namespace Prappo\WpEloquent\Database\Connectors;
 
-use As247\WpEloquent\Support\Arr;
+use Prappo\WpEloquent\Support\Arr;
 use PDO;
 
 class SqlServerConnector extends Connector implements ConnectorInterface

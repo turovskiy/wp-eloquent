@@ -1,23 +1,23 @@
 <?php
 
-namespace As247\WpEloquent\Database\Query;
+namespace Prappo\WpEloquent\Database\Query;
 
 use Closure;
 use DateTimeInterface;
-use As247\WpEloquent\Contracts\Support\Arrayable;
-use As247\WpEloquent\Database\Concerns\BuildsQueries;
-use As247\WpEloquent\Database\ConnectionInterface;
-use As247\WpEloquent\Database\Eloquent\Builder as EloquentBuilder;
-use As247\WpEloquent\Database\Eloquent\Relations\Relation;
-use As247\WpEloquent\Database\Query\Grammars\Grammar;
-use As247\WpEloquent\Database\Query\Processors\Processor;
-use As247\WpEloquent\Pagination\Paginator;
-use As247\WpEloquent\Support\Arr;
-use As247\WpEloquent\Support\Collection;
-use As247\WpEloquent\Support\LazyCollection;
-use As247\WpEloquent\Support\Str;
-use As247\WpEloquent\Support\Traits\ForwardsCalls;
-use As247\WpEloquent\Support\Traits\Macroable;
+use Prappo\WpEloquent\Contracts\Support\Arrayable;
+use Prappo\WpEloquent\Database\Concerns\BuildsQueries;
+use Prappo\WpEloquent\Database\ConnectionInterface;
+use Prappo\WpEloquent\Database\Eloquent\Builder as EloquentBuilder;
+use Prappo\WpEloquent\Database\Eloquent\Relations\Relation;
+use Prappo\WpEloquent\Database\Query\Grammars\Grammar;
+use Prappo\WpEloquent\Database\Query\Processors\Processor;
+use Prappo\WpEloquent\Pagination\Paginator;
+use Prappo\WpEloquent\Support\Arr;
+use Prappo\WpEloquent\Support\Collection;
+use Prappo\WpEloquent\Support\LazyCollection;
+use Prappo\WpEloquent\Support\Str;
+use Prappo\WpEloquent\Support\Traits\ForwardsCalls;
+use Prappo\WpEloquent\Support\Traits\Macroable;
 use InvalidArgumentException;
 use RuntimeException;
 
@@ -30,21 +30,21 @@ class Builder
     /**
      * The database connection instance.
      *
-     * @var \As247\WpEloquent\Database\ConnectionInterface
+     * @var \Prappo\WpEloquent\Database\ConnectionInterface
      */
     public $connection;
 
     /**
      * The database query grammar instance.
      *
-     * @var \As247\WpEloquent\Database\Query\Grammars\Grammar
+     * @var \Prappo\WpEloquent\Database\Query\Grammars\Grammar
      */
     public $grammar;
 
     /**
      * The database query post processor instance.
      *
-     * @var \As247\WpEloquent\Database\Query\Processors\Processor
+     * @var \Prappo\WpEloquent\Database\Query\Processors\Processor
      */
     public $processor;
 
@@ -203,9 +203,9 @@ class Builder
     /**
      * Create a new query builder instance.
      *
-     * @param  \As247\WpEloquent\Database\ConnectionInterface  $connection
-     * @param  \As247\WpEloquent\Database\Query\Grammars\Grammar|null  $grammar
-     * @param  \As247\WpEloquent\Database\Query\Processors\Processor|null  $processor
+     * @param  \Prappo\WpEloquent\Database\ConnectionInterface  $connection
+     * @param  \Prappo\WpEloquent\Database\Query\Grammars\Grammar|null  $grammar
+     * @param  \Prappo\WpEloquent\Database\Query\Processors\Processor|null  $processor
      * @return void
      */
     public function __construct(ConnectionInterface $connection,
@@ -279,7 +279,7 @@ class Builder
     /**
      * Makes "from" fetch from a subquery.
      *
-     * @param  \Closure|\As247\WpEloquent\Database\Query\Builder|string  $query
+     * @param  \Closure|\Prappo\WpEloquent\Database\Query\Builder|string  $query
      * @param  string  $as
      * @return $this
      *
@@ -311,7 +311,7 @@ class Builder
     /**
      * Creates a subquery and parse it.
      *
-     * @param  \Closure|\As247\WpEloquent\Database\Query\Builder|string  $query
+     * @param  \Closure|\Prappo\WpEloquent\Database\Query\Builder|string  $query
      * @return array
      */
     protected function createSub($query)
@@ -417,7 +417,7 @@ class Builder
     /**
      * Set the table which the query is targeting.
      *
-     * @param  \Closure|\As247\WpEloquent\Database\Query\Builder|string  $table
+     * @param  \Closure|\Prappo\WpEloquent\Database\Query\Builder|string  $table
      * @param  string|null  $as
      * @return $this
      */
@@ -490,7 +490,7 @@ class Builder
     /**
      * Add a subquery join clause to the query.
      *
-     * @param  \Closure|\As247\WpEloquent\Database\Query\Builder|string  $query
+     * @param  \Closure|\Prappo\WpEloquent\Database\Query\Builder|string  $query
      * @param  string  $as
      * @param  \Closure|string  $first
      * @param  string|null  $operator
@@ -543,7 +543,7 @@ class Builder
     /**
      * Add a subquery left join to the query.
      *
-     * @param  \Closure|\As247\WpEloquent\Database\Query\Builder|string  $query
+     * @param  \Closure|\Prappo\WpEloquent\Database\Query\Builder|string  $query
      * @param  string  $as
      * @param  \Closure|string  $first
      * @param  string|null  $operator
@@ -586,7 +586,7 @@ class Builder
     /**
      * Add a subquery right join to the query.
      *
-     * @param  \Closure|\As247\WpEloquent\Database\Query\Builder|string  $query
+     * @param  \Closure|\Prappo\WpEloquent\Database\Query\Builder|string  $query
      * @param  string  $as
      * @param  \Closure|string  $first
      * @param  string|null  $operator
@@ -621,7 +621,7 @@ class Builder
     /**
      * Add a subquery cross join to the query.
      *
-     * @param  \Closure|\As247\WpEloquent\Database\Query\Builder|string  $query
+     * @param  \Closure|\Prappo\WpEloquent\Database\Query\Builder|string  $query
      * @param  string  $as
      * @return $this
      */
@@ -641,10 +641,10 @@ class Builder
     /**
      * Get a new join clause.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $parentQuery
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $parentQuery
      * @param  string  $type
      * @param  string  $table
-     * @return \As247\WpEloquent\Database\Query\JoinClause
+     * @return \Prappo\WpEloquent\Database\Query\JoinClause
      */
     protected function newJoinClause(self $parentQuery, $type, $table)
     {
@@ -1004,7 +1004,7 @@ class Builder
      * Add a "where in raw" clause for integer values to the query.
      *
      * @param  string  $column
-     * @param  \As247\WpEloquent\Contracts\Support\Arrayable|array  $values
+     * @param  \Prappo\WpEloquent\Contracts\Support\Arrayable|array  $values
      * @param  string  $boolean
      * @param  bool  $not
      * @return $this
@@ -1030,7 +1030,7 @@ class Builder
      * Add an "or where in raw" clause for integer values to the query.
      *
      * @param  string  $column
-     * @param  \As247\WpEloquent\Contracts\Support\Arrayable|array  $values
+     * @param  \Prappo\WpEloquent\Contracts\Support\Arrayable|array  $values
      * @return $this
      */
     public function orWhereIntegerInRaw($column, $values)
@@ -1042,7 +1042,7 @@ class Builder
      * Add a "where not in raw" clause for integer values to the query.
      *
      * @param  string  $column
-     * @param  \As247\WpEloquent\Contracts\Support\Arrayable|array  $values
+     * @param  \Prappo\WpEloquent\Contracts\Support\Arrayable|array  $values
      * @param  string  $boolean
      * @return $this
      */
@@ -1055,7 +1055,7 @@ class Builder
      * Add an "or where not in raw" clause for integer values to the query.
      *
      * @param  string  $column
-     * @param  \As247\WpEloquent\Contracts\Support\Arrayable|array  $values
+     * @param  \Prappo\WpEloquent\Contracts\Support\Arrayable|array  $values
      * @return $this
      */
     public function orWhereIntegerNotInRaw($column, $values)
@@ -1108,7 +1108,7 @@ class Builder
     /**
      * Add a where between statement to the query.
      *
-     * @param  string|\As247\WpEloquent\Database\Query\Expression  $column
+     * @param  string|\Prappo\WpEloquent\Database\Query\Expression  $column
      * @param  array  $values
      * @param  string  $boolean
      * @param  bool  $not
@@ -1469,7 +1469,7 @@ class Builder
     /**
      * Create a new query instance for nested where condition.
      *
-     * @return \As247\WpEloquent\Database\Query\Builder
+     * @return \Prappo\WpEloquent\Database\Query\Builder
      */
     public function forNestedWhere()
     {
@@ -1479,7 +1479,7 @@ class Builder
     /**
      * Add another query builder as a nested where to the query builder.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  string  $boolean
      * @return $this
      */
@@ -1581,7 +1581,7 @@ class Builder
     /**
      * Add an exists clause to the query.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  string  $boolean
      * @param  bool  $not
      * @return $this
@@ -1941,7 +1941,7 @@ class Builder
     /**
      * Add an "order by" clause to the query.
      *
-     * @param  \Closure|\As247\WpEloquent\Database\Query\Builder|\As247\WpEloquent\Database\Query\Expression|string  $column
+     * @param  \Closure|\Prappo\WpEloquent\Database\Query\Builder|\Prappo\WpEloquent\Database\Query\Expression|string  $column
      * @param  string  $direction
      * @return $this
      *
@@ -2178,7 +2178,7 @@ class Builder
     /**
      * Add a union statement to the query.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder|\Closure  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder|\Closure  $query
      * @param  bool  $all
      * @return $this
      */
@@ -2198,7 +2198,7 @@ class Builder
     /**
      * Add a union all statement to the query.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder|\Closure  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder|\Closure  $query
      * @return $this
      */
     public function unionAll($query)
@@ -2226,7 +2226,7 @@ class Builder
     /**
      * Lock the selected rows in the table for updating.
      *
-     * @return \As247\WpEloquent\Database\Query\Builder
+     * @return \Prappo\WpEloquent\Database\Query\Builder
      */
     public function lockForUpdate()
     {
@@ -2236,7 +2236,7 @@ class Builder
     /**
      * Share lock the selected rows in the table.
      *
-     * @return \As247\WpEloquent\Database\Query\Builder
+     * @return \Prappo\WpEloquent\Database\Query\Builder
      */
     public function sharedLock()
     {
@@ -2282,7 +2282,7 @@ class Builder
      * Execute the query as a "select" statement.
      *
      * @param  array|string  $columns
-     * @return \As247\WpEloquent\Support\Collection
+     * @return \Prappo\WpEloquent\Support\Collection
      */
     public function get($columns = ['*'])
     {
@@ -2310,7 +2310,7 @@ class Builder
      * @param  array  $columns
      * @param  string  $pageName
      * @param  int|null  $page
-     * @return \As247\WpEloquent\Contracts\Pagination\LengthAwarePaginator
+     * @return \Prappo\WpEloquent\Contracts\Pagination\LengthAwarePaginator
      */
     public function paginate($perPage = 15, $columns = ['*'], $pageName = 'page', $page = null)
     {
@@ -2335,7 +2335,7 @@ class Builder
      * @param  array  $columns
      * @param  string  $pageName
      * @param  int|null  $page
-     * @return \As247\WpEloquent\Contracts\Pagination\Paginator
+     * @return \Prappo\WpEloquent\Contracts\Pagination\Paginator
      */
     public function simplePaginate($perPage = 15, $columns = ['*'], $pageName = 'page', $page = null)
     {
@@ -2429,7 +2429,7 @@ class Builder
     /**
      * Get a lazy collection for the given query.
      *
-     * @return \As247\WpEloquent\Support\LazyCollection
+     * @return \Prappo\WpEloquent\Support\LazyCollection
      */
     public function cursor()
     {
@@ -2463,7 +2463,7 @@ class Builder
      *
      * @param  string  $column
      * @param  string|null  $key
-     * @return \As247\WpEloquent\Support\Collection
+     * @return \Prappo\WpEloquent\Support\Collection
      */
     public function pluck($column, $key = null)
     {
@@ -2518,7 +2518,7 @@ class Builder
      * @param  array  $queryResult
      * @param  string  $column
      * @param  string  $key
-     * @return \As247\WpEloquent\Support\Collection
+     * @return \Prappo\WpEloquent\Support\Collection
      */
     protected function pluckFromObjectColumn($queryResult, $column, $key)
     {
@@ -2543,7 +2543,7 @@ class Builder
      * @param  array  $queryResult
      * @param  string  $column
      * @param  string  $key
-     * @return \As247\WpEloquent\Support\Collection
+     * @return \Prappo\WpEloquent\Support\Collection
      */
     protected function pluckFromArrayColumn($queryResult, $column, $key)
     {
@@ -2875,7 +2875,7 @@ class Builder
      * Insert new records into the table using a subquery.
      *
      * @param  array  $columns
-     * @param  \Closure|\As247\WpEloquent\Database\Query\Builder|string  $query
+     * @param  \Closure|\Prappo\WpEloquent\Database\Query\Builder|string  $query
      * @return int
      */
     public function insertUsing(array $columns, $query)
@@ -3006,7 +3006,7 @@ class Builder
     /**
      * Get a new instance of the query builder.
      *
-     * @return \As247\WpEloquent\Database\Query\Builder
+     * @return \Prappo\WpEloquent\Database\Query\Builder
      */
     public function newQuery()
     {
@@ -3016,7 +3016,7 @@ class Builder
     /**
      * Create a new query instance for a sub-query.
      *
-     * @return \As247\WpEloquent\Database\Query\Builder
+     * @return \Prappo\WpEloquent\Database\Query\Builder
      */
     protected function forSubQuery()
     {
@@ -3027,7 +3027,7 @@ class Builder
      * Create a raw database expression.
      *
      * @param  mixed  $value
-     * @return \As247\WpEloquent\Database\Query\Expression
+     * @return \Prappo\WpEloquent\Database\Query\Expression
      */
     public function raw($value)
     {
@@ -3101,7 +3101,7 @@ class Builder
     /**
      * Merge an array of bindings into our bindings.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @return $this
      */
     public function mergeBindings(self $query)
@@ -3137,7 +3137,7 @@ class Builder
     /**
      * Get the database connection instance.
      *
-     * @return \As247\WpEloquent\Database\ConnectionInterface
+     * @return \Prappo\WpEloquent\Database\ConnectionInterface
      */
     public function getConnection()
     {
@@ -3147,7 +3147,7 @@ class Builder
     /**
      * Get the database query processor instance.
      *
-     * @return \As247\WpEloquent\Database\Query\Processors\Processor
+     * @return \Prappo\WpEloquent\Database\Query\Processors\Processor
      */
     public function getProcessor()
     {
@@ -3157,7 +3157,7 @@ class Builder
     /**
      * Get the query grammar instance.
      *
-     * @return \As247\WpEloquent\Database\Query\Grammars\Grammar
+     * @return \Prappo\WpEloquent\Database\Query\Grammars\Grammar
      */
     public function getGrammar()
     {

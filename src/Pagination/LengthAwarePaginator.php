@@ -1,13 +1,13 @@
 <?php
 
-namespace As247\WpEloquent\Pagination;
+namespace Prappo\WpEloquent\Pagination;
 
 use ArrayAccess;
 use Countable;
-use As247\WpEloquent\Contracts\Pagination\LengthAwarePaginator as LengthAwarePaginatorContract;
-use As247\WpEloquent\Contracts\Support\Arrayable;
-use As247\WpEloquent\Contracts\Support\Jsonable;
-use As247\WpEloquent\Support\Collection;
+use Prappo\WpEloquent\Contracts\Pagination\LengthAwarePaginator as LengthAwarePaginatorContract;
+use Prappo\WpEloquent\Contracts\Support\Arrayable;
+use Prappo\WpEloquent\Contracts\Support\Jsonable;
+use Prappo\WpEloquent\Support\Collection;
 use IteratorAggregate;
 use JsonSerializable;
 
@@ -72,7 +72,7 @@ class LengthAwarePaginator extends AbstractPaginator implements Arrayable, Array
      *
      * @param  string|null  $view
      * @param  array  $data
-     * @return \As247\WpEloquent\Contracts\Support\Htmlable
+     * @return \Prappo\WpEloquent\Contracts\Support\Htmlable
      */
     public function links($view = null, $data = [])
     {
@@ -84,7 +84,7 @@ class LengthAwarePaginator extends AbstractPaginator implements Arrayable, Array
      *
      * @param  string|null  $view
      * @param  array  $data
-     * @return \As247\WpEloquent\Contracts\Support\Htmlable
+     * @return \Prappo\WpEloquent\Contracts\Support\Htmlable
      */
     public function render($view = null, $data = [])
     {
@@ -97,7 +97,7 @@ class LengthAwarePaginator extends AbstractPaginator implements Arrayable, Array
     /**
      * Get the paginator links as a collection (for JSON responses).
      *
-     * @return \As247\WpEloquent\Support\Collection
+     * @return \Prappo\WpEloquent\Support\Collection
      */
     protected function linkCollection()
     {

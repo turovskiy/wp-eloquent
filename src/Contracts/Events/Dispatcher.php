@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Contracts\Events;
+namespace Prappo\WpEloquent\Contracts\Events;
 
 interface Dispatcher
 {

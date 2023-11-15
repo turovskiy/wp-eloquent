@@ -1,9 +1,9 @@
 <?php
 
-namespace As247\WpEloquent\Database\Eloquent\Relations;
+namespace Prappo\WpEloquent\Database\Eloquent\Relations;
 
-use As247\WpEloquent\Database\Eloquent\Model;
-use As247\WpEloquent\Database\Eloquent\Relations\Concerns\AsPivot;
+use Prappo\WpEloquent\Database\Eloquent\Model;
+use Prappo\WpEloquent\Database\Eloquent\Relations\Concerns\AsPivot;
 
 class Pivot extends Model
 {

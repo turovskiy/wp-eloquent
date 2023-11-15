@@ -1,16 +1,16 @@
 <?php
 
-namespace As247\WpEloquent\Pagination;
+namespace Prappo\WpEloquent\Pagination;
 
 use Closure;
-use As247\WpEloquent\Contracts\Support\Htmlable;
-use As247\WpEloquent\Support\Arr;
-use As247\WpEloquent\Support\Collection;
-use As247\WpEloquent\Support\Str;
-use As247\WpEloquent\Support\Traits\ForwardsCalls;
+use Prappo\WpEloquent\Contracts\Support\Htmlable;
+use Prappo\WpEloquent\Support\Arr;
+use Prappo\WpEloquent\Support\Collection;
+use Prappo\WpEloquent\Support\Str;
+use Prappo\WpEloquent\Support\Traits\ForwardsCalls;
 
 /**
- * @mixin \As247\WpEloquent\Support\Collection
+ * @mixin \Prappo\WpEloquent\Support\Collection
  */
 abstract class AbstractPaginator implements Htmlable
 {
@@ -19,7 +19,7 @@ abstract class AbstractPaginator implements Htmlable
     /**
      * All of the items being paginated.
      *
-     * @var \As247\WpEloquent\Support\Collection
+     * @var \Prappo\WpEloquent\Support\Collection
      */
     protected $items;
 
@@ -525,7 +525,7 @@ abstract class AbstractPaginator implements Htmlable
     /**
      * Get an instance of the view factory from the resolver.
      *
-     * @return \As247\WpEloquent\Contracts\View\Factory
+     * @return \Prappo\WpEloquent\Contracts\View\Factory
      */
     public static function viewFactory()
     {
@@ -642,7 +642,7 @@ abstract class AbstractPaginator implements Htmlable
     /**
      * Get the paginator's underlying collection.
      *
-     * @return \As247\WpEloquent\Support\Collection
+     * @return \Prappo\WpEloquent\Support\Collection
      */
     public function getCollection()
     {
@@ -652,7 +652,7 @@ abstract class AbstractPaginator implements Htmlable
     /**
      * Set the paginator's underlying collection.
      *
-     * @param  \As247\WpEloquent\Support\Collection  $collection
+     * @param  \Prappo\WpEloquent\Support\Collection  $collection
      * @return $this
      */
     public function setCollection(Collection $collection)

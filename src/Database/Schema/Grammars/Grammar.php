@@ -1,14 +1,14 @@
 <?php
 
-namespace As247\WpEloquent\Database\Schema\Grammars;
+namespace Prappo\WpEloquent\Database\Schema\Grammars;
 
 use Doctrine\DBAL\Schema\AbstractSchemaManager as SchemaManager;
 use Doctrine\DBAL\Schema\TableDiff;
-use As247\WpEloquent\Database\Connection;
-use As247\WpEloquent\Database\Grammar as BaseGrammar;
-use As247\WpEloquent\Database\Query\Expression;
-use As247\WpEloquent\Database\Schema\Blueprint;
-use As247\WpEloquent\Support\Fluent;
+use Prappo\WpEloquent\Database\Connection;
+use Prappo\WpEloquent\Database\Grammar as BaseGrammar;
+use Prappo\WpEloquent\Database\Query\Expression;
+use Prappo\WpEloquent\Database\Schema\Blueprint;
+use Prappo\WpEloquent\Support\Fluent;
 use RuntimeException;
 
 abstract class Grammar extends BaseGrammar
@@ -30,9 +30,9 @@ abstract class Grammar extends BaseGrammar
     /**
      * Compile a rename column command.
      *
-     * @param  \As247\WpEloquent\Database\Schema\Blueprint  $blueprint
-     * @param  \As247\WpEloquent\Support\Fluent  $command
-     * @param  \As247\WpEloquent\Database\Connection  $connection
+     * @param  \Prappo\WpEloquent\Database\Schema\Blueprint  $blueprint
+     * @param  \Prappo\WpEloquent\Support\Fluent  $command
+     * @param  \Prappo\WpEloquent\Database\Connection  $connection
      * @return array
      */
     public function compileRenameColumn(Blueprint $blueprint, Fluent $command, Connection $connection)
@@ -43,9 +43,9 @@ abstract class Grammar extends BaseGrammar
     /**
      * Compile a change column command into a series of SQL statements.
      *
-     * @param  \As247\WpEloquent\Database\Schema\Blueprint  $blueprint
-     * @param  \As247\WpEloquent\Support\Fluent  $command
-     * @param  \As247\WpEloquent\Database\Connection  $connection
+     * @param  \Prappo\WpEloquent\Database\Schema\Blueprint  $blueprint
+     * @param  \Prappo\WpEloquent\Support\Fluent  $command
+     * @param  \Prappo\WpEloquent\Database\Connection  $connection
      * @return array
      *
      * @throws \RuntimeException
@@ -58,8 +58,8 @@ abstract class Grammar extends BaseGrammar
     /**
      * Compile a foreign key command.
      *
-     * @param  \As247\WpEloquent\Database\Schema\Blueprint  $blueprint
-     * @param  \As247\WpEloquent\Support\Fluent  $command
+     * @param  \Prappo\WpEloquent\Database\Schema\Blueprint  $blueprint
+     * @param  \Prappo\WpEloquent\Support\Fluent  $command
      * @return string
      */
     public function compileForeign(Blueprint $blueprint, Fluent $command)
@@ -98,7 +98,7 @@ abstract class Grammar extends BaseGrammar
     /**
      * Compile the blueprint's column definitions.
      *
-     * @param  \As247\WpEloquent\Database\Schema\Blueprint  $blueprint
+     * @param  \Prappo\WpEloquent\Database\Schema\Blueprint  $blueprint
      * @return array
      */
     protected function getColumns(Blueprint $blueprint)
@@ -120,7 +120,7 @@ abstract class Grammar extends BaseGrammar
     /**
      * Get the SQL for the column data type.
      *
-     * @param  \As247\WpEloquent\Support\Fluent  $column
+     * @param  \Prappo\WpEloquent\Support\Fluent  $column
      * @return string
      */
     protected function getType(Fluent $column)
@@ -131,7 +131,7 @@ abstract class Grammar extends BaseGrammar
     /**
      * Create the column definition for a generated, computed column type.
      *
-     * @param  \As247\WpEloquent\Support\Fluent  $column
+     * @param  \Prappo\WpEloquent\Support\Fluent  $column
      * @return void
      *
      * @throws \RuntimeException
@@ -145,8 +145,8 @@ abstract class Grammar extends BaseGrammar
      * Add the column modifiers to the definition.
      *
      * @param  string  $sql
-     * @param  \As247\WpEloquent\Database\Schema\Blueprint  $blueprint
-     * @param  \As247\WpEloquent\Support\Fluent  $column
+     * @param  \Prappo\WpEloquent\Database\Schema\Blueprint  $blueprint
+     * @param  \Prappo\WpEloquent\Support\Fluent  $column
      * @return string
      */
     protected function addModifiers($sql, Blueprint $blueprint, Fluent $column)
@@ -163,9 +163,9 @@ abstract class Grammar extends BaseGrammar
     /**
      * Get the primary key command if it exists on the blueprint.
      *
-     * @param  \As247\WpEloquent\Database\Schema\Blueprint  $blueprint
+     * @param  \Prappo\WpEloquent\Database\Schema\Blueprint  $blueprint
      * @param  string  $name
-     * @return \As247\WpEloquent\Support\Fluent|null
+     * @return \Prappo\WpEloquent\Support\Fluent|null
      */
     protected function getCommandByName(Blueprint $blueprint, $name)
     {
@@ -179,7 +179,7 @@ abstract class Grammar extends BaseGrammar
     /**
      * Get all of the commands with a given name.
      *
-     * @param  \As247\WpEloquent\Database\Schema\Blueprint  $blueprint
+     * @param  \Prappo\WpEloquent\Database\Schema\Blueprint  $blueprint
      * @param  string  $name
      * @return array
      */
@@ -220,7 +220,7 @@ abstract class Grammar extends BaseGrammar
     /**
      * Wrap a value in keyword identifiers.
      *
-     * @param  \As247\WpEloquent\Database\Query\Expression|string  $value
+     * @param  \Prappo\WpEloquent\Database\Query\Expression|string  $value
      * @param  bool  $prefixAlias
      * @return string
      */
@@ -251,7 +251,7 @@ abstract class Grammar extends BaseGrammar
     /**
      * Create an empty Doctrine DBAL TableDiff from the Blueprint.
      *
-     * @param  \As247\WpEloquent\Database\Schema\Blueprint  $blueprint
+     * @param  \Prappo\WpEloquent\Database\Schema\Blueprint  $blueprint
      * @param  \Doctrine\DBAL\Schema\AbstractSchemaManager  $schema
      * @return \Doctrine\DBAL\Schema\TableDiff
      */

@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Support\Facades;
+namespace Prappo\WpEloquent\Support\Facades;
 
 use Closure;
 use Mockery;
@@ -12,7 +12,7 @@ abstract class Facade
     /**
      * The application instance being facaded.
      *
-     * @var \As247\WpEloquent\Contracts\Foundation\Application
+     * @var \Prappo\WpEloquent\Contracts\Foundation\Application
      */
     protected static $app;
 
@@ -223,7 +223,7 @@ abstract class Facade
     /**
      * Get the application instance behind the facade.
      *
-     * @return \As247\WpEloquent\Contracts\Foundation\Application
+     * @return \Prappo\WpEloquent\Contracts\Foundation\Application
      */
     public static function getFacadeApplication()
     {
@@ -233,7 +233,7 @@ abstract class Facade
     /**
      * Set the application instance.
      *
-     * @param  \As247\WpEloquent\Contracts\Container\Container  $app
+     * @param  \Prappo\WpEloquent\Contracts\Container\Container  $app
      * @return void
      */
     public static function setFacadeApplication($app)

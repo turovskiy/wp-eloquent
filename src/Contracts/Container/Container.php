@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Contracts\Container;
+namespace Prappo\WpEloquent\Contracts\Container;
 
 use Closure;
 
@@ -114,7 +114,7 @@ interface Container
      * Define a contextual binding.
      *
      * @param  string|array  $concrete
-     * @return \As247\WpEloquent\Contracts\Container\ContextualBindingBuilder
+     * @return \Prappo\WpEloquent\Contracts\Container\ContextualBindingBuilder
      */
     public function when($concrete);
 
@@ -140,7 +140,7 @@ interface Container
      * @param  array  $parameters
      * @return mixed
      *
-     * @throws \As247\WpEloquent\Contracts\Container\BindingResolutionException
+     * @throws \Prappo\WpEloquent\Contracts\Container\BindingResolutionException
      */
     public function make($abstract, array $parameters = []);
 

@@ -1,18 +1,18 @@
 <?php
 
-namespace As247\WpEloquent\Database\Eloquent\Relations;
+namespace Prappo\WpEloquent\Database\Eloquent\Relations;
 
 use Closure;
-use As247\WpEloquent\Database\Eloquent\Builder;
-use As247\WpEloquent\Database\Eloquent\Collection;
-use As247\WpEloquent\Database\Eloquent\Model;
-use As247\WpEloquent\Database\Query\Expression;
-use As247\WpEloquent\Support\Arr;
-use As247\WpEloquent\Support\Traits\ForwardsCalls;
-use As247\WpEloquent\Support\Traits\Macroable;
+use Prappo\WpEloquent\Database\Eloquent\Builder;
+use Prappo\WpEloquent\Database\Eloquent\Collection;
+use Prappo\WpEloquent\Database\Eloquent\Model;
+use Prappo\WpEloquent\Database\Query\Expression;
+use Prappo\WpEloquent\Support\Arr;
+use Prappo\WpEloquent\Support\Traits\ForwardsCalls;
+use Prappo\WpEloquent\Support\Traits\Macroable;
 
 /**
- * @mixin \As247\WpEloquent\Database\Eloquent\Builder
+ * @mixin \Prappo\WpEloquent\Database\Eloquent\Builder
  */
 abstract class Relation
 {
@@ -23,21 +23,21 @@ abstract class Relation
     /**
      * The Eloquent query builder instance.
      *
-     * @var \As247\WpEloquent\Database\Eloquent\Builder
+     * @var \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     protected $query;
 
     /**
      * The parent model instance.
      *
-     * @var \As247\WpEloquent\Database\Eloquent\Model
+     * @var \Prappo\WpEloquent\Database\Eloquent\Model
      */
     protected $parent;
 
     /**
      * The related model instance.
      *
-     * @var \As247\WpEloquent\Database\Eloquent\Model
+     * @var \Prappo\WpEloquent\Database\Eloquent\Model
      */
     protected $related;
 
@@ -58,8 +58,8 @@ abstract class Relation
     /**
      * Create a new relation instance.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \As247\WpEloquent\Database\Eloquent\Model  $parent
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
      * @return void
      */
     public function __construct(Builder $query, Model $parent)
@@ -121,7 +121,7 @@ abstract class Relation
      * Match the eagerly loaded results to their parents.
      *
      * @param  array  $models
-     * @param  \As247\WpEloquent\Database\Eloquent\Collection  $results
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Collection  $results
      * @param  string  $relation
      * @return array
      */
@@ -137,7 +137,7 @@ abstract class Relation
     /**
      * Get the relationship for eager loading.
      *
-     * @return \As247\WpEloquent\Database\Eloquent\Collection
+     * @return \Prappo\WpEloquent\Database\Eloquent\Collection
      */
     public function getEager()
     {
@@ -148,7 +148,7 @@ abstract class Relation
      * Execute the query as a "select" statement.
      *
      * @param  array  $columns
-     * @return \As247\WpEloquent\Database\Eloquent\Collection
+     * @return \Prappo\WpEloquent\Database\Eloquent\Collection
      */
     public function get($columns = ['*'])
     {
@@ -185,9 +185,9 @@ abstract class Relation
     /**
      * Add the constraints for a relationship count query.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $parentQuery
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $parentQuery
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     public function getRelationExistenceCountQuery(Builder $query, Builder $parentQuery)
     {
@@ -201,10 +201,10 @@ abstract class Relation
      *
      * Essentially, these queries compare on column names like whereColumn.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $parentQuery
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])
     {
@@ -230,7 +230,7 @@ abstract class Relation
     /**
      * Get the underlying query for the relation.
      *
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     public function getQuery()
     {
@@ -240,7 +240,7 @@ abstract class Relation
     /**
      * Get the base query builder driving the Eloquent builder.
      *
-     * @return \As247\WpEloquent\Database\Query\Builder
+     * @return \Prappo\WpEloquent\Database\Query\Builder
      */
     public function getBaseQuery()
     {
@@ -250,7 +250,7 @@ abstract class Relation
     /**
      * Get the parent model of the relation.
      *
-     * @return \As247\WpEloquent\Database\Eloquent\Model
+     * @return \Prappo\WpEloquent\Database\Eloquent\Model
      */
     public function getParent()
     {
@@ -270,7 +270,7 @@ abstract class Relation
     /**
      * Get the related model of the relation.
      *
-     * @return \As247\WpEloquent\Database\Eloquent\Model
+     * @return \Prappo\WpEloquent\Database\Eloquent\Model
      */
     public function getRelated()
     {
@@ -310,7 +310,7 @@ abstract class Relation
     /**
      * Get the name of the "where in" method for eager loading.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Model  $model
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $model
      * @param  string  $key
      * @return string
      */

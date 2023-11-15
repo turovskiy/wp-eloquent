@@ -1,8 +1,8 @@
 <?php
 
-namespace As247\WpEloquent\Database\Schema;
+namespace Prappo\WpEloquent\Database\Schema;
 
-use As247\WpEloquent\Support\Fluent;
+use Prappo\WpEloquent\Support\Fluent;
 
 /**
  * @method $this after(string $column) Place the column "after" another column (MySQL)

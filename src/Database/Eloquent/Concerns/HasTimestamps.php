@@ -1,8 +1,8 @@
 <?php
 
-namespace As247\WpEloquent\Database\Eloquent\Concerns;
+namespace Prappo\WpEloquent\Database\Eloquent\Concerns;
 
-use As247\WpEloquent\Support\Facades\Date;
+use Prappo\WpEloquent\Support\Facades\Date;
 
 trait HasTimestamps
 {
@@ -80,7 +80,7 @@ trait HasTimestamps
     /**
      * Get a fresh timestamp for the model.
      *
-     * @return \As247\WpEloquent\Support\Carbon
+     * @return \Prappo\WpEloquent\Support\Carbon
      */
     public function freshTimestamp()
     {

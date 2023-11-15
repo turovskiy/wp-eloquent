@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace As247\WpEloquent\Doctrine\Inflector;
+namespace Prappo\WpEloquent\Doctrine\Inflector;
 
 interface WordInflector
 {

@@ -1,22 +1,22 @@
 <?php
 
-namespace As247\WpEloquent\Pagination;
+namespace Prappo\WpEloquent\Pagination;
 
-use As247\WpEloquent\Contracts\Pagination\LengthAwarePaginator as PaginatorContract;
+use Prappo\WpEloquent\Contracts\Pagination\LengthAwarePaginator as PaginatorContract;
 
 class UrlWindow
 {
     /**
      * The paginator implementation.
      *
-     * @var \As247\WpEloquent\Contracts\Pagination\LengthAwarePaginator
+     * @var \Prappo\WpEloquent\Contracts\Pagination\LengthAwarePaginator
      */
     protected $paginator;
 
     /**
      * Create a new URL window instance.
      *
-     * @param  \As247\WpEloquent\Contracts\Pagination\LengthAwarePaginator  $paginator
+     * @param  \Prappo\WpEloquent\Contracts\Pagination\LengthAwarePaginator  $paginator
      * @return void
      */
     public function __construct(PaginatorContract $paginator)
@@ -27,7 +27,7 @@ class UrlWindow
     /**
      * Create a new URL window instance.
      *
-     * @param  \As247\WpEloquent\Contracts\Pagination\LengthAwarePaginator  $paginator
+     * @param  \Prappo\WpEloquent\Contracts\Pagination\LengthAwarePaginator  $paginator
      * @return array
      */
     public static function make(PaginatorContract $paginator)

@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Database\Events;
+namespace Prappo\WpEloquent\Database\Events;
 
 abstract class ConnectionEvent
 {
@@ -14,14 +14,14 @@ abstract class ConnectionEvent
     /**
      * The database connection instance.
      *
-     * @var \As247\WpEloquent\Database\Connection
+     * @var \Prappo\WpEloquent\Database\Connection
      */
     public $connection;
 
     /**
      * Create a new event instance.
      *
-     * @param  \As247\WpEloquent\Database\Connection  $connection
+     * @param  \Prappo\WpEloquent\Database\Connection  $connection
      * @return void
      */
     public function __construct($connection)

@@ -1,8 +1,8 @@
 <?php
 
-namespace As247\WpEloquent\Database\Eloquent\Concerns;
+namespace Prappo\WpEloquent\Database\Eloquent\Concerns;
 
-use As247\WpEloquent\Support\Str;
+use Prappo\WpEloquent\Support\Str;
 
 trait GuardsAttributes
 {

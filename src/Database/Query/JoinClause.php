@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Database\Query;
+namespace Prappo\WpEloquent\Database\Query;
 
 use Closure;
 
@@ -23,21 +23,21 @@ class JoinClause extends Builder
     /**
      * The connection of the parent query builder.
      *
-     * @var \As247\WpEloquent\Database\ConnectionInterface
+     * @var \Prappo\WpEloquent\Database\ConnectionInterface
      */
     protected $parentConnection;
 
     /**
      * The grammar of the parent query builder.
      *
-     * @var \As247\WpEloquent\Database\Query\Grammars\Grammar
+     * @var \Prappo\WpEloquent\Database\Query\Grammars\Grammar
      */
     protected $parentGrammar;
 
     /**
      * The processor of the parent query builder.
      *
-     * @var \As247\WpEloquent\Database\Query\Processors\Processor
+     * @var \Prappo\WpEloquent\Database\Query\Processors\Processor
      */
     protected $parentProcessor;
 
@@ -51,7 +51,7 @@ class JoinClause extends Builder
     /**
      * Create a new join clause instance.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $parentQuery
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $parentQuery
      * @param  string  $type
      * @param  string  $table
      * @return void
@@ -84,7 +84,7 @@ class JoinClause extends Builder
      *
      * @param  \Closure|string  $first
      * @param  string|null  $operator
-     * @param  \As247\WpEloquent\Database\Query\Expression|string|null  $second
+     * @param  \Prappo\WpEloquent\Database\Query\Expression|string|null  $second
      * @param  string  $boolean
      * @return $this
      *
@@ -105,7 +105,7 @@ class JoinClause extends Builder
      * @param  \Closure|string  $first
      * @param  string|null  $operator
      * @param  string|null  $second
-     * @return \As247\WpEloquent\Database\Query\JoinClause
+     * @return \Prappo\WpEloquent\Database\Query\JoinClause
      */
     public function orOn($first, $operator = null, $second = null)
     {
@@ -115,7 +115,7 @@ class JoinClause extends Builder
     /**
      * Get a new instance of the join clause builder.
      *
-     * @return \As247\WpEloquent\Database\Query\JoinClause
+     * @return \Prappo\WpEloquent\Database\Query\JoinClause
      */
     public function newQuery()
     {
@@ -125,7 +125,7 @@ class JoinClause extends Builder
     /**
      * Create a new query instance for sub-query.
      *
-     * @return \As247\WpEloquent\Database\Query\Builder
+     * @return \Prappo\WpEloquent\Database\Query\Builder
      */
     protected function forSubQuery()
     {
@@ -135,7 +135,7 @@ class JoinClause extends Builder
     /**
      * Create a new parent query instance.
      *
-     * @return \As247\WpEloquent\Database\Query\Builder
+     * @return \Prappo\WpEloquent\Database\Query\Builder
      */
     protected function newParentQuery()
     {

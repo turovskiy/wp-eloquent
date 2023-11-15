@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Support\Traits;
+namespace Prappo\WpEloquent\Support\Traits;
 
 use BadMethodCallException;
 use Closure;

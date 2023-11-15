@@ -1,10 +1,10 @@
 <?php
 
-namespace As247\WpEloquent\Database\Connectors;
+namespace Prappo\WpEloquent\Database\Connectors;
 
 use Doctrine\DBAL\Driver\PDOConnection;
 use Exception;
-use As247\WpEloquent\Database\DetectsLostConnections;
+use Prappo\WpEloquent\Database\DetectsLostConnections;
 use PDO;
 use Throwable;
 

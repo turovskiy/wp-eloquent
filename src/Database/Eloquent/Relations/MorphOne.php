@@ -1,10 +1,10 @@
 <?php
 
-namespace As247\WpEloquent\Database\Eloquent\Relations;
+namespace Prappo\WpEloquent\Database\Eloquent\Relations;
 
-use As247\WpEloquent\Database\Eloquent\Collection;
-use As247\WpEloquent\Database\Eloquent\Model;
-use As247\WpEloquent\Database\Eloquent\Relations\Concerns\SupportsDefaultModels;
+use Prappo\WpEloquent\Database\Eloquent\Collection;
+use Prappo\WpEloquent\Database\Eloquent\Model;
+use Prappo\WpEloquent\Database\Eloquent\Relations\Concerns\SupportsDefaultModels;
 
 class MorphOne extends MorphOneOrMany
 {
@@ -44,7 +44,7 @@ class MorphOne extends MorphOneOrMany
      * Match the eagerly loaded results to their parents.
      *
      * @param  array  $models
-     * @param  \As247\WpEloquent\Database\Eloquent\Collection  $results
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Collection  $results
      * @param  string  $relation
      * @return array
      */
@@ -56,8 +56,8 @@ class MorphOne extends MorphOneOrMany
     /**
      * Make a new related instance for the given model.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Model  $parent
-     * @return \As247\WpEloquent\Database\Eloquent\Model
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
+     * @return \Prappo\WpEloquent\Database\Eloquent\Model
      */
     public function newRelatedInstanceFor(Model $parent)
     {

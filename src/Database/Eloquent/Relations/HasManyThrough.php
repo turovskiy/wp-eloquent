@@ -1,27 +1,27 @@
 <?php
 
-namespace As247\WpEloquent\Database\Eloquent\Relations;
+namespace Prappo\WpEloquent\Database\Eloquent\Relations;
 
-use As247\WpEloquent\Contracts\Support\Arrayable;
-use As247\WpEloquent\Database\Eloquent\Builder;
-use As247\WpEloquent\Database\Eloquent\Collection;
-use As247\WpEloquent\Database\Eloquent\Model;
-use As247\WpEloquent\Database\Eloquent\ModelNotFoundException;
-use As247\WpEloquent\Database\Eloquent\SoftDeletes;
+use Prappo\WpEloquent\Contracts\Support\Arrayable;
+use Prappo\WpEloquent\Database\Eloquent\Builder;
+use Prappo\WpEloquent\Database\Eloquent\Collection;
+use Prappo\WpEloquent\Database\Eloquent\Model;
+use Prappo\WpEloquent\Database\Eloquent\ModelNotFoundException;
+use Prappo\WpEloquent\Database\Eloquent\SoftDeletes;
 
 class HasManyThrough extends Relation
 {
     /**
      * The "through" parent model instance.
      *
-     * @var \As247\WpEloquent\Database\Eloquent\Model
+     * @var \Prappo\WpEloquent\Database\Eloquent\Model
      */
     protected $throughParent;
 
     /**
      * The far parent model instance.
      *
-     * @var \As247\WpEloquent\Database\Eloquent\Model
+     * @var \Prappo\WpEloquent\Database\Eloquent\Model
      */
     protected $farParent;
 
@@ -63,9 +63,9 @@ class HasManyThrough extends Relation
     /**
      * Create a new has many through relationship instance.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \As247\WpEloquent\Database\Eloquent\Model  $farParent
-     * @param  \As247\WpEloquent\Database\Eloquent\Model  $throughParent
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $farParent
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $throughParent
      * @param  string  $firstKey
      * @param  string  $secondKey
      * @param  string  $localKey
@@ -103,7 +103,7 @@ class HasManyThrough extends Relation
     /**
      * Set the join clause on the query.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder|null  $query
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder|null  $query
      * @return void
      */
     protected function performJoin(Builder $query = null)
@@ -188,7 +188,7 @@ class HasManyThrough extends Relation
      * Match the eagerly loaded results to their parents.
      *
      * @param  array  $models
-     * @param  \As247\WpEloquent\Database\Eloquent\Collection  $results
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Collection  $results
      * @param  string  $relation
      * @return array
      */
@@ -213,7 +213,7 @@ class HasManyThrough extends Relation
     /**
      * Build model dictionary keyed by the relation's foreign key.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Collection  $results
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Collection  $results
      * @return array
      */
     protected function buildDictionary(Collection $results)
@@ -234,7 +234,7 @@ class HasManyThrough extends Relation
      * Get the first related model record matching the attributes or instantiate it.
      *
      * @param  array  $attributes
-     * @return \As247\WpEloquent\Database\Eloquent\Model
+     * @return \Prappo\WpEloquent\Database\Eloquent\Model
      */
     public function firstOrNew(array $attributes)
     {
@@ -250,7 +250,7 @@ class HasManyThrough extends Relation
      *
      * @param  array  $attributes
      * @param  array  $values
-     * @return \As247\WpEloquent\Database\Eloquent\Model
+     * @return \Prappo\WpEloquent\Database\Eloquent\Model
      */
     public function updateOrCreate(array $attributes, array $values = [])
     {
@@ -268,7 +268,7 @@ class HasManyThrough extends Relation
      * @param  mixed  $operator
      * @param  mixed  $value
      * @param  string  $boolean
-     * @return \As247\WpEloquent\Database\Eloquent\Model|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Model|static
      */
     public function firstWhere($column, $operator = null, $value = null, $boolean = 'and')
     {
@@ -292,9 +292,9 @@ class HasManyThrough extends Relation
      * Execute the query and get the first result or throw an exception.
      *
      * @param  array  $columns
-     * @return \As247\WpEloquent\Database\Eloquent\Model|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Model|static
      *
-     * @throws \As247\WpEloquent\Database\Eloquent\ModelNotFoundException
+     * @throws \Prappo\WpEloquent\Database\Eloquent\ModelNotFoundException
      */
     public function firstOrFail($columns = ['*'])
     {
@@ -310,7 +310,7 @@ class HasManyThrough extends Relation
      *
      * @param  mixed  $id
      * @param  array  $columns
-     * @return \As247\WpEloquent\Database\Eloquent\Model|\As247\WpEloquent\Database\Eloquent\Collection|null
+     * @return \Prappo\WpEloquent\Database\Eloquent\Model|\Prappo\WpEloquent\Database\Eloquent\Collection|null
      */
     public function find($id, $columns = ['*'])
     {
@@ -326,9 +326,9 @@ class HasManyThrough extends Relation
     /**
      * Find multiple related models by their primary keys.
      *
-     * @param  \As247\WpEloquent\Contracts\Support\Arrayable|array  $ids
+     * @param  \Prappo\WpEloquent\Contracts\Support\Arrayable|array  $ids
      * @param  array  $columns
-     * @return \As247\WpEloquent\Database\Eloquent\Collection
+     * @return \Prappo\WpEloquent\Database\Eloquent\Collection
      */
     public function findMany($ids, $columns = ['*'])
     {
@@ -348,9 +348,9 @@ class HasManyThrough extends Relation
      *
      * @param  mixed  $id
      * @param  array  $columns
-     * @return \As247\WpEloquent\Database\Eloquent\Model|\As247\WpEloquent\Database\Eloquent\Collection
+     * @return \Prappo\WpEloquent\Database\Eloquent\Model|\Prappo\WpEloquent\Database\Eloquent\Collection
      *
-     * @throws \As247\WpEloquent\Database\Eloquent\ModelNotFoundException
+     * @throws \Prappo\WpEloquent\Database\Eloquent\ModelNotFoundException
      */
     public function findOrFail($id, $columns = ['*'])
     {
@@ -385,7 +385,7 @@ class HasManyThrough extends Relation
      * Execute the query as a "select" statement.
      *
      * @param  array  $columns
-     * @return \As247\WpEloquent\Database\Eloquent\Collection
+     * @return \Prappo\WpEloquent\Database\Eloquent\Collection
      */
     public function get($columns = ['*'])
     {
@@ -410,7 +410,7 @@ class HasManyThrough extends Relation
      * @param  array  $columns
      * @param  string  $pageName
      * @param  int  $page
-     * @return \As247\WpEloquent\Contracts\Pagination\LengthAwarePaginator
+     * @return \Prappo\WpEloquent\Contracts\Pagination\LengthAwarePaginator
      */
     public function paginate($perPage = null, $columns = ['*'], $pageName = 'page', $page = null)
     {
@@ -426,7 +426,7 @@ class HasManyThrough extends Relation
      * @param  array  $columns
      * @param  string  $pageName
      * @param  int|null  $page
-     * @return \As247\WpEloquent\Contracts\Pagination\Paginator
+     * @return \Prappo\WpEloquent\Contracts\Pagination\Paginator
      */
     public function simplePaginate($perPage = null, $columns = ['*'], $pageName = 'page', $page = null)
     {
@@ -512,7 +512,7 @@ class HasManyThrough extends Relation
      * Prepare the query builder for query execution.
      *
      * @param  array  $columns
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     protected function prepareQueryBuilder($columns = ['*'])
     {
@@ -526,10 +526,10 @@ class HasManyThrough extends Relation
     /**
      * Add the constraints for a relationship query.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $parentQuery
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])
     {
@@ -551,10 +551,10 @@ class HasManyThrough extends Relation
     /**
      * Add the constraints for a relationship query on the same table.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $parentQuery
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     public function getRelationExistenceQueryForSelfRelation(Builder $query, Builder $parentQuery, $columns = ['*'])
     {
@@ -576,10 +576,10 @@ class HasManyThrough extends Relation
     /**
      * Add the constraints for a relationship query on the same table as the through parent.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $parentQuery
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     public function getRelationExistenceQueryForThroughSelfRelation(Builder $query, Builder $parentQuery, $columns = ['*'])
     {

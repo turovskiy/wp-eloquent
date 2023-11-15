@@ -1,10 +1,10 @@
 <?php
 
-namespace As247\WpEloquent\Database\Schema;
+namespace Prappo\WpEloquent\Database\Schema;
 
 use Closure;
 use Doctrine\DBAL\Types\Type;
-use As247\WpEloquent\Database\Connection;
+use Prappo\WpEloquent\Database\Connection;
 use InvalidArgumentException;
 use LogicException;
 use RuntimeException;
@@ -14,14 +14,14 @@ class Builder
     /**
      * The database connection instance.
      *
-     * @var \As247\WpEloquent\Database\Connection
+     * @var \Prappo\WpEloquent\Database\Connection
      */
     protected $connection;
 
     /**
      * The schema grammar instance.
      *
-     * @var \As247\WpEloquent\Database\Schema\Grammars\Grammar
+     * @var \Prappo\WpEloquent\Database\Schema\Grammars\Grammar
      */
     protected $grammar;
 
@@ -49,7 +49,7 @@ class Builder
     /**
      * Create a new database Schema manager.
      *
-     * @param  \As247\WpEloquent\Database\Connection  $connection
+     * @param  \Prappo\WpEloquent\Database\Connection  $connection
      * @return void
      */
     public function __construct(Connection $connection)
@@ -315,7 +315,7 @@ class Builder
     /**
      * Execute the blueprint to build / modify the table.
      *
-     * @param  \As247\WpEloquent\Database\Schema\Blueprint  $blueprint
+     * @param  \Prappo\WpEloquent\Database\Schema\Blueprint  $blueprint
      * @return void
      */
     protected function build(Blueprint $blueprint)
@@ -328,7 +328,7 @@ class Builder
      *
      * @param  string  $table
      * @param  \Closure|null  $callback
-     * @return \As247\WpEloquent\Database\Schema\Blueprint
+     * @return \Prappo\WpEloquent\Database\Schema\Blueprint
      */
     protected function createBlueprint($table, Closure $callback = null)
     {
@@ -375,7 +375,7 @@ class Builder
     /**
      * Get the database connection instance.
      *
-     * @return \As247\WpEloquent\Database\Connection
+     * @return \Prappo\WpEloquent\Database\Connection
      */
     public function getConnection()
     {
@@ -385,7 +385,7 @@ class Builder
     /**
      * Set the database connection instance.
      *
-     * @param  \As247\WpEloquent\Database\Connection  $connection
+     * @param  \Prappo\WpEloquent\Database\Connection  $connection
      * @return $this
      */
     public function setConnection(Connection $connection)

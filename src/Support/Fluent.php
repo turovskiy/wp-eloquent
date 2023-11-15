@@ -1,10 +1,10 @@
 <?php
 
-namespace As247\WpEloquent\Support;
+namespace Prappo\WpEloquent\Support;
 
 use ArrayAccess;
-use As247\WpEloquent\Contracts\Support\Arrayable;
-use As247\WpEloquent\Contracts\Support\Jsonable;
+use Prappo\WpEloquent\Contracts\Support\Arrayable;
+use Prappo\WpEloquent\Contracts\Support\Jsonable;
 use JsonSerializable;
 
 class Fluent implements Arrayable, ArrayAccess, Jsonable, JsonSerializable

@@ -1,9 +1,9 @@
 <?php
 
-namespace As247\WpEloquent\Events;
+namespace Prappo\WpEloquent\Events;
 
-use As247\WpEloquent\Contracts\Events\Dispatcher as DispatcherContract;
-use As247\WpEloquent\Support\Traits\ForwardsCalls;
+use Prappo\WpEloquent\Contracts\Events\Dispatcher as DispatcherContract;
+use Prappo\WpEloquent\Support\Traits\ForwardsCalls;
 
 class NullDispatcher implements DispatcherContract
 {
@@ -12,14 +12,14 @@ class NullDispatcher implements DispatcherContract
     /**
      * The underlying event dispatcher instance.
      *
-     * @var \As247\WpEloquent\Contracts\Bus\Dispatcher
+     * @var \Prappo\WpEloquent\Contracts\Bus\Dispatcher
      */
     protected $dispatcher;
 
     /**
      * Create a new event dispatcher instance that does not fire.
      *
-     * @param  \As247\WpEloquent\Contracts\Events\Dispatcher  $dispatcher
+     * @param  \Prappo\WpEloquent\Contracts\Events\Dispatcher  $dispatcher
      * @return void
      */
     public function __construct(DispatcherContract $dispatcher)

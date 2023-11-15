@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Database\Query\Processors;
+namespace Prappo\WpEloquent\Database\Query\Processors;
 
 class MySqlProcessor extends Processor
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace As247\WpEloquent\Database\Eloquent\Relations;
+namespace Prappo\WpEloquent\Database\Eloquent\Relations;
 
-use As247\WpEloquent\Database\Eloquent\Collection;
+use Prappo\WpEloquent\Database\Eloquent\Collection;
 
 class MorphMany extends MorphOneOrMany
 {
@@ -38,7 +38,7 @@ class MorphMany extends MorphOneOrMany
      * Match the eagerly loaded results to their parents.
      *
      * @param  array  $models
-     * @param  \As247\WpEloquent\Database\Eloquent\Collection  $results
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Collection  $results
      * @param  string  $relation
      * @return array
      */

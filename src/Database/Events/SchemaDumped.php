@@ -1,13 +1,13 @@
 <?php
 
-namespace As247\WpEloquent\Database\Events;
+namespace Prappo\WpEloquent\Database\Events;
 
 class SchemaDumped
 {
     /**
      * The database connection instance.
      *
-     * @var \As247\WpEloquent\Database\Connection
+     * @var \Prappo\WpEloquent\Database\Connection
      */
     public $connection;
 
@@ -28,7 +28,7 @@ class SchemaDumped
     /**
      * Create a new event instance.
      *
-     * @param  \As247\WpEloquent\Database\Connection  $connection
+     * @param  \Prappo\WpEloquent\Database\Connection  $connection
      * @param  string  $path
      * @return void
      */

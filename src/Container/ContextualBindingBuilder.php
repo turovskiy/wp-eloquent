@@ -1,16 +1,16 @@
 <?php
 
-namespace As247\WpEloquent\Container;
+namespace Prappo\WpEloquent\Container;
 
-use As247\WpEloquent\Contracts\Container\Container;
-use As247\WpEloquent\Contracts\Container\ContextualBindingBuilder as ContextualBindingBuilderContract;
+use Prappo\WpEloquent\Contracts\Container\Container;
+use Prappo\WpEloquent\Contracts\Container\ContextualBindingBuilder as ContextualBindingBuilderContract;
 
 class ContextualBindingBuilder implements ContextualBindingBuilderContract
 {
     /**
      * The underlying container instance.
      *
-     * @var \As247\WpEloquent\Contracts\Container\Container
+     * @var \Prappo\WpEloquent\Contracts\Container\Container
      */
     protected $container;
 
@@ -31,7 +31,7 @@ class ContextualBindingBuilder implements ContextualBindingBuilderContract
     /**
      * Create a new contextual binding builder.
      *
-     * @param  \As247\WpEloquent\Contracts\Container\Container  $container
+     * @param  \Prappo\WpEloquent\Contracts\Container\Container  $container
      * @param  string|array  $concrete
      * @return void
      */

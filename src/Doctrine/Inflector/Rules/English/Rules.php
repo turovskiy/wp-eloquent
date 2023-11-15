@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace As247\WpEloquent\Doctrine\Inflector\Rules\English;
+namespace Prappo\WpEloquent\Doctrine\Inflector\Rules\English;
 
-use As247\WpEloquent\Doctrine\Inflector\Rules\Patterns;
-use As247\WpEloquent\Doctrine\Inflector\Rules\Ruleset;
-use As247\WpEloquent\Doctrine\Inflector\Rules\Substitutions;
-use As247\WpEloquent\Doctrine\Inflector\Rules\Transformations;
+use Prappo\WpEloquent\Doctrine\Inflector\Rules\Patterns;
+use Prappo\WpEloquent\Doctrine\Inflector\Rules\Ruleset;
+use Prappo\WpEloquent\Doctrine\Inflector\Rules\Substitutions;
+use Prappo\WpEloquent\Doctrine\Inflector\Rules\Transformations;
 
 final class Rules
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace As247\WpEloquent\Support;
+namespace Prappo\WpEloquent\Support;
 
-use As247\WpEloquent\Support\Traits\Macroable;
+use Prappo\WpEloquent\Support\Traits\Macroable;
 use Ramsey\Uuid\Codec\TimestampFirstCombCodec;
 use Ramsey\Uuid\Generator\CombGenerator;
 use Ramsey\Uuid\Uuid;
@@ -45,7 +45,7 @@ class Str
      * Get a new stringable object from the given string.
      *
      * @param  string  $string
-     * @return \As247\WpEloquent\Support\Stringable
+     * @return \Prappo\WpEloquent\Support\Stringable
      */
     public static function of($string)
     {

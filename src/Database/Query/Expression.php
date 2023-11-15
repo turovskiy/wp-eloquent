@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Database\Query;
+namespace Prappo\WpEloquent\Database\Query;
 
 class Expression
 {

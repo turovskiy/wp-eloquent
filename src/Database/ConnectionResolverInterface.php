@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Database;
+namespace Prappo\WpEloquent\Database;
 
 interface ConnectionResolverInterface
 {
@@ -8,7 +8,7 @@ interface ConnectionResolverInterface
      * Get a database connection instance.
      *
      * @param  string|null  $name
-     * @return \As247\WpEloquent\Database\ConnectionInterface
+     * @return \Prappo\WpEloquent\Database\ConnectionInterface
      */
     public function connection($name = null);
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace As247\WpEloquent\Database;
+namespace Prappo\WpEloquent\Database;
 
 use Doctrine\DBAL\Driver\PDOPgSql\Driver as DoctrineDriver;
-use As247\WpEloquent\Database\Query\Grammars\PostgresGrammar as QueryGrammar;
-use As247\WpEloquent\Database\Query\Processors\PostgresProcessor;
-use As247\WpEloquent\Database\Schema\Grammars\PostgresGrammar as SchemaGrammar;
-use As247\WpEloquent\Database\Schema\PostgresBuilder;
-use As247\WpEloquent\Database\Schema\PostgresSchemaState;
+use Prappo\WpEloquent\Database\Query\Grammars\PostgresGrammar as QueryGrammar;
+use Prappo\WpEloquent\Database\Query\Processors\PostgresProcessor;
+use Prappo\WpEloquent\Database\Schema\Grammars\PostgresGrammar as SchemaGrammar;
+use Prappo\WpEloquent\Database\Schema\PostgresBuilder;
+use Prappo\WpEloquent\Database\Schema\PostgresSchemaState;
 use PDO;
 
 class PostgresConnection extends Connection
@@ -41,7 +41,7 @@ class PostgresConnection extends Connection
     /**
      * Get the default query grammar instance.
      *
-     * @return \As247\WpEloquent\Database\Query\Grammars\PostgresGrammar
+     * @return \Prappo\WpEloquent\Database\Query\Grammars\PostgresGrammar
      */
     protected function getDefaultQueryGrammar()
     {
@@ -51,7 +51,7 @@ class PostgresConnection extends Connection
     /**
      * Get a schema builder instance for the connection.
      *
-     * @return \As247\WpEloquent\Database\Schema\PostgresBuilder
+     * @return \Prappo\WpEloquent\Database\Schema\PostgresBuilder
      */
     public function getSchemaBuilder()
     {
@@ -65,7 +65,7 @@ class PostgresConnection extends Connection
     /**
      * Get the default schema grammar instance.
      *
-     * @return \As247\WpEloquent\Database\Schema\Grammars\PostgresGrammar
+     * @return \Prappo\WpEloquent\Database\Schema\Grammars\PostgresGrammar
      */
     protected function getDefaultSchemaGrammar()
     {
@@ -75,9 +75,9 @@ class PostgresConnection extends Connection
     /**
      * Get the schema state for the connection.
      *
-     * @param  \As247\WpEloquent\Filesystem\Filesystem|null  $files
+     * @param  \Prappo\WpEloquent\Filesystem\Filesystem|null  $files
      * @param  callable|null  $processFactory
-     * @return \As247\WpEloquent\Database\Schema\PostgresSchemaState
+     * @return \Prappo\WpEloquent\Database\Schema\PostgresSchemaState
      */
     public function getSchemaState(Filesystem $files = null, callable $processFactory = null)
     {
@@ -87,7 +87,7 @@ class PostgresConnection extends Connection
     /**
      * Get the default post processor instance.
      *
-     * @return \As247\WpEloquent\Database\Query\Processors\PostgresProcessor
+     * @return \Prappo\WpEloquent\Database\Query\Processors\PostgresProcessor
      */
     protected function getDefaultPostProcessor()
     {

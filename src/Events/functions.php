@@ -1,15 +1,15 @@
 <?php
 
-namespace As247\WpEloquent\Events;
+namespace Prappo\WpEloquent\Events;
 
 use Closure;
 
-if (! function_exists('As247\WpEloquent\Events\queueable')) {
+if (! function_exists('Prappo\WpEloquent\Events\queueable')) {
     /**
      * Create a new queued Closure event listener.
      *
      * @param  \Closure  $closure
-     * @return \As247\WpEloquent\Events\QueuedClosure
+     * @return \Prappo\WpEloquent\Events\QueuedClosure
      */
     function queueable(Closure $closure)
     {

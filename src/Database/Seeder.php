@@ -1,10 +1,10 @@
 <?php
 
-namespace As247\WpEloquent\Database;
+namespace Prappo\WpEloquent\Database;
 
-use As247\WpEloquent\Console\Command;
-use As247\WpEloquent\Container\Container;
-use As247\WpEloquent\Support\Arr;
+use Prappo\WpEloquent\Console\Command;
+use Prappo\WpEloquent\Container\Container;
+use Prappo\WpEloquent\Support\Arr;
 use InvalidArgumentException;
 
 abstract class Seeder
@@ -12,14 +12,14 @@ abstract class Seeder
     /**
      * The container instance.
      *
-     * @var \As247\WpEloquent\Container\Container
+     * @var \Prappo\WpEloquent\Container\Container
      */
     protected $container;
 
     /**
      * The console command instance.
      *
-     * @var \As247\WpEloquent\Console\Command
+     * @var \Prappo\WpEloquent\Console\Command
      */
     protected $command;
 
@@ -86,7 +86,7 @@ abstract class Seeder
      * Resolve an instance of the given seeder class.
      *
      * @param  string  $class
-     * @return \As247\WpEloquent\Database\Seeder
+     * @return \Prappo\WpEloquent\Database\Seeder
      */
     protected function resolve($class)
     {
@@ -108,7 +108,7 @@ abstract class Seeder
     /**
      * Set the IoC container instance.
      *
-     * @param  \As247\WpEloquent\Container\Container  $container
+     * @param  \Prappo\WpEloquent\Container\Container  $container
      * @return $this
      */
     public function setContainer(Container $container)
@@ -121,7 +121,7 @@ abstract class Seeder
     /**
      * Set the console command instance.
      *
-     * @param  \As247\WpEloquent\Console\Command  $command
+     * @param  \Prappo\WpEloquent\Console\Command  $command
      * @return $this
      */
     public function setCommand(Command $command)

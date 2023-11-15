@@ -1,13 +1,13 @@
 <?php
 
-namespace As247\WpEloquent\Database\Events;
+namespace Prappo\WpEloquent\Database\Events;
 
 class StatementPrepared
 {
     /**
      * The database connection instance.
      *
-     * @var \As247\WpEloquent\Database\Connection
+     * @var \Prappo\WpEloquent\Database\Connection
      */
     public $connection;
 
@@ -21,7 +21,7 @@ class StatementPrepared
     /**
      * Create a new event instance.
      *
-     * @param  \As247\WpEloquent\Database\Connection  $connection
+     * @param  \Prappo\WpEloquent\Database\Connection  $connection
      * @param  \PDOStatement  $statement
      * @return void
      */

@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Container;
+namespace Prappo\WpEloquent\Container;
 
 use Exception;
 

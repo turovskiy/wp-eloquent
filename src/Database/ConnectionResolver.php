@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Database;
+namespace Prappo\WpEloquent\Database;
 
 class ConnectionResolver implements ConnectionResolverInterface
 {
@@ -35,7 +35,7 @@ class ConnectionResolver implements ConnectionResolverInterface
      * Get a database connection instance.
      *
      * @param  string|null  $name
-     * @return \As247\WpEloquent\Database\ConnectionInterface
+     * @return \Prappo\WpEloquent\Database\ConnectionInterface
      */
     public function connection($name = null)
     {
@@ -50,7 +50,7 @@ class ConnectionResolver implements ConnectionResolverInterface
      * Add a connection to the resolver.
      *
      * @param  string  $name
-     * @param  \As247\WpEloquent\Database\ConnectionInterface  $connection
+     * @param  \Prappo\WpEloquent\Database\ConnectionInterface  $connection
      * @return void
      */
     public function addConnection($name, ConnectionInterface $connection)

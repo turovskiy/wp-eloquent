@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace As247\WpEloquent\Doctrine\Inflector\Rules;
+namespace Prappo\WpEloquent\Doctrine\Inflector\Rules;
 
 final class Substitution
 {

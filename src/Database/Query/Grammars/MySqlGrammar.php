@@ -1,9 +1,9 @@
 <?php
 
-namespace As247\WpEloquent\Database\Query\Grammars;
+namespace Prappo\WpEloquent\Database\Query\Grammars;
 
-use As247\WpEloquent\Database\Query\Builder;
-use As247\WpEloquent\Support\Str;
+use Prappo\WpEloquent\Database\Query\Builder;
+use Prappo\WpEloquent\Support\Str;
 
 class MySqlGrammar extends Grammar
 {
@@ -54,7 +54,7 @@ class MySqlGrammar extends Grammar
     /**
      * Compile an insert ignore statement into SQL.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $values
      * @return string
      */
@@ -106,7 +106,7 @@ class MySqlGrammar extends Grammar
     /**
      * Compile the lock into SQL.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  bool|string  $value
      * @return string
      */
@@ -122,7 +122,7 @@ class MySqlGrammar extends Grammar
     /**
      * Compile an insert statement into SQL.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $values
      * @return string
      */
@@ -138,7 +138,7 @@ class MySqlGrammar extends Grammar
     /**
      * Compile the columns for an update statement.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $values
      * @return string
      */
@@ -178,7 +178,7 @@ class MySqlGrammar extends Grammar
     /**
      * Compile an update statement without joins into SQL.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  string  $table
      * @param  string  $columns
      * @param  string  $where
@@ -222,7 +222,7 @@ class MySqlGrammar extends Grammar
     /**
      * Compile a delete query that does not use joins.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  string  $table
      * @param  string  $where
      * @return string

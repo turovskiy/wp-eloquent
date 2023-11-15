@@ -1,7 +1,7 @@
 <?php
 
 
-namespace As247\WpEloquent\Database;
+namespace Prappo\WpEloquent\Database;
 
 
 use PDO;

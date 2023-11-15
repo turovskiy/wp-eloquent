@@ -1,16 +1,16 @@
 <?php
 
-namespace As247\WpEloquent\Support;
+namespace Prappo\WpEloquent\Support;
 
 /**
- * @mixin \As247\WpEloquent\Support\Enumerable
+ * @mixin \Prappo\WpEloquent\Support\Enumerable
  */
 class HigherOrderCollectionProxy
 {
     /**
      * The collection being operated on.
      *
-     * @var \As247\WpEloquent\Support\Enumerable
+     * @var \Prappo\WpEloquent\Support\Enumerable
      */
     protected $collection;
 
@@ -24,7 +24,7 @@ class HigherOrderCollectionProxy
     /**
      * Create a new proxy instance.
      *
-     * @param  \As247\WpEloquent\Support\Enumerable  $collection
+     * @param  \Prappo\WpEloquent\Support\Enumerable  $collection
      * @param  string  $method
      * @return void
      */

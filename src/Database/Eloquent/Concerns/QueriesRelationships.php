@@ -1,14 +1,14 @@
 <?php
 
-namespace As247\WpEloquent\Database\Eloquent\Concerns;
+namespace Prappo\WpEloquent\Database\Eloquent\Concerns;
 
 use Closure;
-use As247\WpEloquent\Database\Eloquent\Builder;
-use As247\WpEloquent\Database\Eloquent\Relations\MorphTo;
-use As247\WpEloquent\Database\Eloquent\Relations\Relation;
-use As247\WpEloquent\Database\Query\Builder as QueryBuilder;
-use As247\WpEloquent\Database\Query\Expression;
-use As247\WpEloquent\Support\Str;
+use Prappo\WpEloquent\Database\Eloquent\Builder;
+use Prappo\WpEloquent\Database\Eloquent\Relations\MorphTo;
+use Prappo\WpEloquent\Database\Eloquent\Relations\Relation;
+use Prappo\WpEloquent\Database\Query\Builder as QueryBuilder;
+use Prappo\WpEloquent\Database\Query\Expression;
+use Prappo\WpEloquent\Support\Str;
 use RuntimeException;
 
 trait QueriesRelationships
@@ -16,12 +16,12 @@ trait QueriesRelationships
     /**
      * Add a relationship count / exists condition to the query.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Relations\Relation|string  $relation
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Relations\Relation|string  $relation
      * @param  string  $operator
      * @param  int  $count
      * @param  string  $boolean
      * @param  \Closure|null  $callback
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      *
      * @throws \RuntimeException
      */
@@ -72,7 +72,7 @@ trait QueriesRelationships
      * @param  int  $count
      * @param  string  $boolean
      * @param  \Closure|null  $callback
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     protected function hasNested($relations, $operator = '>=', $count = 1, $boolean = 'and', $callback = null)
     {
@@ -103,7 +103,7 @@ trait QueriesRelationships
      * @param  string  $relation
      * @param  string  $operator
      * @param  int  $count
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function orHas($relation, $operator = '>=', $count = 1)
     {
@@ -116,7 +116,7 @@ trait QueriesRelationships
      * @param  string  $relation
      * @param  string  $boolean
      * @param  \Closure|null  $callback
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function doesntHave($relation, $boolean = 'and', Closure $callback = null)
     {
@@ -127,7 +127,7 @@ trait QueriesRelationships
      * Add a relationship count / exists condition to the query with an "or".
      *
      * @param  string  $relation
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function orDoesntHave($relation)
     {
@@ -141,7 +141,7 @@ trait QueriesRelationships
      * @param  \Closure|null  $callback
      * @param  string  $operator
      * @param  int  $count
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function whereHas($relation, Closure $callback = null, $operator = '>=', $count = 1)
     {
@@ -155,7 +155,7 @@ trait QueriesRelationships
      * @param  \Closure|null  $callback
      * @param  string  $operator
      * @param  int  $count
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function orWhereHas($relation, Closure $callback = null, $operator = '>=', $count = 1)
     {
@@ -167,7 +167,7 @@ trait QueriesRelationships
      *
      * @param  string  $relation
      * @param  \Closure|null  $callback
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function whereDoesntHave($relation, Closure $callback = null)
     {
@@ -179,7 +179,7 @@ trait QueriesRelationships
      *
      * @param  string  $relation
      * @param  \Closure|null  $callback
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function orWhereDoesntHave($relation, Closure $callback = null)
     {
@@ -195,7 +195,7 @@ trait QueriesRelationships
      * @param  int  $count
      * @param  string  $boolean
      * @param  \Closure|null  $callback
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function hasMorph($relation, $types, $operator = '>=', $count = 1, $boolean = 'and', Closure $callback = null)
     {
@@ -232,9 +232,9 @@ trait QueriesRelationships
     /**
      * Get the BelongsTo relationship for a single polymorphic type.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Relations\MorphTo  $relation
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Relations\MorphTo  $relation
      * @param  string  $type
-     * @return \As247\WpEloquent\Database\Eloquent\Relations\BelongsTo
+     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\BelongsTo
      */
     protected function getBelongsToRelation(MorphTo $relation, $type)
     {
@@ -258,7 +258,7 @@ trait QueriesRelationships
      * @param  string|array  $types
      * @param  string  $operator
      * @param  int  $count
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function orHasMorph($relation, $types, $operator = '>=', $count = 1)
     {
@@ -272,7 +272,7 @@ trait QueriesRelationships
      * @param  string|array  $types
      * @param  string  $boolean
      * @param  \Closure|null  $callback
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function doesntHaveMorph($relation, $types, $boolean = 'and', Closure $callback = null)
     {
@@ -284,7 +284,7 @@ trait QueriesRelationships
      *
      * @param  string  $relation
      * @param  string|array  $types
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function orDoesntHaveMorph($relation, $types)
     {
@@ -299,7 +299,7 @@ trait QueriesRelationships
      * @param  \Closure|null  $callback
      * @param  string  $operator
      * @param  int  $count
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function whereHasMorph($relation, $types, Closure $callback = null, $operator = '>=', $count = 1)
     {
@@ -314,7 +314,7 @@ trait QueriesRelationships
      * @param  \Closure|null  $callback
      * @param  string  $operator
      * @param  int  $count
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function orWhereHasMorph($relation, $types, Closure $callback = null, $operator = '>=', $count = 1)
     {
@@ -327,7 +327,7 @@ trait QueriesRelationships
      * @param  string  $relation
      * @param  string|array  $types
      * @param  \Closure|null  $callback
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function whereDoesntHaveMorph($relation, $types, Closure $callback = null)
     {
@@ -340,7 +340,7 @@ trait QueriesRelationships
      * @param  string  $relation
      * @param  string|array  $types
      * @param  \Closure|null  $callback
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function orWhereDoesntHaveMorph($relation, $types, Closure $callback = null)
     {
@@ -414,12 +414,12 @@ trait QueriesRelationships
     /**
      * Add the "has" condition where clause to the query.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $hasQuery
-     * @param  \As247\WpEloquent\Database\Eloquent\Relations\Relation  $relation
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $hasQuery
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Relations\Relation  $relation
      * @param  string  $operator
      * @param  int  $count
      * @param  string  $boolean
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     protected function addHasWhere(Builder $hasQuery, Relation $relation, $operator, $count, $boolean)
     {
@@ -433,8 +433,8 @@ trait QueriesRelationships
     /**
      * Merge the where constraints from another query to the current query.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $from
-     * @return \As247\WpEloquent\Database\Eloquent\Builder|static
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $from
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder|static
      */
     public function mergeConstraintsFrom(Builder $from)
     {
@@ -453,7 +453,7 @@ trait QueriesRelationships
     /**
      * Add a sub-query count clause to this query.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  string  $operator
      * @param  int  $count
      * @param  string  $boolean
@@ -475,7 +475,7 @@ trait QueriesRelationships
      * Get the "has relation" base query instance.
      *
      * @param  string  $relation
-     * @return \As247\WpEloquent\Database\Eloquent\Relations\Relation
+     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\Relation
      */
     protected function getRelationWithoutConstraints($relation)
     {

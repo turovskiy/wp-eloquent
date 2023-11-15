@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Contracts\Support;
+namespace Prappo\WpEloquent\Contracts\Support;
 
 interface MessageBag extends Arrayable
 {
@@ -23,7 +23,7 @@ interface MessageBag extends Arrayable
     /**
      * Merge a new array of messages into the bag.
      *
-     * @param  \As247\WpEloquent\Contracts\Support\MessageProvider|array  $messages
+     * @param  \Prappo\WpEloquent\Contracts\Support\MessageProvider|array  $messages
      * @return $this
      */
     public function merge($messages);

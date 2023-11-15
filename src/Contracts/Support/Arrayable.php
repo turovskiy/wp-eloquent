@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Contracts\Support;
+namespace Prappo\WpEloquent\Contracts\Support;
 
 interface Arrayable
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace As247\WpEloquent\Database\Eloquent\Relations;
+namespace Prappo\WpEloquent\Database\Eloquent\Relations;
 
-use As247\WpEloquent\Database\Eloquent\Builder;
-use As247\WpEloquent\Database\Eloquent\Model;
+use Prappo\WpEloquent\Database\Eloquent\Builder;
+use Prappo\WpEloquent\Database\Eloquent\Model;
 
 abstract class MorphOneOrMany extends HasOneOrMany
 {
@@ -24,8 +24,8 @@ abstract class MorphOneOrMany extends HasOneOrMany
     /**
      * Create a new morph one or many relationship instance.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \As247\WpEloquent\Database\Eloquent\Model  $parent
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
      * @param  string  $type
      * @param  string  $id
      * @param  string  $localKey
@@ -70,7 +70,7 @@ abstract class MorphOneOrMany extends HasOneOrMany
     /**
      * Set the foreign ID and type for creating a related model.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Model  $model
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $model
      * @return void
      */
     protected function setForeignAttributesForCreate(Model $model)
@@ -83,10 +83,10 @@ abstract class MorphOneOrMany extends HasOneOrMany
     /**
      * Get the relationship query.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $parentQuery
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])
     {

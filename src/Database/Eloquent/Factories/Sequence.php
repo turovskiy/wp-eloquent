@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Database\Eloquent\Factories;
+namespace Prappo\WpEloquent\Database\Eloquent\Factories;
 
 class Sequence
 {

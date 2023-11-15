@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Support;
+namespace Prappo\WpEloquent\Support;
 
 use ReflectionClass;
 use ReflectionNamedType;

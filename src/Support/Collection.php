@@ -1,11 +1,11 @@
 <?php
 
-namespace As247\WpEloquent\Support;
+namespace Prappo\WpEloquent\Support;
 
 use ArrayAccess;
 use ArrayIterator;
-use As247\WpEloquent\Support\Traits\EnumeratesValues;
-use As247\WpEloquent\Support\Traits\Macroable;
+use Prappo\WpEloquent\Support\Traits\EnumeratesValues;
+use Prappo\WpEloquent\Support\Traits\Macroable;
 use stdClass;
 
 class Collection implements ArrayAccess, Enumerable

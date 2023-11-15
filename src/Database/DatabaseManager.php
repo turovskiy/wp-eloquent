@@ -1,30 +1,30 @@
 <?php
 
-namespace As247\WpEloquent\Database;
+namespace Prappo\WpEloquent\Database;
 
-use As247\WpEloquent\Database\Connectors\ConnectionFactory;
-use As247\WpEloquent\Support\Arr;
-use As247\WpEloquent\Support\ConfigurationUrlParser;
-use As247\WpEloquent\Support\Str;
+use Prappo\WpEloquent\Database\Connectors\ConnectionFactory;
+use Prappo\WpEloquent\Support\Arr;
+use Prappo\WpEloquent\Support\ConfigurationUrlParser;
+use Prappo\WpEloquent\Support\Str;
 use InvalidArgumentException;
 use PDO;
 
 /**
- * @mixin \As247\WpEloquent\Database\Connection
+ * @mixin \Prappo\WpEloquent\Database\Connection
  */
 class DatabaseManager implements ConnectionResolverInterface
 {
     /**
      * The application instance.
      *
-     * @var \As247\WpEloquent\Contracts\Container\Container
+     * @var \Prappo\WpEloquent\Contracts\Container\Container
      */
     protected $app;
 
     /**
      * The database connection factory instance.
      *
-     * @var \As247\WpEloquent\Database\Connectors\ConnectionFactory
+     * @var \Prappo\WpEloquent\Database\Connectors\ConnectionFactory
      */
     protected $factory;
 
@@ -52,8 +52,8 @@ class DatabaseManager implements ConnectionResolverInterface
     /**
      * Create a new database manager instance.
      *
-     * @param  \As247\WpEloquent\Contracts\Container\Container  $app
-     * @param  \As247\WpEloquent\Database\Connectors\ConnectionFactory  $factory
+     * @param  \Prappo\WpEloquent\Contracts\Container\Container  $app
+     * @param  \Prappo\WpEloquent\Database\Connectors\ConnectionFactory  $factory
      * @return void
      */
     public function __construct($app, ConnectionFactory $factory)
@@ -70,7 +70,7 @@ class DatabaseManager implements ConnectionResolverInterface
      * Get a database connection instance.
      *
      * @param  string|null  $name
-     * @return \As247\WpEloquent\Database\Connection
+     * @return \Prappo\WpEloquent\Database\Connection
      */
     public function connection($name = null)
     {
@@ -108,7 +108,7 @@ class DatabaseManager implements ConnectionResolverInterface
      * Make the database connection instance.
      *
      * @param  string  $name
-     * @return \As247\WpEloquent\Database\Connection
+     * @return \Prappo\WpEloquent\Database\Connection
      */
     protected function makeConnection($name)
     {
@@ -159,9 +159,9 @@ class DatabaseManager implements ConnectionResolverInterface
     /**
      * Prepare the database connection instance.
      *
-     * @param  \As247\WpEloquent\Database\Connection  $connection
+     * @param  \Prappo\WpEloquent\Database\Connection  $connection
      * @param  string  $type
-     * @return \As247\WpEloquent\Database\Connection
+     * @return \Prappo\WpEloquent\Database\Connection
      */
     protected function configure(Connection $connection, $type)
     {
@@ -185,9 +185,9 @@ class DatabaseManager implements ConnectionResolverInterface
     /**
      * Prepare the read / write mode for database connection instance.
      *
-     * @param  \As247\WpEloquent\Database\Connection  $connection
+     * @param  \Prappo\WpEloquent\Database\Connection  $connection
      * @param  string|null  $type
-     * @return \As247\WpEloquent\Database\Connection
+     * @return \Prappo\WpEloquent\Database\Connection
      */
     protected function setPdoForType(Connection $connection, $type = null)
     {
@@ -232,7 +232,7 @@ class DatabaseManager implements ConnectionResolverInterface
      * Reconnect to the given database.
      *
      * @param  string|null  $name
-     * @return \As247\WpEloquent\Database\Connection
+     * @return \Prappo\WpEloquent\Database\Connection
      */
     public function reconnect($name = null)
     {
@@ -267,7 +267,7 @@ class DatabaseManager implements ConnectionResolverInterface
      * Refresh the PDO connections on a given connection.
      *
      * @param  string  $name
-     * @return \As247\WpEloquent\Database\Connection
+     * @return \Prappo\WpEloquent\Database\Connection
      */
     protected function refreshPdoConnections($name)
     {

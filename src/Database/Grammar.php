@@ -1,9 +1,9 @@
 <?php
 
-namespace As247\WpEloquent\Database;
+namespace Prappo\WpEloquent\Database;
 
-use As247\WpEloquent\Database\Query\Expression;
-use As247\WpEloquent\Support\Traits\Macroable;
+use Prappo\WpEloquent\Database\Query\Expression;
+use Prappo\WpEloquent\Support\Traits\Macroable;
 
 abstract class Grammar
 {
@@ -30,7 +30,7 @@ abstract class Grammar
     /**
      * Wrap a table in keyword identifiers.
      *
-     * @param  \As247\WpEloquent\Database\Query\Expression|string  $table
+     * @param  \Prappo\WpEloquent\Database\Query\Expression|string  $table
      * @return string
      */
     public function wrapTable($table)
@@ -45,7 +45,7 @@ abstract class Grammar
     /**
      * Wrap a value in keyword identifiers.
      *
-     * @param  \As247\WpEloquent\Database\Query\Expression|string  $value
+     * @param  \Prappo\WpEloquent\Database\Query\Expression|string  $value
      * @param  bool  $prefixAlias
      * @return string
      */
@@ -178,7 +178,7 @@ abstract class Grammar
     /**
      * Get the value of a raw expression.
      *
-     * @param  \As247\WpEloquent\Database\Query\Expression  $expression
+     * @param  \Prappo\WpEloquent\Database\Query\Expression  $expression
      * @return string
      */
     public function getValue($expression)

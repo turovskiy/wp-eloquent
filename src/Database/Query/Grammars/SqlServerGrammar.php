@@ -1,10 +1,10 @@
 <?php
 
-namespace As247\WpEloquent\Database\Query\Grammars;
+namespace Prappo\WpEloquent\Database\Query\Grammars;
 
-use As247\WpEloquent\Database\Query\Builder;
-use As247\WpEloquent\Support\Arr;
-use As247\WpEloquent\Support\Str;
+use Prappo\WpEloquent\Database\Query\Builder;
+use Prappo\WpEloquent\Support\Arr;
+use Prappo\WpEloquent\Support\Str;
 
 class SqlServerGrammar extends Grammar
 {
@@ -22,7 +22,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a select query into SQL.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @return string
      */
     public function compileSelect(Builder $query)
@@ -46,7 +46,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile the "select *" portion of the query.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $columns
      * @return string|null
      */
@@ -71,7 +71,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile the "from" portion of the query.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  string  $table
      * @return string
      */
@@ -93,7 +93,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a "where date" clause.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $where
      * @return string
      */
@@ -107,7 +107,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a "where time" clause.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $where
      * @return string
      */
@@ -161,7 +161,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Create a full ANSI offset clause for the query.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $components
      * @return string
      */
@@ -204,7 +204,7 @@ class SqlServerGrammar extends Grammar
      * Compile a common table expression for a query.
      *
      * @param  string  $sql
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @return string
      */
     protected function compileTableExpression($sql, $query)
@@ -217,7 +217,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile the limit / offset row constraint for a query.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @return string
      */
     protected function compileRowConstraint($query)
@@ -236,7 +236,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a delete statement without joins into SQL.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  string  $table
      * @param  string  $where
      * @return string
@@ -264,7 +264,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile the "limit" portions of the query.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  int  $limit
      * @return string
      */
@@ -276,7 +276,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile the "offset" portions of the query.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  int  $offset
      * @return string
      */
@@ -288,7 +288,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile the lock into SQL.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  bool|string  $value
      * @return string
      */
@@ -311,7 +311,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile an exists statement into SQL.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @return string
      */
     public function compileExists(Builder $query)
@@ -326,7 +326,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile an update statement with joins into SQL.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  string  $table
      * @param  string  $columns
      * @param  string  $where
@@ -427,7 +427,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Wrap a table in keyword identifiers.
      *
-     * @param  \As247\WpEloquent\Database\Query\Expression|string  $table
+     * @param  \Prappo\WpEloquent\Database\Query\Expression|string  $table
      * @return string
      */
     public function wrapTable($table)

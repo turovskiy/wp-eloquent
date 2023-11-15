@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Database\Eloquent;
+namespace Prappo\WpEloquent\Database\Eloquent;
 
 use RuntimeException;
 
@@ -21,7 +21,7 @@ class JsonEncodingException extends RuntimeException
     /**
      * Create a new JSON encoding exception for the resource.
      *
-     * @param  \As247\WpEloquent\Http\Resources\Json\JsonResource  $resource
+     * @param  \Prappo\WpEloquent\Http\Resources\Json\JsonResource  $resource
      * @param  string  $message
      * @return static
      */

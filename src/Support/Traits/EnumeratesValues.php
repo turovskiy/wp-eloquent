@@ -1,17 +1,17 @@
 <?php
 
-namespace As247\WpEloquent\Support\Traits;
+namespace Prappo\WpEloquent\Support\Traits;
 
 use CachingIterator;
 use Closure;
 use Exception;
-use As247\WpEloquent\Contracts\Support\Arrayable;
-use As247\WpEloquent\Contracts\Support\Jsonable;
-use As247\WpEloquent\Support\Arr;
-use As247\WpEloquent\Support\Collection;
-use As247\WpEloquent\Support\Enumerable;
-use As247\WpEloquent\Support\HigherOrderCollectionProxy;
-use As247\WpEloquent\Support\HigherOrderWhenProxy;
+use Prappo\WpEloquent\Contracts\Support\Arrayable;
+use Prappo\WpEloquent\Contracts\Support\Jsonable;
+use Prappo\WpEloquent\Support\Arr;
+use Prappo\WpEloquent\Support\Collection;
+use Prappo\WpEloquent\Support\Enumerable;
+use Prappo\WpEloquent\Support\HigherOrderCollectionProxy;
+use Prappo\WpEloquent\Support\HigherOrderWhenProxy;
 use JsonSerializable;
 use Symfony\Component\VarDumper\VarDumper;
 use Traversable;
@@ -765,7 +765,7 @@ trait EnumeratesValues
     /**
      * Collect the values into a collection.
      *
-     * @return \As247\WpEloquent\Support\Collection
+     * @return \Prappo\WpEloquent\Support\Collection
      */
     public function collect()
     {

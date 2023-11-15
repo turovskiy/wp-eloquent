@@ -1,14 +1,14 @@
 <?php
 
-namespace As247\WpEloquent\Database;
+namespace Prappo\WpEloquent\Database;
 
 use Doctrine\DBAL\Driver\PDOSqlite\Driver as DoctrineDriver;
-use As247\WpEloquent\Database\Query\Grammars\SQLiteGrammar as QueryGrammar;
-use As247\WpEloquent\Database\Query\Processors\SQLiteProcessor;
-use As247\WpEloquent\Database\Schema\Grammars\SQLiteGrammar as SchemaGrammar;
-use As247\WpEloquent\Database\Schema\SQLiteBuilder;
-use As247\WpEloquent\Database\Schema\SqliteSchemaState;
-use As247\WpEloquent\Filesystem\Filesystem;
+use Prappo\WpEloquent\Database\Query\Grammars\SQLiteGrammar as QueryGrammar;
+use Prappo\WpEloquent\Database\Query\Processors\SQLiteProcessor;
+use Prappo\WpEloquent\Database\Schema\Grammars\SQLiteGrammar as SchemaGrammar;
+use Prappo\WpEloquent\Database\Schema\SQLiteBuilder;
+use Prappo\WpEloquent\Database\Schema\SqliteSchemaState;
+use Prappo\WpEloquent\Filesystem\Filesystem;
 
 class SQLiteConnection extends Connection
 {
@@ -39,7 +39,7 @@ class SQLiteConnection extends Connection
     /**
      * Get the default query grammar instance.
      *
-     * @return \As247\WpEloquent\Database\Query\Grammars\SQLiteGrammar
+     * @return \Prappo\WpEloquent\Database\Query\Grammars\SQLiteGrammar
      */
     protected function getDefaultQueryGrammar()
     {
@@ -49,7 +49,7 @@ class SQLiteConnection extends Connection
     /**
      * Get a schema builder instance for the connection.
      *
-     * @return \As247\WpEloquent\Database\Schema\SQLiteBuilder
+     * @return \Prappo\WpEloquent\Database\Schema\SQLiteBuilder
      */
     public function getSchemaBuilder()
     {
@@ -63,7 +63,7 @@ class SQLiteConnection extends Connection
     /**
      * Get the default schema grammar instance.
      *
-     * @return \As247\WpEloquent\Database\Schema\Grammars\SQLiteGrammar
+     * @return \Prappo\WpEloquent\Database\Schema\Grammars\SQLiteGrammar
      */
     protected function getDefaultSchemaGrammar()
     {
@@ -73,7 +73,7 @@ class SQLiteConnection extends Connection
     /**
      * Get the schema state for the connection.
      *
-     * @param  \As247\WpEloquent\Filesystem\Filesystem|null  $files
+     * @param  \Prappo\WpEloquent\Filesystem\Filesystem|null  $files
      * @param  callable|null  $processFactory
      *
      * @throws \RuntimeException
@@ -86,7 +86,7 @@ class SQLiteConnection extends Connection
     /**
      * Get the default post processor instance.
      *
-     * @return \As247\WpEloquent\Database\Query\Processors\SQLiteProcessor
+     * @return \Prappo\WpEloquent\Database\Query\Processors\SQLiteProcessor
      */
     protected function getDefaultPostProcessor()
     {

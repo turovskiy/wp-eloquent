@@ -1,10 +1,10 @@
 <?php
 
-namespace As247\WpEloquent\Database\Eloquent\Relations;
+namespace Prappo\WpEloquent\Database\Eloquent\Relations;
 
-use As247\WpEloquent\Database\Eloquent\Builder;
-use As247\WpEloquent\Database\Eloquent\Model;
-use As247\WpEloquent\Support\Arr;
+use Prappo\WpEloquent\Database\Eloquent\Builder;
+use Prappo\WpEloquent\Database\Eloquent\Model;
+use Prappo\WpEloquent\Support\Arr;
 
 class MorphToMany extends BelongsToMany
 {
@@ -34,8 +34,8 @@ class MorphToMany extends BelongsToMany
     /**
      * Create a new morph to many relationship instance.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \As247\WpEloquent\Database\Eloquent\Model  $parent
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
      * @param  string  $name
      * @param  string  $table
      * @param  string  $foreignPivotKey
@@ -103,10 +103,10 @@ class MorphToMany extends BelongsToMany
     /**
      * Add the constraints for a relationship count query.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \As247\WpEloquent\Database\Eloquent\Builder  $parentQuery
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \As247\WpEloquent\Database\Eloquent\Builder
+     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
      */
     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])
     {
@@ -118,7 +118,7 @@ class MorphToMany extends BelongsToMany
     /**
      * Get the pivot models that are currently attached.
      *
-     * @return \As247\WpEloquent\Support\Collection
+     * @return \Prappo\WpEloquent\Support\Collection
      */
     protected function getCurrentlyAttachedPivots()
     {
@@ -133,7 +133,7 @@ class MorphToMany extends BelongsToMany
     /**
      * Create a new query builder for the pivot table.
      *
-     * @return \As247\WpEloquent\Database\Query\Builder
+     * @return \Prappo\WpEloquent\Database\Query\Builder
      */
     public function newPivotQuery()
     {
@@ -145,7 +145,7 @@ class MorphToMany extends BelongsToMany
      *
      * @param  array  $attributes
      * @param  bool  $exists
-     * @return \As247\WpEloquent\Database\Eloquent\Relations\Pivot
+     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\Pivot
      */
     public function newPivot(array $attributes = [], $exists = false)
     {

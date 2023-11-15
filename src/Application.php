@@ -1,12 +1,12 @@
 <?php
 
 
-namespace As247\WpEloquent;
+namespace Prappo\WpEloquent;
 
-use As247\WpEloquent\Events\Dispatcher;
-use As247\WpEloquent\Database\Capsule\Manager;
-use As247\WpEloquent\Database\WpConnection;
-use As247\WpEloquent\Support\Facades\Facade;
+use Prappo\WpEloquent\Events\Dispatcher;
+use Prappo\WpEloquent\Database\Capsule\Manager;
+use Prappo\WpEloquent\Database\WpConnection;
+use Prappo\WpEloquent\Support\Facades\Facade;
 
 class Application
 {

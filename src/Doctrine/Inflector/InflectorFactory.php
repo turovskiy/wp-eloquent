@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace As247\WpEloquent\Doctrine\Inflector;
+namespace Prappo\WpEloquent\Doctrine\Inflector;
 
-use As247\WpEloquent\Doctrine\Inflector\Rules\English;
+use Prappo\WpEloquent\Doctrine\Inflector\Rules\English;
 use InvalidArgumentException;
 use function sprintf;
 

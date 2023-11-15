@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Database\Schema;
+namespace Prappo\WpEloquent\Database\Schema;
 
 class SqliteSchemaState extends SchemaState
 {

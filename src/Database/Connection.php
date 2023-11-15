@@ -1,23 +1,23 @@
 <?php
 
-namespace As247\WpEloquent\Database;
+namespace Prappo\WpEloquent\Database;
 
 use Closure;
 use DateTimeInterface;
 use Doctrine\DBAL\Connection as DoctrineConnection;
 use Exception;
-use As247\WpEloquent\Contracts\Events\Dispatcher;
-use As247\WpEloquent\Database\Events\QueryExecuted;
-use As247\WpEloquent\Database\Events\StatementPrepared;
-use As247\WpEloquent\Database\Events\TransactionBeginning;
-use As247\WpEloquent\Database\Events\TransactionCommitted;
-use As247\WpEloquent\Database\Events\TransactionRolledBack;
-use As247\WpEloquent\Database\Query\Builder as QueryBuilder;
-use As247\WpEloquent\Database\Query\Expression;
-use As247\WpEloquent\Database\Query\Grammars\Grammar as QueryGrammar;
-use As247\WpEloquent\Database\Query\Processors\Processor;
-use As247\WpEloquent\Database\Schema\Builder as SchemaBuilder;
-use As247\WpEloquent\Support\Arr;
+use Prappo\WpEloquent\Contracts\Events\Dispatcher;
+use Prappo\WpEloquent\Database\Events\QueryExecuted;
+use Prappo\WpEloquent\Database\Events\StatementPrepared;
+use Prappo\WpEloquent\Database\Events\TransactionBeginning;
+use Prappo\WpEloquent\Database\Events\TransactionCommitted;
+use Prappo\WpEloquent\Database\Events\TransactionRolledBack;
+use Prappo\WpEloquent\Database\Query\Builder as QueryBuilder;
+use Prappo\WpEloquent\Database\Query\Expression;
+use Prappo\WpEloquent\Database\Query\Grammars\Grammar as QueryGrammar;
+use Prappo\WpEloquent\Database\Query\Processors\Processor;
+use Prappo\WpEloquent\Database\Schema\Builder as SchemaBuilder;
+use Prappo\WpEloquent\Support\Arr;
 use LogicException;
 use PDO;
 use PDOStatement;
@@ -73,28 +73,28 @@ class Connection implements ConnectionInterface
     /**
      * The query grammar implementation.
      *
-     * @var \As247\WpEloquent\Database\Query\Grammars\Grammar
+     * @var \Prappo\WpEloquent\Database\Query\Grammars\Grammar
      */
     protected $queryGrammar;
 
     /**
      * The schema grammar implementation.
      *
-     * @var \As247\WpEloquent\Database\Schema\Grammars\Grammar
+     * @var \Prappo\WpEloquent\Database\Schema\Grammars\Grammar
      */
     protected $schemaGrammar;
 
     /**
      * The query post processor implementation.
      *
-     * @var \As247\WpEloquent\Database\Query\Processors\Processor
+     * @var \Prappo\WpEloquent\Database\Query\Processors\Processor
      */
     protected $postProcessor;
 
     /**
      * The event dispatcher instance.
      *
-     * @var \As247\WpEloquent\Contracts\Events\Dispatcher
+     * @var \Prappo\WpEloquent\Contracts\Events\Dispatcher
      */
     protected $events;
 
@@ -197,7 +197,7 @@ class Connection implements ConnectionInterface
     /**
      * Get the default query grammar instance.
      *
-     * @return \As247\WpEloquent\Database\Query\Grammars\Grammar
+     * @return \Prappo\WpEloquent\Database\Query\Grammars\Grammar
      */
     protected function getDefaultQueryGrammar()
     {
@@ -217,7 +217,7 @@ class Connection implements ConnectionInterface
     /**
      * Get the default schema grammar instance.
      *
-     * @return \As247\WpEloquent\Database\Schema\Grammars\Grammar
+     * @return \Prappo\WpEloquent\Database\Schema\Grammars\Grammar
      */
     protected function getDefaultSchemaGrammar()
     {
@@ -237,7 +237,7 @@ class Connection implements ConnectionInterface
     /**
      * Get the default post processor instance.
      *
-     * @return \As247\WpEloquent\Database\Query\Processors\Processor
+     * @return \Prappo\WpEloquent\Database\Query\Processors\Processor
      */
     protected function getDefaultPostProcessor()
     {
@@ -247,7 +247,7 @@ class Connection implements ConnectionInterface
     /**
      * Get a schema builder instance for the connection.
      *
-     * @return \As247\WpEloquent\Database\Schema\Builder
+     * @return \Prappo\WpEloquent\Database\Schema\Builder
      */
     public function getSchemaBuilder()
     {
@@ -261,9 +261,9 @@ class Connection implements ConnectionInterface
     /**
      * Begin a fluent query against a database table.
      *
-     * @param  \Closure|\As247\WpEloquent\Database\Query\Builder|string  $table
+     * @param  \Closure|\Prappo\WpEloquent\Database\Query\Builder|string  $table
      * @param  string|null  $as
-     * @return \As247\WpEloquent\Database\Query\Builder
+     * @return \Prappo\WpEloquent\Database\Query\Builder
      */
     public function table($table, $as = null)
     {
@@ -273,7 +273,7 @@ class Connection implements ConnectionInterface
     /**
      * Get a new query builder instance.
      *
-     * @return \As247\WpEloquent\Database\Query\Builder
+     * @return \Prappo\WpEloquent\Database\Query\Builder
      */
     public function query()
     {
@@ -616,7 +616,7 @@ class Connection implements ConnectionInterface
      * @param  \Closure  $callback
      * @return mixed
      *
-     * @throws \As247\WpEloquent\Database\QueryException
+     * @throws \Prappo\WpEloquent\Database\QueryException
      */
     protected function run($query, $bindings, Closure $callback)
     {
@@ -653,7 +653,7 @@ class Connection implements ConnectionInterface
      * @param  \Closure  $callback
      * @return mixed
      *
-     * @throws \As247\WpEloquent\Database\QueryException
+     * @throws \Prappo\WpEloquent\Database\QueryException
      */
     protected function runQueryCallback($query, $bindings, Closure $callback)
     {
@@ -707,13 +707,13 @@ class Connection implements ConnectionInterface
     /**
      * Handle a query exception.
      *
-     * @param  \As247\WpEloquent\Database\QueryException  $e
+     * @param  \Prappo\WpEloquent\Database\QueryException  $e
      * @param  string  $query
      * @param  array  $bindings
      * @param  \Closure  $callback
      * @return mixed
      *
-     * @throws \As247\WpEloquent\Database\QueryException
+     * @throws \Prappo\WpEloquent\Database\QueryException
      */
     protected function handleQueryException(QueryException $e, $query, $bindings, Closure $callback)
     {
@@ -729,13 +729,13 @@ class Connection implements ConnectionInterface
     /**
      * Handle a query exception that occurred during query execution.
      *
-     * @param  \As247\WpEloquent\Database\QueryException  $e
+     * @param  \Prappo\WpEloquent\Database\QueryException  $e
      * @param  string  $query
      * @param  array  $bindings
      * @param  \Closure  $callback
      * @return mixed
      *
-     * @throws \As247\WpEloquent\Database\QueryException
+     * @throws \Prappo\WpEloquent\Database\QueryException
      */
     protected function tryAgainIfCausedByLostConnection(QueryException $e, $query, $bindings, Closure $callback)
     {
@@ -840,7 +840,7 @@ class Connection implements ConnectionInterface
      * Get a new raw query expression.
      *
      * @param  mixed  $value
-     * @return \As247\WpEloquent\Database\Query\Expression
+     * @return \Prappo\WpEloquent\Database\Query\Expression
      */
     public function raw($value)
     {
@@ -1046,7 +1046,7 @@ class Connection implements ConnectionInterface
     /**
      * Get the query grammar used by the connection.
      *
-     * @return \As247\WpEloquent\Database\Query\Grammars\Grammar
+     * @return \Prappo\WpEloquent\Database\Query\Grammars\Grammar
      */
     public function getQueryGrammar()
     {
@@ -1056,7 +1056,7 @@ class Connection implements ConnectionInterface
     /**
      * Set the query grammar used by the connection.
      *
-     * @param  \As247\WpEloquent\Database\Query\Grammars\Grammar  $grammar
+     * @param  \Prappo\WpEloquent\Database\Query\Grammars\Grammar  $grammar
      * @return $this
      */
     public function setQueryGrammar(Query\Grammars\Grammar $grammar)
@@ -1069,7 +1069,7 @@ class Connection implements ConnectionInterface
     /**
      * Get the schema grammar used by the connection.
      *
-     * @return \As247\WpEloquent\Database\Schema\Grammars\Grammar
+     * @return \Prappo\WpEloquent\Database\Schema\Grammars\Grammar
      */
     public function getSchemaGrammar()
     {
@@ -1079,7 +1079,7 @@ class Connection implements ConnectionInterface
     /**
      * Set the schema grammar used by the connection.
      *
-     * @param  \As247\WpEloquent\Database\Schema\Grammars\Grammar  $grammar
+     * @param  \Prappo\WpEloquent\Database\Schema\Grammars\Grammar  $grammar
      * @return $this
      */
     public function setSchemaGrammar(Schema\Grammars\Grammar $grammar)
@@ -1092,7 +1092,7 @@ class Connection implements ConnectionInterface
     /**
      * Get the query post processor used by the connection.
      *
-     * @return \As247\WpEloquent\Database\Query\Processors\Processor
+     * @return \Prappo\WpEloquent\Database\Query\Processors\Processor
      */
     public function getPostProcessor()
     {
@@ -1102,7 +1102,7 @@ class Connection implements ConnectionInterface
     /**
      * Set the query post processor used by the connection.
      *
-     * @param  \As247\WpEloquent\Database\Query\Processors\Processor  $processor
+     * @param  \Prappo\WpEloquent\Database\Query\Processors\Processor  $processor
      * @return $this
      */
     public function setPostProcessor(Processor $processor)
@@ -1115,7 +1115,7 @@ class Connection implements ConnectionInterface
     /**
      * Get the event dispatcher used by the connection.
      *
-     * @return \As247\WpEloquent\Contracts\Events\Dispatcher
+     * @return \Prappo\WpEloquent\Contracts\Events\Dispatcher
      */
     public function getEventDispatcher()
     {
@@ -1125,7 +1125,7 @@ class Connection implements ConnectionInterface
     /**
      * Set the event dispatcher instance on the connection.
      *
-     * @param  \As247\WpEloquent\Contracts\Events\Dispatcher  $events
+     * @param  \Prappo\WpEloquent\Contracts\Events\Dispatcher  $events
      * @return $this
      */
     public function setEventDispatcher(Dispatcher $events)
@@ -1256,8 +1256,8 @@ class Connection implements ConnectionInterface
     /**
      * Set the table prefix and return the grammar.
      *
-     * @param  \As247\WpEloquent\Database\Grammar  $grammar
-     * @return \As247\WpEloquent\Database\Grammar
+     * @param  \Prappo\WpEloquent\Database\Grammar  $grammar
+     * @return \Prappo\WpEloquent\Database\Grammar
      */
     public function withTablePrefix(Grammar $grammar)
     {

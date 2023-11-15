@@ -1,10 +1,10 @@
 <?php
 
-namespace As247\WpEloquent\Database\Eloquent\Concerns;
+namespace Prappo\WpEloquent\Database\Eloquent\Concerns;
 
 use Closure;
-use As247\WpEloquent\Database\Eloquent\Scope;
-use As247\WpEloquent\Support\Arr;
+use Prappo\WpEloquent\Database\Eloquent\Scope;
+use Prappo\WpEloquent\Support\Arr;
 use InvalidArgumentException;
 
 trait HasGlobalScopes
@@ -12,7 +12,7 @@ trait HasGlobalScopes
     /**
      * Register a new global scope on the model.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Scope|\Closure|string  $scope
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Scope|\Closure|string  $scope
      * @param  \Closure|null  $implementation
      * @return mixed
      *
@@ -34,7 +34,7 @@ trait HasGlobalScopes
     /**
      * Determine if a model has a global scope.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Scope|string  $scope
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Scope|string  $scope
      * @return bool
      */
     public static function hasGlobalScope($scope)
@@ -45,8 +45,8 @@ trait HasGlobalScopes
     /**
      * Get a global scope registered with the model.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Scope|string  $scope
-     * @return \As247\WpEloquent\Database\Eloquent\Scope|\Closure|null
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Scope|string  $scope
+     * @return \Prappo\WpEloquent\Database\Eloquent\Scope|\Closure|null
      */
     public static function getGlobalScope($scope)
     {

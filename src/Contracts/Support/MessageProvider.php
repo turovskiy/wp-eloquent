@@ -1,13 +1,13 @@
 <?php
 
-namespace As247\WpEloquent\Contracts\Support;
+namespace Prappo\WpEloquent\Contracts\Support;
 
 interface MessageProvider
 {
     /**
      * Get the messages for the instance.
      *
-     * @return \As247\WpEloquent\Contracts\Support\MessageBag
+     * @return \Prappo\WpEloquent\Contracts\Support\MessageBag
      */
     public function getMessageBag();
 }

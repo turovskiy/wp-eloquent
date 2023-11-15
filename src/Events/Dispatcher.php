@@ -1,17 +1,17 @@
 <?php
 
-namespace As247\WpEloquent\Events;
+namespace Prappo\WpEloquent\Events;
 
 use Closure;
 use Exception;
-use As247\WpEloquent\Container\Container;
-use As247\WpEloquent\Contracts\Container\Container as ContainerContract;
-use As247\WpEloquent\Contracts\Events\Dispatcher as DispatcherContract;
-use As247\WpEloquent\Contracts\Queue\ShouldQueue;
-use As247\WpEloquent\Support\Arr;
-use As247\WpEloquent\Support\Str;
-use As247\WpEloquent\Support\Traits\Macroable;
-use As247\WpEloquent\Support\Traits\ReflectsClosures;
+use Prappo\WpEloquent\Container\Container;
+use Prappo\WpEloquent\Contracts\Container\Container as ContainerContract;
+use Prappo\WpEloquent\Contracts\Events\Dispatcher as DispatcherContract;
+use Prappo\WpEloquent\Contracts\Queue\ShouldQueue;
+use Prappo\WpEloquent\Support\Arr;
+use Prappo\WpEloquent\Support\Str;
+use Prappo\WpEloquent\Support\Traits\Macroable;
+use Prappo\WpEloquent\Support\Traits\ReflectsClosures;
 use ReflectionClass;
 
 class Dispatcher implements DispatcherContract
@@ -21,7 +21,7 @@ class Dispatcher implements DispatcherContract
     /**
      * The IoC container instance.
      *
-     * @var \As247\WpEloquent\Contracts\Container\Container
+     * @var \Prappo\WpEloquent\Contracts\Container\Container
      */
     protected $container;
 
@@ -56,7 +56,7 @@ class Dispatcher implements DispatcherContract
     /**
      * Create a new event dispatcher instance.
      *
-     * @param  \As247\WpEloquent\Contracts\Container\Container|null  $container
+     * @param  \Prappo\WpEloquent\Contracts\Container\Container|null  $container
      * @return void
      */
     public function __construct(ContainerContract $container = null)
@@ -560,7 +560,7 @@ class Dispatcher implements DispatcherContract
     /**
      * Get the queue implementation from the resolver.
      *
-     * @return \As247\WpEloquent\Contracts\Queue\Queue
+     * @return \Prappo\WpEloquent\Contracts\Queue\Queue
      */
     protected function resolveQueue()
     {

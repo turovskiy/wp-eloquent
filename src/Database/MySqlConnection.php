@@ -1,14 +1,14 @@
 <?php
 
-namespace As247\WpEloquent\Database;
+namespace Prappo\WpEloquent\Database;
 
 use Doctrine\DBAL\Driver\PDOMySql\Driver as DoctrineDriver;
-use As247\WpEloquent\Database\Query\Grammars\MySqlGrammar as QueryGrammar;
-use As247\WpEloquent\Database\Query\Processors\MySqlProcessor;
-use As247\WpEloquent\Database\Schema\Grammars\MySqlGrammar as SchemaGrammar;
-use As247\WpEloquent\Database\Schema\MySqlBuilder;
-use As247\WpEloquent\Database\Schema\MySqlSchemaState;
-use As247\WpEloquent\Filesystem\Filesystem;
+use Prappo\WpEloquent\Database\Query\Grammars\MySqlGrammar as QueryGrammar;
+use Prappo\WpEloquent\Database\Query\Processors\MySqlProcessor;
+use Prappo\WpEloquent\Database\Schema\Grammars\MySqlGrammar as SchemaGrammar;
+use Prappo\WpEloquent\Database\Schema\MySqlBuilder;
+use Prappo\WpEloquent\Database\Schema\MySqlSchemaState;
+use Prappo\WpEloquent\Filesystem\Filesystem;
 use PDO;
 
 class MySqlConnection extends Connection
@@ -26,7 +26,7 @@ class MySqlConnection extends Connection
     /**
      * Get the default query grammar instance.
      *
-     * @return \As247\WpEloquent\Database\Query\Grammars\MySqlGrammar
+     * @return \Prappo\WpEloquent\Database\Query\Grammars\MySqlGrammar
      */
     protected function getDefaultQueryGrammar()
     {
@@ -36,7 +36,7 @@ class MySqlConnection extends Connection
     /**
      * Get a schema builder instance for the connection.
      *
-     * @return \As247\WpEloquent\Database\Schema\MySqlBuilder
+     * @return \Prappo\WpEloquent\Database\Schema\MySqlBuilder
      */
     public function getSchemaBuilder()
     {
@@ -50,7 +50,7 @@ class MySqlConnection extends Connection
     /**
      * Get the default schema grammar instance.
      *
-     * @return \As247\WpEloquent\Database\Schema\Grammars\MySqlGrammar
+     * @return \Prappo\WpEloquent\Database\Schema\Grammars\MySqlGrammar
      */
     protected function getDefaultSchemaGrammar()
     {
@@ -60,9 +60,9 @@ class MySqlConnection extends Connection
     /**
      * Get the schema state for the connection.
      *
-     * @param  \As247\WpEloquent\Filesystem\Filesystem|null  $files
+     * @param  \Prappo\WpEloquent\Filesystem\Filesystem|null  $files
      * @param  callable|null  $processFactory
-     * @return \As247\WpEloquent\Database\Schema\MySqlSchemaState
+     * @return \Prappo\WpEloquent\Database\Schema\MySqlSchemaState
      */
     public function getSchemaState(Filesystem $files = null, callable $processFactory = null)
     {
@@ -72,7 +72,7 @@ class MySqlConnection extends Connection
     /**
      * Get the default post processor instance.
      *
-     * @return \As247\WpEloquent\Database\Query\Processors\MySqlProcessor
+     * @return \Prappo\WpEloquent\Database\Query\Processors\MySqlProcessor
      */
     protected function getDefaultPostProcessor()
     {

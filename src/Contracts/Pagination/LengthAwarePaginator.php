@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Contracts\Pagination;
+namespace Prappo\WpEloquent\Contracts\Pagination;
 
 interface LengthAwarePaginator extends Paginator
 {

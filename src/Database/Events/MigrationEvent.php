@@ -1,16 +1,16 @@
 <?php
 
-namespace As247\WpEloquent\Database\Events;
+namespace Prappo\WpEloquent\Database\Events;
 
-use As247\WpEloquent\Contracts\Database\Events\MigrationEvent as MigrationEventContract;
-use As247\WpEloquent\Database\Migrations\Migration;
+use Prappo\WpEloquent\Contracts\Database\Events\MigrationEvent as MigrationEventContract;
+use Prappo\WpEloquent\Database\Migrations\Migration;
 
 abstract class MigrationEvent implements MigrationEventContract
 {
     /**
      * An migration instance.
      *
-     * @var \As247\WpEloquent\Database\Migrations\Migration
+     * @var \Prappo\WpEloquent\Database\Migrations\Migration
      */
     public $migration;
 
@@ -24,7 +24,7 @@ abstract class MigrationEvent implements MigrationEventContract
     /**
      * Create a new event instance.
      *
-     * @param  \As247\WpEloquent\Database\Migrations\Migration  $migration
+     * @param  \Prappo\WpEloquent\Database\Migrations\Migration  $migration
      * @param  string  $method
      * @return void
      */

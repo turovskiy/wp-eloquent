@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Database\Connectors;
+namespace Prappo\WpEloquent\Database\Connectors;
 
 use PDO;
 

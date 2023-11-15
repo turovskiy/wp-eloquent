@@ -1,18 +1,18 @@
 <?php
 
-namespace As247\WpEloquent\Database\Eloquent\Factories;
+namespace Prappo\WpEloquent\Database\Eloquent\Factories;
 
-use As247\WpEloquent\Database\Eloquent\Model;
-use As247\WpEloquent\Database\Eloquent\Relations\BelongsToMany;
-use As247\WpEloquent\Database\Eloquent\Relations\HasOneOrMany;
-use As247\WpEloquent\Database\Eloquent\Relations\MorphOneOrMany;
+use Prappo\WpEloquent\Database\Eloquent\Model;
+use Prappo\WpEloquent\Database\Eloquent\Relations\BelongsToMany;
+use Prappo\WpEloquent\Database\Eloquent\Relations\HasOneOrMany;
+use Prappo\WpEloquent\Database\Eloquent\Relations\MorphOneOrMany;
 
 class Relationship
 {
     /**
      * The related factory instance.
      *
-     * @var \As247\WpEloquent\Database\Eloquent\Factories\Factory
+     * @var \Prappo\WpEloquent\Database\Eloquent\Factories\Factory
      */
     protected $factory;
 
@@ -26,7 +26,7 @@ class Relationship
     /**
      * Create a new child relationship instance.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Factories\Factory  $factory
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Factories\Factory  $factory
      * @param  string  $relationship
      * @return void
      */
@@ -39,7 +39,7 @@ class Relationship
     /**
      * Create the child relationship for the given parent model.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Model  $parent
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
      * @return void
      */
     public function createFor(Model $parent)

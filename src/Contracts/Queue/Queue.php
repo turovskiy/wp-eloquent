@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Contracts\Queue;
+namespace Prappo\WpEloquent\Contracts\Queue;
 
 interface Queue
 {
@@ -78,7 +78,7 @@ interface Queue
      * Pop the next job off of the queue.
      *
      * @param  string|null  $queue
-     * @return \As247\WpEloquent\Contracts\Queue\Job|null
+     * @return \Prappo\WpEloquent\Contracts\Queue\Job|null
      */
     public function pop($queue = null);
 

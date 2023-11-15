@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Database\Concerns;
+namespace Prappo\WpEloquent\Database\Concerns;
 
 use Closure;
 use Throwable;

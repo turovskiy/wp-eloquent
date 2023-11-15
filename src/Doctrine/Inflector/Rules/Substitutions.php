@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace As247\WpEloquent\Doctrine\Inflector\Rules;
+namespace Prappo\WpEloquent\Doctrine\Inflector\Rules;
 
-use As247\WpEloquent\Doctrine\Inflector\WordInflector;
+use Prappo\WpEloquent\Doctrine\Inflector\WordInflector;
 use function strtolower;
 use function strtoupper;
 use function substr;

@@ -1,9 +1,9 @@
 <?php
 
-namespace As247\WpEloquent\Support;
+namespace Prappo\WpEloquent\Support;
 
 use Closure;
-use As247\WpEloquent\Support\Traits\Macroable;
+use Prappo\WpEloquent\Support\Traits\Macroable;
 use Symfony\Component\VarDumper\VarDumper;
 
 class Stringable
@@ -187,7 +187,7 @@ class Stringable
      *
      * @param  string  $delimiter
      * @param  int  $limit
-     * @return \As247\WpEloquent\Support\Collection
+     * @return \Prappo\WpEloquent\Support\Collection
      */
     public function explode($delimiter, $limit = PHP_INT_MAX)
     {
@@ -200,7 +200,7 @@ class Stringable
      * @param  string  $pattern
      * @param  int  $limit
      * @param  int  $flags
-     * @return \As247\WpEloquent\Support\Collection
+     * @return \Prappo\WpEloquent\Support\Collection
      */
     public function split($pattern, $limit = -1, $flags = 0)
     {
@@ -325,7 +325,7 @@ class Stringable
      * Get the string matching the given pattern.
      *
      * @param  string  $pattern
-     * @return \As247\WpEloquent\Support\Collection
+     * @return \Prappo\WpEloquent\Support\Collection
      */
     public function matchAll($pattern)
     {

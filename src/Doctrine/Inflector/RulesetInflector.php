@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace As247\WpEloquent\Doctrine\Inflector;
+namespace Prappo\WpEloquent\Doctrine\Inflector;
 
-use As247\WpEloquent\Doctrine\Inflector\Rules\Ruleset;
+use Prappo\WpEloquent\Doctrine\Inflector\Rules\Ruleset;
 use function array_merge;
 
 /**

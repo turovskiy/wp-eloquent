@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace As247\WpEloquent\Doctrine\Inflector\Rules\English;
+namespace Prappo\WpEloquent\Doctrine\Inflector\Rules\English;
 
-use As247\WpEloquent\Doctrine\Inflector\GenericLanguageInflectorFactory;
-use As247\WpEloquent\Doctrine\Inflector\Rules\Ruleset;
+use Prappo\WpEloquent\Doctrine\Inflector\GenericLanguageInflectorFactory;
+use Prappo\WpEloquent\Doctrine\Inflector\Rules\Ruleset;
 
 final class InflectorFactory extends GenericLanguageInflectorFactory
 {

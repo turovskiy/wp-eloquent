@@ -1,13 +1,13 @@
 <?php
 
-namespace As247\WpEloquent\Contracts\Database\Eloquent;
+namespace Prappo\WpEloquent\Contracts\Database\Eloquent;
 
 interface CastsAttributes
 {
     /**
      * Transform the attribute from the underlying model values.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Model  $model
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $model
      * @param  string  $key
      * @param  mixed  $value
      * @param  array  $attributes
@@ -18,7 +18,7 @@ interface CastsAttributes
     /**
      * Transform the attribute to its underlying model values.
      *
-     * @param  \As247\WpEloquent\Database\Eloquent\Model  $model
+     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $model
      * @param  string  $key
      * @param  mixed  $value
      * @param  array  $attributes

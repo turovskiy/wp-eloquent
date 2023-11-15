@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Container;
+namespace Prappo\WpEloquent\Container;
 
 use Closure;
 use ReflectionNamedType;
@@ -13,7 +13,7 @@ class Util
     /**
      * If the given value is not an array and not null, wrap it in one.
      *
-     * From Arr::wrap() in As247\WpEloquent\Support.
+     * From Arr::wrap() in Prappo\WpEloquent\Support.
      *
      * @param  mixed  $value
      * @return array
@@ -30,7 +30,7 @@ class Util
     /**
      * Return the default value of the given value.
      *
-     * From global value() helper in As247\WpEloquent\Support.
+     * From global value() helper in Prappo\WpEloquent\Support.
      *
      * @param  mixed  $value
      * @return mixed
@@ -43,7 +43,7 @@ class Util
     /**
      * Get the class name of the given parameter's type, if possible.
      *
-     * From Reflector::getParameterClassName() in As247\WpEloquent\Support.
+     * From Reflector::getParameterClassName() in Prappo\WpEloquent\Support.
      *
      * @param  \ReflectionParameter  $parameter
      * @return string|null

@@ -1,15 +1,15 @@
 <?php
 
-namespace As247\WpEloquent\Database\Query\Processors;
+namespace Prappo\WpEloquent\Database\Query\Processors;
 
-use As247\WpEloquent\Database\Query\Builder;
+use Prappo\WpEloquent\Database\Query\Builder;
 
 class Processor
 {
     /**
      * Process the results of a "select" query.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  array  $results
      * @return array
      */
@@ -21,7 +21,7 @@ class Processor
     /**
      * Process an  "insert get ID" query.
      *
-     * @param  \As247\WpEloquent\Database\Query\Builder  $query
+     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
      * @param  string  $sql
      * @param  array  $values
      * @param  string|null  $sequence

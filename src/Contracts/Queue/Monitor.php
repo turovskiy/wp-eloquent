@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Contracts\Queue;
+namespace Prappo\WpEloquent\Contracts\Queue;
 
 interface Monitor
 {

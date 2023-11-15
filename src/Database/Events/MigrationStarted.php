@@ -1,6 +1,6 @@
 <?php
 
-namespace As247\WpEloquent\Database\Events;
+namespace Prappo\WpEloquent\Database\Events;
 
 class MigrationStarted extends MigrationEvent
 {
