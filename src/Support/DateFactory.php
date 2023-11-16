@@ -197,6 +197,7 @@ class DateFactory
      */
     public function __call($method, $parameters)
     {
+        return date("Y-m-d H:i:s");
         $defaultClassName = static::DEFAULT_CLASS_NAME;
 
         // Using callable to generate dates...
@@ -212,8 +213,10 @@ class DateFactory
         $dateClass = static::$dateClass ?: $defaultClassName;
 
         // Check if date can be created using public class method...
-        if (method_exists($dateClass, $method) ||
-            method_exists($dateClass, 'hasMacro') && $dateClass::hasMacro($method)) {
+        if (
+            method_exists($dateClass, $method) ||
+            method_exists($dateClass, 'hasMacro') && $dateClass::hasMacro($method)
+        ) {
             return $dateClass::$method(...$parameters);
         }
 
