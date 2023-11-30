@@ -1023,9 +1023,9 @@ trait HasAttributes
      * @param  \DateTimeInterface  $date
      * @return string
      */
-    protected function serializeDate(DateTimeInterface $date)
+    protected function serializeDate($date)
     {
-        return Carbon::instance($date)->toJSON();
+        return $date;
     }
 
     /**
