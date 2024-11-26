@@ -1,10 +1,10 @@
 <?php
 
-namespace Prappo\WpEloquent\Support;
+namespace Turovskiy\WpEloquent\Support;
 
 use Countable;
-use Prappo\WpEloquent\Contracts\Support\Arrayable;
-use Prappo\WpEloquent\Contracts\Support\Jsonable;
+use Turovskiy\WpEloquent\Contracts\Support\Arrayable;
+use Turovskiy\WpEloquent\Contracts\Support\Jsonable;
 use IteratorAggregate;
 use JsonSerializable;
 
@@ -996,7 +996,7 @@ interface Enumerable extends Arrayable, Countable, IteratorAggregate, Jsonable, 
     /**
      * Collect the values into a collection.
      *
-     * @return \Prappo\WpEloquent\Support\Collection
+     * @return \Turovskiy\WpEloquent\Support\Collection
      */
     public function collect();
 

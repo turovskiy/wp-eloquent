@@ -1,10 +1,10 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent\Relations;
+namespace Turovskiy\WpEloquent\Database\Eloquent\Relations;
 
-use Prappo\WpEloquent\Database\Eloquent\Builder;
-use Prappo\WpEloquent\Database\Eloquent\Model;
-use Prappo\WpEloquent\Support\Arr;
+use Turovskiy\WpEloquent\Database\Eloquent\Builder;
+use Turovskiy\WpEloquent\Database\Eloquent\Model;
+use Turovskiy\WpEloquent\Support\Arr;
 
 class MorphToMany extends BelongsToMany
 {
@@ -34,8 +34,8 @@ class MorphToMany extends BelongsToMany
     /**
      * Create a new morph to many relationship instance.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $parent
      * @param  string  $name
      * @param  string  $table
      * @param  string  $foreignPivotKey
@@ -103,10 +103,10 @@ class MorphToMany extends BelongsToMany
     /**
      * Add the constraints for a relationship count query.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $parentQuery
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Builder
      */
     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])
     {
@@ -118,7 +118,7 @@ class MorphToMany extends BelongsToMany
     /**
      * Get the pivot models that are currently attached.
      *
-     * @return \Prappo\WpEloquent\Support\Collection
+     * @return \Turovskiy\WpEloquent\Support\Collection
      */
     protected function getCurrentlyAttachedPivots()
     {
@@ -133,7 +133,7 @@ class MorphToMany extends BelongsToMany
     /**
      * Create a new query builder for the pivot table.
      *
-     * @return \Prappo\WpEloquent\Database\Query\Builder
+     * @return \Turovskiy\WpEloquent\Database\Query\Builder
      */
     public function newPivotQuery()
     {
@@ -145,7 +145,7 @@ class MorphToMany extends BelongsToMany
      *
      * @param  array  $attributes
      * @param  bool  $exists
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\Pivot
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\Pivot
      */
     public function newPivot(array $attributes = [], $exists = false)
     {

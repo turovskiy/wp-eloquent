@@ -1,11 +1,11 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent\Relations;
+namespace Turovskiy\WpEloquent\Database\Eloquent\Relations;
 
 use BadMethodCallException;
-use Prappo\WpEloquent\Database\Eloquent\Builder;
-use Prappo\WpEloquent\Database\Eloquent\Collection;
-use Prappo\WpEloquent\Database\Eloquent\Model;
+use Turovskiy\WpEloquent\Database\Eloquent\Builder;
+use Turovskiy\WpEloquent\Database\Eloquent\Collection;
+use Turovskiy\WpEloquent\Database\Eloquent\Model;
 
 class MorphTo extends BelongsTo
 {
@@ -19,7 +19,7 @@ class MorphTo extends BelongsTo
     /**
      * The models whose relations are being eager loaded.
      *
-     * @var \Prappo\WpEloquent\Database\Eloquent\Collection
+     * @var \Turovskiy\WpEloquent\Database\Eloquent\Collection
      */
     protected $models;
 
@@ -54,8 +54,8 @@ class MorphTo extends BelongsTo
     /**
      * Create a new morph to relationship instance.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $parent
      * @param  string  $foreignKey
      * @param  string  $ownerKey
      * @param  string  $type
@@ -83,7 +83,7 @@ class MorphTo extends BelongsTo
     /**
      * Build a dictionary with the models.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Collection  $models
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Collection  $models
      * @return void
      */
     protected function buildDictionary(Collection $models)
@@ -115,7 +115,7 @@ class MorphTo extends BelongsTo
      * Get all of the relation results for a type.
      *
      * @param  string  $type
-     * @return \Prappo\WpEloquent\Database\Eloquent\Collection
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Collection
      */
     protected function getResultsByType($type)
     {
@@ -160,7 +160,7 @@ class MorphTo extends BelongsTo
      * Create a new model instance by type.
      *
      * @param  string  $type
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     public function createModelByType($type)
     {
@@ -177,7 +177,7 @@ class MorphTo extends BelongsTo
      * Match the eagerly loaded results to their parents.
      *
      * @param  array  $models
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Collection  $results
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Collection  $results
      * @param  string  $relation
      * @return array
      */
@@ -190,7 +190,7 @@ class MorphTo extends BelongsTo
      * Match the results for a given type to their parents.
      *
      * @param  string  $type
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Collection  $results
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Collection  $results
      * @return void
      */
     protected function matchToMorphParents($type, Collection $results)
@@ -209,8 +209,8 @@ class MorphTo extends BelongsTo
     /**
      * Associate the model instance to the given parent.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $model
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $model
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     public function associate($model)
     {
@@ -228,7 +228,7 @@ class MorphTo extends BelongsTo
     /**
      * Dissociate previously associated model from the given parent.
      *
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     public function dissociate()
     {
@@ -242,7 +242,7 @@ class MorphTo extends BelongsTo
     /**
      * Alias for the "dissociate" method.
      *
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     public function disassociate()
     {
@@ -264,8 +264,8 @@ class MorphTo extends BelongsTo
     /**
      * Make a new related instance for the given model.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $parent
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     protected function newRelatedInstanceFor(Model $parent)
     {
@@ -296,7 +296,7 @@ class MorphTo extends BelongsTo
      * Specify which relations to load for a given morph type.
      *
      * @param  array  $with
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\MorphTo
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphTo
      */
     public function morphWith(array $with)
     {
@@ -311,7 +311,7 @@ class MorphTo extends BelongsTo
      * Specify which relationship counts to load for a given morph type.
      *
      * @param  array  $withCount
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\MorphTo
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphTo
      */
     public function morphWithCount(array $withCount)
     {
@@ -325,8 +325,8 @@ class MorphTo extends BelongsTo
     /**
      * Replay stored macro calls on the actual related instance.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Builder
      */
     protected function replayMacros(Builder $query)
     {

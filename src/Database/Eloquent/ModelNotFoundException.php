@@ -1,8 +1,8 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent;
+namespace Turovskiy\WpEloquent\Database\Eloquent;
 
-use Prappo\WpEloquent\Support\Arr;
+use Turovskiy\WpEloquent\Support\Arr;
 use RuntimeException;
 
 class ModelNotFoundException extends RuntimeException

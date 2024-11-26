@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Prappo\WpEloquent\Doctrine\Inflector\Rules;
+namespace Turovskiy\WpEloquent\Doctrine\Inflector\Rules;
 
 use function array_map;
 use function implode;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Prappo\WpEloquent\Support\Traits;
+namespace Turovskiy\WpEloquent\Support\Traits;
 
-use Prappo\WpEloquent\Container\Container;
+use Turovskiy\WpEloquent\Container\Container;
 
 trait Localizable
 {

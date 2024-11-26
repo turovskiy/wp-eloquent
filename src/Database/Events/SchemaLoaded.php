@@ -1,13 +1,13 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Events;
+namespace Turovskiy\WpEloquent\Database\Events;
 
 class SchemaLoaded
 {
     /**
      * The database connection instance.
      *
-     * @var \Prappo\WpEloquent\Database\Connection
+     * @var \Turovskiy\WpEloquent\Database\Connection
      */
     public $connection;
 
@@ -28,7 +28,7 @@ class SchemaLoaded
     /**
      * Create a new event instance.
      *
-     * @param  \Prappo\WpEloquent\Database\Connection  $connection
+     * @param  \Turovskiy\WpEloquent\Database\Connection  $connection
      * @param  string  $path
      * @return void
      */

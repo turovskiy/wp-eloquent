@@ -1,11 +1,11 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent\Relations;
+namespace Turovskiy\WpEloquent\Database\Eloquent\Relations;
 
-use Prappo\WpEloquent\Database\Eloquent\Builder;
-use Prappo\WpEloquent\Database\Eloquent\Collection;
-use Prappo\WpEloquent\Database\Eloquent\Model;
-use Prappo\WpEloquent\Database\Eloquent\Relations\Concerns\SupportsDefaultModels;
+use Turovskiy\WpEloquent\Database\Eloquent\Builder;
+use Turovskiy\WpEloquent\Database\Eloquent\Collection;
+use Turovskiy\WpEloquent\Database\Eloquent\Model;
+use Turovskiy\WpEloquent\Database\Eloquent\Relations\Concerns\SupportsDefaultModels;
 
 class BelongsTo extends Relation
 {
@@ -14,7 +14,7 @@ class BelongsTo extends Relation
     /**
      * The child model instance of the relation.
      *
-     * @var \Prappo\WpEloquent\Database\Eloquent\Model
+     * @var \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     protected $child;
 
@@ -49,8 +49,8 @@ class BelongsTo extends Relation
     /**
      * Create a new belongs to relationship instance.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $child
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $child
      * @param  string  $foreignKey
      * @param  string  $ownerKey
      * @param  string  $relationName
@@ -164,7 +164,7 @@ class BelongsTo extends Relation
      * Match the eagerly loaded results to their parents.
      *
      * @param  array  $models
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Collection  $results
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Collection  $results
      * @param  string  $relation
      * @return array
      */
@@ -198,8 +198,8 @@ class BelongsTo extends Relation
     /**
      * Associate the model instance to the given parent.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model|int|string  $model
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model|int|string  $model
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     public function associate($model)
     {
@@ -219,7 +219,7 @@ class BelongsTo extends Relation
     /**
      * Dissociate previously associated model from the given parent.
      *
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     public function dissociate()
     {
@@ -231,7 +231,7 @@ class BelongsTo extends Relation
     /**
      * Alias of "dissociate" method.
      *
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     public function disassociate()
     {
@@ -241,10 +241,10 @@ class BelongsTo extends Relation
     /**
      * Add the constraints for a relationship query.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $parentQuery
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Builder
      */
     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])
     {
@@ -260,10 +260,10 @@ class BelongsTo extends Relation
     /**
      * Add the constraints for a relationship query on the same table.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $parentQuery
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Builder
      */
     public function getRelationExistenceQueryForSelfRelation(Builder $query, Builder $parentQuery, $columns = ['*'])
     {
@@ -302,8 +302,8 @@ class BelongsTo extends Relation
     /**
      * Make a new related instance for the given model.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $parent
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     protected function newRelatedInstanceFor(Model $parent)
     {
@@ -313,7 +313,7 @@ class BelongsTo extends Relation
     /**
      * Get the child of the relationship.
      *
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     public function getChild()
     {

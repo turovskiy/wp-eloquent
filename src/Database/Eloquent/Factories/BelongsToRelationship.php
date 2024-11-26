@@ -1,16 +1,16 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent\Factories;
+namespace Turovskiy\WpEloquent\Database\Eloquent\Factories;
 
-use Prappo\WpEloquent\Database\Eloquent\Model;
-use Prappo\WpEloquent\Database\Eloquent\Relations\MorphTo;
+use Turovskiy\WpEloquent\Database\Eloquent\Model;
+use Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphTo;
 
 class BelongsToRelationship
 {
     /**
      * The related factory instance.
      *
-     * @var \Prappo\WpEloquent\Database\Eloquent\Factories\Factory
+     * @var \Turovskiy\WpEloquent\Database\Eloquent\Factories\Factory
      */
     protected $factory;
 
@@ -31,7 +31,7 @@ class BelongsToRelationship
     /**
      * Create a new "belongs to" relationship definition.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Factories\Factory  $factory
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Factories\Factory  $factory
      * @param  string  $relationship
      * @return void
      */
@@ -44,7 +44,7 @@ class BelongsToRelationship
     /**
      * Get the parent model attributes and resolvers for the given child model.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $model
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $model
      * @return array
      */
     public function attributesFor(Model $model)

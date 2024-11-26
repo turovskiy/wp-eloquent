@@ -1,10 +1,10 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent\Relations;
+namespace Turovskiy\WpEloquent\Database\Eloquent\Relations;
 
-use Prappo\WpEloquent\Database\Eloquent\Collection;
-use Prappo\WpEloquent\Database\Eloquent\Model;
-use Prappo\WpEloquent\Database\Eloquent\Relations\Concerns\SupportsDefaultModels;
+use Turovskiy\WpEloquent\Database\Eloquent\Collection;
+use Turovskiy\WpEloquent\Database\Eloquent\Model;
+use Turovskiy\WpEloquent\Database\Eloquent\Relations\Concerns\SupportsDefaultModels;
 
 class HasOneThrough extends HasManyThrough
 {
@@ -40,7 +40,7 @@ class HasOneThrough extends HasManyThrough
      * Match the eagerly loaded results to their parents.
      *
      * @param  array  $models
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Collection  $results
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Collection  $results
      * @param  string  $relation
      * @return array
      */
@@ -66,8 +66,8 @@ class HasOneThrough extends HasManyThrough
     /**
      * Make a new related instance for the given model.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $parent
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     public function newRelatedInstanceFor(Model $parent)
     {

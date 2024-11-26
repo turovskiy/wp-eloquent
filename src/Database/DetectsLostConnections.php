@@ -1,8 +1,8 @@
 <?php
 
-namespace Prappo\WpEloquent\Database;
+namespace Turovskiy\WpEloquent\Database;
 
-use Prappo\WpEloquent\Support\Str;
+use Turovskiy\WpEloquent\Support\Str;
 use Throwable;
 
 trait DetectsLostConnections

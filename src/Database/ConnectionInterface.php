@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Database;
+namespace Turovskiy\WpEloquent\Database;
 
 use Closure;
 
@@ -9,9 +9,9 @@ interface ConnectionInterface
     /**
      * Begin a fluent query against a database table.
      *
-     * @param  \Closure|\Prappo\WpEloquent\Database\Query\Builder|string  $table
+     * @param  \Closure|\Turovskiy\WpEloquent\Database\Query\Builder|string  $table
      * @param  string|null  $as
-     * @return \Prappo\WpEloquent\Database\Query\Builder
+     * @return \Turovskiy\WpEloquent\Database\Query\Builder
      */
     public function table($table, $as = null);
 
@@ -19,7 +19,7 @@ interface ConnectionInterface
      * Get a new raw query expression.
      *
      * @param  mixed  $value
-     * @return \Prappo\WpEloquent\Database\Query\Expression
+     * @return \Turovskiy\WpEloquent\Database\Query\Expression
      */
     public function raw($value);
 

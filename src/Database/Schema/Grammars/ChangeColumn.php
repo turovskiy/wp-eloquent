@@ -1,14 +1,14 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Schema\Grammars;
+namespace Turovskiy\WpEloquent\Database\Schema\Grammars;
 
 use Doctrine\DBAL\Schema\AbstractSchemaManager as SchemaManager;
 use Doctrine\DBAL\Schema\Comparator;
 use Doctrine\DBAL\Schema\Table;
 use Doctrine\DBAL\Types\Type;
-use Prappo\WpEloquent\Database\Connection;
-use Prappo\WpEloquent\Database\Schema\Blueprint;
-use Prappo\WpEloquent\Support\Fluent;
+use Turovskiy\WpEloquent\Database\Connection;
+use Turovskiy\WpEloquent\Database\Schema\Blueprint;
+use Turovskiy\WpEloquent\Support\Fluent;
 use RuntimeException;
 
 class ChangeColumn
@@ -16,10 +16,10 @@ class ChangeColumn
     /**
      * Compile a change column command into a series of SQL statements.
      *
-     * @param  \Prappo\WpEloquent\Database\Schema\Grammars\Grammar  $grammar
-     * @param  \Prappo\WpEloquent\Database\Schema\Blueprint  $blueprint
-     * @param  \Prappo\WpEloquent\Support\Fluent  $command
-     * @param  \Prappo\WpEloquent\Database\Connection  $connection
+     * @param  \Turovskiy\WpEloquent\Database\Schema\Grammars\Grammar  $grammar
+     * @param  \Turovskiy\WpEloquent\Database\Schema\Blueprint  $blueprint
+     * @param  \Turovskiy\WpEloquent\Support\Fluent  $command
+     * @param  \Turovskiy\WpEloquent\Database\Connection  $connection
      * @return array
      *
      * @throws \RuntimeException
@@ -51,8 +51,8 @@ class ChangeColumn
     /**
      * Get the Doctrine table difference for the given changes.
      *
-     * @param  \Prappo\WpEloquent\Database\Schema\Grammars\Grammar  $grammar
-     * @param  \Prappo\WpEloquent\Database\Schema\Blueprint  $blueprint
+     * @param  \Turovskiy\WpEloquent\Database\Schema\Grammars\Grammar  $grammar
+     * @param  \Turovskiy\WpEloquent\Database\Schema\Blueprint  $blueprint
      * @param  \Doctrine\DBAL\Schema\AbstractSchemaManager  $schema
      * @return \Doctrine\DBAL\Schema\TableDiff|bool
      */
@@ -68,7 +68,7 @@ class ChangeColumn
     /**
      * Get a copy of the given Doctrine table after making the column changes.
      *
-     * @param  \Prappo\WpEloquent\Database\Schema\Blueprint  $blueprint
+     * @param  \Turovskiy\WpEloquent\Database\Schema\Blueprint  $blueprint
      * @param  \Doctrine\DBAL\Schema\Table  $table
      * @return \Doctrine\DBAL\Schema\Table
      */
@@ -101,7 +101,7 @@ class ChangeColumn
      * Get the Doctrine column instance for a column change.
      *
      * @param  \Doctrine\DBAL\Schema\Table  $table
-     * @param  \Prappo\WpEloquent\Support\Fluent  $fluent
+     * @param  \Turovskiy\WpEloquent\Support\Fluent  $fluent
      * @return \Doctrine\DBAL\Schema\Column
      */
     protected static function getDoctrineColumn(Table $table, Fluent $fluent)
@@ -114,7 +114,7 @@ class ChangeColumn
     /**
      * Get the Doctrine column change options.
      *
-     * @param  \Prappo\WpEloquent\Support\Fluent  $fluent
+     * @param  \Turovskiy\WpEloquent\Support\Fluent  $fluent
      * @return array
      */
     protected static function getDoctrineColumnChangeOptions(Fluent $fluent)

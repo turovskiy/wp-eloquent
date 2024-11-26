@@ -1,8 +1,8 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent\Relations;
+namespace Turovskiy\WpEloquent\Database\Eloquent\Relations;
 
-use Prappo\WpEloquent\Support\Str;
+use Turovskiy\WpEloquent\Support\Str;
 
 class MorphPivot extends Pivot
 {
@@ -27,8 +27,8 @@ class MorphPivot extends Pivot
     /**
      * Set the keys for a save update query.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Builder
      */
     protected function setKeysForSaveQuery($query)
     {
@@ -78,7 +78,7 @@ class MorphPivot extends Pivot
      * Set the morph class for the pivot.
      *
      * @param  string  $morphClass
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\MorphPivot
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphPivot
      */
     public function setMorphClass($morphClass)
     {
@@ -110,7 +110,7 @@ class MorphPivot extends Pivot
      * Get a new query to restore one or more models by their queueable IDs.
      *
      * @param  array|int  $ids
-     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Builder
      */
     public function newQueryForRestoration($ids)
     {
@@ -134,7 +134,7 @@ class MorphPivot extends Pivot
      * Get a new query to restore multiple models by their queueable IDs.
      *
      * @param  array  $ids
-     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Builder
      */
     protected function newQueryForCollectionRestoration(array $ids)
     {

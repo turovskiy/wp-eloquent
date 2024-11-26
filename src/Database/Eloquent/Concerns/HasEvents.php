@@ -1,10 +1,10 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent\Concerns;
+namespace Turovskiy\WpEloquent\Database\Eloquent\Concerns;
 
-use Prappo\WpEloquent\Contracts\Events\Dispatcher;
-use Prappo\WpEloquent\Events\NullDispatcher;
-use Prappo\WpEloquent\Support\Arr;
+use Turovskiy\WpEloquent\Contracts\Events\Dispatcher;
+use Turovskiy\WpEloquent\Events\NullDispatcher;
+use Turovskiy\WpEloquent\Support\Arr;
 use InvalidArgumentException;
 
 trait HasEvents
@@ -362,7 +362,7 @@ trait HasEvents
     /**
      * Get the event dispatcher instance.
      *
-     * @return \Prappo\WpEloquent\Contracts\Events\Dispatcher
+     * @return \Turovskiy\WpEloquent\Contracts\Events\Dispatcher
      */
     public static function getEventDispatcher()
     {
@@ -372,7 +372,7 @@ trait HasEvents
     /**
      * Set the event dispatcher instance.
      *
-     * @param  \Prappo\WpEloquent\Contracts\Events\Dispatcher  $dispatcher
+     * @param  \Turovskiy\WpEloquent\Contracts\Events\Dispatcher  $dispatcher
      * @return void
      */
     public static function setEventDispatcher(Dispatcher $dispatcher)

@@ -1,8 +1,8 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Connectors;
+namespace Turovskiy\WpEloquent\Database\Connectors;
 
-use Prappo\WpEloquent\Database\WpPdo;
+use Turovskiy\WpEloquent\Database\WpPdo;
 
 class WpConnector extends MySqlConnector
 {

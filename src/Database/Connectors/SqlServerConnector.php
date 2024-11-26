@@ -1,8 +1,8 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Connectors;
+namespace Turovskiy\WpEloquent\Database\Connectors;
 
-use Prappo\WpEloquent\Support\Arr;
+use Turovskiy\WpEloquent\Support\Arr;
 use PDO;
 
 class SqlServerConnector extends Connector implements ConnectorInterface

@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Contracts\Database;
+namespace Turovskiy\WpEloquent\Contracts\Database;
 
 class ModelIdentifier
 {

@@ -1,20 +1,20 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent\Concerns;
+namespace Turovskiy\WpEloquent\Database\Eloquent\Concerns;
 
 use Carbon\CarbonInterface;
 use DateTimeInterface;
-use Prappo\WpEloquent\Contracts\Database\Eloquent\Castable;
-use Prappo\WpEloquent\Contracts\Database\Eloquent\CastsInboundAttributes;
-use Prappo\WpEloquent\Contracts\Support\Arrayable;
-use Prappo\WpEloquent\Database\Eloquent\InvalidCastException;
-use Prappo\WpEloquent\Database\Eloquent\JsonEncodingException;
-use Prappo\WpEloquent\Database\Eloquent\Relations\Relation;
-use Prappo\WpEloquent\Support\Arr;
-use Prappo\WpEloquent\Support\Carbon;
-use Prappo\WpEloquent\Support\Collection as BaseCollection;
-use Prappo\WpEloquent\Support\Facades\Date;
-use Prappo\WpEloquent\Support\Str;
+use Turovskiy\WpEloquent\Contracts\Database\Eloquent\Castable;
+use Turovskiy\WpEloquent\Contracts\Database\Eloquent\CastsInboundAttributes;
+use Turovskiy\WpEloquent\Contracts\Support\Arrayable;
+use Turovskiy\WpEloquent\Database\Eloquent\InvalidCastException;
+use Turovskiy\WpEloquent\Database\Eloquent\JsonEncodingException;
+use Turovskiy\WpEloquent\Database\Eloquent\Relations\Relation;
+use Turovskiy\WpEloquent\Support\Arr;
+use Turovskiy\WpEloquent\Support\Carbon;
+use Turovskiy\WpEloquent\Support\Collection as BaseCollection;
+use Turovskiy\WpEloquent\Support\Facades\Date;
+use Turovskiy\WpEloquent\Support\Str;
 use InvalidArgumentException;
 use LogicException;
 
@@ -915,7 +915,7 @@ trait HasAttributes
      * Return a timestamp as DateTime object with time set to 00:00:00.
      *
      * @param  mixed  $value
-     * @return \Prappo\WpEloquent\Support\Carbon
+     * @return \Turovskiy\WpEloquent\Support\Carbon
      */
     protected function asDate($value)
     {
@@ -926,7 +926,7 @@ trait HasAttributes
      * Return a timestamp as DateTime object.
      *
      * @param  mixed  $value
-     * @return \Prappo\WpEloquent\Support\Carbon
+     * @return \Turovskiy\WpEloquent\Support\Carbon
      */
     protected function asDateTime($value)
     {
@@ -1153,7 +1153,7 @@ trait HasAttributes
      * @param  string  $key
      * @return bool
      *
-     * @throws \Prappo\WpEloquent\Database\Eloquent\InvalidCastException
+     * @throws \Turovskiy\WpEloquent\Database\Eloquent\InvalidCastException
      */
     protected function isClassSerializable($key)
     {

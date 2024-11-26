@@ -1,9 +1,9 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent;
+namespace Turovskiy\WpEloquent\Database\Eloquent;
 
-use Prappo\WpEloquent\Contracts\Queue\EntityNotFoundException;
-use Prappo\WpEloquent\Contracts\Queue\EntityResolver as EntityResolverContract;
+use Turovskiy\WpEloquent\Contracts\Queue\EntityNotFoundException;
+use Turovskiy\WpEloquent\Contracts\Queue\EntityResolver as EntityResolverContract;
 
 class QueueEntityResolver implements EntityResolverContract
 {
@@ -14,7 +14,7 @@ class QueueEntityResolver implements EntityResolverContract
      * @param  mixed  $id
      * @return mixed
      *
-     * @throws \Prappo\WpEloquent\Contracts\Queue\EntityNotFoundException
+     * @throws \Turovskiy\WpEloquent\Contracts\Queue\EntityNotFoundException
      */
     public function resolve($type, $id)
     {

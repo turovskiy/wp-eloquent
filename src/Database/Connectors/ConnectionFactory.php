@@ -1,15 +1,15 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Connectors;
+namespace Turovskiy\WpEloquent\Database\Connectors;
 
-use Prappo\WpEloquent\Contracts\Container\Container;
-use Prappo\WpEloquent\Database\Connection;
-use Prappo\WpEloquent\Database\MySqlConnection;
-use Prappo\WpEloquent\Database\PostgresConnection;
-use Prappo\WpEloquent\Database\SQLiteConnection;
-use Prappo\WpEloquent\Database\SqlServerConnection;
-use Prappo\WpEloquent\Database\WpConnection;
-use Prappo\WpEloquent\Support\Arr;
+use Turovskiy\WpEloquent\Contracts\Container\Container;
+use Turovskiy\WpEloquent\Database\Connection;
+use Turovskiy\WpEloquent\Database\MySqlConnection;
+use Turovskiy\WpEloquent\Database\PostgresConnection;
+use Turovskiy\WpEloquent\Database\SQLiteConnection;
+use Turovskiy\WpEloquent\Database\SqlServerConnection;
+use Turovskiy\WpEloquent\Database\WpConnection;
+use Turovskiy\WpEloquent\Support\Arr;
 use InvalidArgumentException;
 use PDOException;
 
@@ -18,14 +18,14 @@ class ConnectionFactory
     /**
      * The IoC container instance.
      *
-     * @var \Prappo\WpEloquent\Contracts\Container\Container
+     * @var \Turovskiy\WpEloquent\Contracts\Container\Container
      */
     protected $container;
 
     /**
      * Create a new connection factory instance.
      *
-     * @param  \Prappo\WpEloquent\Contracts\Container\Container  $container
+     * @param  \Turovskiy\WpEloquent\Contracts\Container\Container  $container
      * @return void
      */
     public function __construct(Container $container)
@@ -38,7 +38,7 @@ class ConnectionFactory
      *
      * @param  array  $config
      * @param  string|null  $name
-     * @return \Prappo\WpEloquent\Database\Connection
+     * @return \Turovskiy\WpEloquent\Database\Connection
      */
     public function make(array $config, $name = null)
     {
@@ -67,7 +67,7 @@ class ConnectionFactory
      * Create a single database connection instance.
      *
      * @param  array  $config
-     * @return \Prappo\WpEloquent\Database\Connection
+     * @return \Turovskiy\WpEloquent\Database\Connection
      */
     protected function createSingleConnection(array $config)
     {
@@ -82,7 +82,7 @@ class ConnectionFactory
      * Create a read / write database connection instance.
      *
      * @param  array  $config
-     * @return \Prappo\WpEloquent\Database\Connection
+     * @return \Turovskiy\WpEloquent\Database\Connection
      */
     protected function createReadWriteConnection(array $config)
     {
@@ -228,7 +228,7 @@ class ConnectionFactory
      * Create a connector instance based on the configuration.
      *
      * @param  array  $config
-     * @return \Prappo\WpEloquent\Database\Connectors\ConnectorInterface
+     * @return \Turovskiy\WpEloquent\Database\Connectors\ConnectorInterface
      *
      * @throws \InvalidArgumentException
      */
@@ -266,7 +266,7 @@ class ConnectionFactory
      * @param  string  $database
      * @param  string  $prefix
      * @param  array  $config
-     * @return \Prappo\WpEloquent\Database\Connection
+     * @return \Turovskiy\WpEloquent\Database\Connection
      *
      * @throws \InvalidArgumentException
      */

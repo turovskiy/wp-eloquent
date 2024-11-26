@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Events;
+namespace Turovskiy\WpEloquent\Database\Events;
 
 class TransactionCommitted extends ConnectionEvent
 {

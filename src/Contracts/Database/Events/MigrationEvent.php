@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Contracts\Database\Events;
+namespace Turovskiy\WpEloquent\Contracts\Database\Events;
 
 interface MigrationEvent
 {

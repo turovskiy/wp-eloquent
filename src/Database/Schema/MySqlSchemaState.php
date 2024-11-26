@@ -1,9 +1,9 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Schema;
+namespace Turovskiy\WpEloquent\Database\Schema;
 
 use Exception;
-use Prappo\WpEloquent\Support\Str;
+use Turovskiy\WpEloquent\Support\Str;
 use Symfony\Component\Process\Process;
 
 class MySqlSchemaState extends SchemaState

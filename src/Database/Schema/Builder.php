@@ -1,10 +1,10 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Schema;
+namespace Turovskiy\WpEloquent\Database\Schema;
 
 use Closure;
 use Doctrine\DBAL\Types\Type;
-use Prappo\WpEloquent\Database\Connection;
+use Turovskiy\WpEloquent\Database\Connection;
 use InvalidArgumentException;
 use LogicException;
 use RuntimeException;
@@ -14,14 +14,14 @@ class Builder
     /**
      * The database connection instance.
      *
-     * @var \Prappo\WpEloquent\Database\Connection
+     * @var \Turovskiy\WpEloquent\Database\Connection
      */
     protected $connection;
 
     /**
      * The schema grammar instance.
      *
-     * @var \Prappo\WpEloquent\Database\Schema\Grammars\Grammar
+     * @var \Turovskiy\WpEloquent\Database\Schema\Grammars\Grammar
      */
     protected $grammar;
 
@@ -49,7 +49,7 @@ class Builder
     /**
      * Create a new database Schema manager.
      *
-     * @param  \Prappo\WpEloquent\Database\Connection  $connection
+     * @param  \Turovskiy\WpEloquent\Database\Connection  $connection
      * @return void
      */
     public function __construct(Connection $connection)
@@ -315,7 +315,7 @@ class Builder
     /**
      * Execute the blueprint to build / modify the table.
      *
-     * @param  \Prappo\WpEloquent\Database\Schema\Blueprint  $blueprint
+     * @param  \Turovskiy\WpEloquent\Database\Schema\Blueprint  $blueprint
      * @return void
      */
     protected function build(Blueprint $blueprint)
@@ -328,7 +328,7 @@ class Builder
      *
      * @param  string  $table
      * @param  \Closure|null  $callback
-     * @return \Prappo\WpEloquent\Database\Schema\Blueprint
+     * @return \Turovskiy\WpEloquent\Database\Schema\Blueprint
      */
     protected function createBlueprint($table, Closure $callback = null)
     {
@@ -375,7 +375,7 @@ class Builder
     /**
      * Get the database connection instance.
      *
-     * @return \Prappo\WpEloquent\Database\Connection
+     * @return \Turovskiy\WpEloquent\Database\Connection
      */
     public function getConnection()
     {
@@ -385,7 +385,7 @@ class Builder
     /**
      * Set the database connection instance.
      *
-     * @param  \Prappo\WpEloquent\Database\Connection  $connection
+     * @param  \Turovskiy\WpEloquent\Database\Connection  $connection
      * @return $this
      */
     public function setConnection(Connection $connection)

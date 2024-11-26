@@ -1,16 +1,16 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent;
+namespace Turovskiy\WpEloquent\Database\Eloquent;
 
 /**
- * @mixin \Prappo\WpEloquent\Database\Eloquent\Builder
+ * @mixin \Turovskiy\WpEloquent\Database\Eloquent\Builder
  */
 class HigherOrderBuilderProxy
 {
     /**
      * The collection being operated on.
      *
-     * @var \Prappo\WpEloquent\Database\Eloquent\Builder
+     * @var \Turovskiy\WpEloquent\Database\Eloquent\Builder
      */
     protected $builder;
 
@@ -24,7 +24,7 @@ class HigherOrderBuilderProxy
     /**
      * Create a new proxy instance.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $builder
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $builder
      * @param  string  $method
      * @return void
      */

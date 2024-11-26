@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Connectors;
+namespace Turovskiy\WpEloquent\Database\Connectors;
 
 interface ConnectorInterface
 {

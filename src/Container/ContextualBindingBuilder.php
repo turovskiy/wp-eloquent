@@ -1,16 +1,16 @@
 <?php
 
-namespace Prappo\WpEloquent\Container;
+namespace Turovskiy\WpEloquent\Container;
 
-use Prappo\WpEloquent\Contracts\Container\Container;
-use Prappo\WpEloquent\Contracts\Container\ContextualBindingBuilder as ContextualBindingBuilderContract;
+use Turovskiy\WpEloquent\Contracts\Container\Container;
+use Turovskiy\WpEloquent\Contracts\Container\ContextualBindingBuilder as ContextualBindingBuilderContract;
 
 class ContextualBindingBuilder implements ContextualBindingBuilderContract
 {
     /**
      * The underlying container instance.
      *
-     * @var \Prappo\WpEloquent\Contracts\Container\Container
+     * @var \Turovskiy\WpEloquent\Contracts\Container\Container
      */
     protected $container;
 
@@ -31,7 +31,7 @@ class ContextualBindingBuilder implements ContextualBindingBuilderContract
     /**
      * Create a new contextual binding builder.
      *
-     * @param  \Prappo\WpEloquent\Contracts\Container\Container  $container
+     * @param  \Turovskiy\WpEloquent\Contracts\Container\Container  $container
      * @param  string|array  $concrete
      * @return void
      */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Support\Traits;
+namespace Turovskiy\WpEloquent\Support\Traits;
 
 trait Tappable
 {

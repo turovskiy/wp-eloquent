@@ -1,9 +1,9 @@
 <?php
 
-namespace Prappo\WpEloquent\Support\Traits;
+namespace Turovskiy\WpEloquent\Support\Traits;
 
 use Closure;
-use Prappo\WpEloquent\Support\Reflector;
+use Turovskiy\WpEloquent\Support\Reflector;
 use ReflectionFunction;
 use RuntimeException;
 

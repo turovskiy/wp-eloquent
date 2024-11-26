@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Prappo\WpEloquent\Doctrine\Inflector;
+namespace Turovskiy\WpEloquent\Doctrine\Inflector;
 
 class NoopWordInflector implements WordInflector
 {

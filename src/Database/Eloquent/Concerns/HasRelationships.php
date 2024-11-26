@@ -1,24 +1,24 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent\Concerns;
+namespace Turovskiy\WpEloquent\Database\Eloquent\Concerns;
 
 use Closure;
-use Prappo\WpEloquent\Database\Eloquent\Builder;
-use Prappo\WpEloquent\Database\Eloquent\Collection;
-use Prappo\WpEloquent\Database\Eloquent\Model;
-use Prappo\WpEloquent\Database\Eloquent\Relations\BelongsTo;
-use Prappo\WpEloquent\Database\Eloquent\Relations\BelongsToMany;
-use Prappo\WpEloquent\Database\Eloquent\Relations\HasMany;
-use Prappo\WpEloquent\Database\Eloquent\Relations\HasManyThrough;
-use Prappo\WpEloquent\Database\Eloquent\Relations\HasOne;
-use Prappo\WpEloquent\Database\Eloquent\Relations\HasOneThrough;
-use Prappo\WpEloquent\Database\Eloquent\Relations\MorphMany;
-use Prappo\WpEloquent\Database\Eloquent\Relations\MorphOne;
-use Prappo\WpEloquent\Database\Eloquent\Relations\MorphTo;
-use Prappo\WpEloquent\Database\Eloquent\Relations\MorphToMany;
-use Prappo\WpEloquent\Database\Eloquent\Relations\Relation;
-use Prappo\WpEloquent\Support\Arr;
-use Prappo\WpEloquent\Support\Str;
+use Turovskiy\WpEloquent\Database\Eloquent\Builder;
+use Turovskiy\WpEloquent\Database\Eloquent\Collection;
+use Turovskiy\WpEloquent\Database\Eloquent\Model;
+use Turovskiy\WpEloquent\Database\Eloquent\Relations\BelongsTo;
+use Turovskiy\WpEloquent\Database\Eloquent\Relations\BelongsToMany;
+use Turovskiy\WpEloquent\Database\Eloquent\Relations\HasMany;
+use Turovskiy\WpEloquent\Database\Eloquent\Relations\HasManyThrough;
+use Turovskiy\WpEloquent\Database\Eloquent\Relations\HasOne;
+use Turovskiy\WpEloquent\Database\Eloquent\Relations\HasOneThrough;
+use Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphMany;
+use Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphOne;
+use Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphTo;
+use Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphToMany;
+use Turovskiy\WpEloquent\Database\Eloquent\Relations\Relation;
+use Turovskiy\WpEloquent\Support\Arr;
+use Turovskiy\WpEloquent\Support\Str;
 
 trait HasRelationships
 {
@@ -73,7 +73,7 @@ trait HasRelationships
      * @param  string  $related
      * @param  string|null  $foreignKey
      * @param  string|null  $localKey
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\HasOne
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\HasOne
      */
     public function hasOne($related, $foreignKey = null, $localKey = null)
     {
@@ -89,11 +89,11 @@ trait HasRelationships
     /**
      * Instantiate a new HasOne relationship.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $parent
      * @param  string  $foreignKey
      * @param  string  $localKey
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\HasOne
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\HasOne
      */
     protected function newHasOne(Builder $query, Model $parent, $foreignKey, $localKey)
     {
@@ -109,7 +109,7 @@ trait HasRelationships
      * @param  string|null  $secondKey
      * @param  string|null  $localKey
      * @param  string|null  $secondLocalKey
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\HasOneThrough
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\HasOneThrough
      */
     public function hasOneThrough($related, $through, $firstKey = null, $secondKey = null, $localKey = null, $secondLocalKey = null)
     {
@@ -129,14 +129,14 @@ trait HasRelationships
     /**
      * Instantiate a new HasOneThrough relationship.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $farParent
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $throughParent
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $farParent
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $throughParent
      * @param  string  $firstKey
      * @param  string  $secondKey
      * @param  string  $localKey
      * @param  string  $secondLocalKey
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\HasOneThrough
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\HasOneThrough
      */
     protected function newHasOneThrough(Builder $query, Model $farParent, Model $throughParent, $firstKey, $secondKey, $localKey, $secondLocalKey)
     {
@@ -151,7 +151,7 @@ trait HasRelationships
      * @param  string|null  $type
      * @param  string|null  $id
      * @param  string|null  $localKey
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\MorphOne
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphOne
      */
     public function morphOne($related, $name, $type = null, $id = null, $localKey = null)
     {
@@ -169,12 +169,12 @@ trait HasRelationships
     /**
      * Instantiate a new MorphOne relationship.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $parent
      * @param  string  $type
      * @param  string  $id
      * @param  string  $localKey
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\MorphOne
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphOne
      */
     protected function newMorphOne(Builder $query, Model $parent, $type, $id, $localKey)
     {
@@ -188,7 +188,7 @@ trait HasRelationships
      * @param  string|null  $foreignKey
      * @param  string|null  $ownerKey
      * @param  string|null  $relation
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\BelongsTo
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\BelongsTo
      */
     public function belongsTo($related, $foreignKey = null, $ownerKey = null, $relation = null)
     {
@@ -221,12 +221,12 @@ trait HasRelationships
     /**
      * Instantiate a new BelongsTo relationship.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $child
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $child
      * @param  string  $foreignKey
      * @param  string  $ownerKey
      * @param  string  $relation
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\BelongsTo
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\BelongsTo
      */
     protected function newBelongsTo(Builder $query, Model $child, $foreignKey, $ownerKey, $relation)
     {
@@ -240,7 +240,7 @@ trait HasRelationships
      * @param  string|null  $type
      * @param  string|null  $id
      * @param  string|null  $ownerKey
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\MorphTo
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphTo
      */
     public function morphTo($name = null, $type = null, $id = null, $ownerKey = null)
     {
@@ -268,7 +268,7 @@ trait HasRelationships
      * @param  string  $type
      * @param  string  $id
      * @param  string  $ownerKey
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\MorphTo
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphTo
      */
     protected function morphEagerTo($name, $type, $id, $ownerKey)
     {
@@ -285,7 +285,7 @@ trait HasRelationships
      * @param  string  $type
      * @param  string  $id
      * @param  string  $ownerKey
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\MorphTo
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphTo
      */
     protected function morphInstanceTo($target, $name, $type, $id, $ownerKey)
     {
@@ -301,13 +301,13 @@ trait HasRelationships
     /**
      * Instantiate a new MorphTo relationship.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $parent
      * @param  string  $foreignKey
      * @param  string  $ownerKey
      * @param  string  $type
      * @param  string  $relation
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\MorphTo
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphTo
      */
     protected function newMorphTo(Builder $query, Model $parent, $foreignKey, $ownerKey, $type, $relation)
     {
@@ -343,7 +343,7 @@ trait HasRelationships
      * @param  string  $related
      * @param  string|null  $foreignKey
      * @param  string|null  $localKey
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\HasMany
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\HasMany
      */
     public function hasMany($related, $foreignKey = null, $localKey = null)
     {
@@ -361,11 +361,11 @@ trait HasRelationships
     /**
      * Instantiate a new HasMany relationship.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $parent
      * @param  string  $foreignKey
      * @param  string  $localKey
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\HasMany
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\HasMany
      */
     protected function newHasMany(Builder $query, Model $parent, $foreignKey, $localKey)
     {
@@ -381,7 +381,7 @@ trait HasRelationships
      * @param  string|null  $secondKey
      * @param  string|null  $localKey
      * @param  string|null  $secondLocalKey
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\HasManyThrough
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\HasManyThrough
      */
     public function hasManyThrough($related, $through, $firstKey = null, $secondKey = null, $localKey = null, $secondLocalKey = null)
     {
@@ -405,14 +405,14 @@ trait HasRelationships
     /**
      * Instantiate a new HasManyThrough relationship.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $farParent
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $throughParent
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $farParent
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $throughParent
      * @param  string  $firstKey
      * @param  string  $secondKey
      * @param  string  $localKey
      * @param  string  $secondLocalKey
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\HasManyThrough
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\HasManyThrough
      */
     protected function newHasManyThrough(Builder $query, Model $farParent, Model $throughParent, $firstKey, $secondKey, $localKey, $secondLocalKey)
     {
@@ -427,7 +427,7 @@ trait HasRelationships
      * @param  string|null  $type
      * @param  string|null  $id
      * @param  string|null  $localKey
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\MorphMany
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphMany
      */
     public function morphMany($related, $name, $type = null, $id = null, $localKey = null)
     {
@@ -448,12 +448,12 @@ trait HasRelationships
     /**
      * Instantiate a new MorphMany relationship.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $parent
      * @param  string  $type
      * @param  string  $id
      * @param  string  $localKey
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\MorphMany
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphMany
      */
     protected function newMorphMany(Builder $query, Model $parent, $type, $id, $localKey)
     {
@@ -470,7 +470,7 @@ trait HasRelationships
      * @param  string|null  $parentKey
      * @param  string|null  $relatedKey
      * @param  string|null  $relation
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\BelongsToMany
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\BelongsToMany
      */
     public function belongsToMany($related, $table = null, $foreignPivotKey = null, $relatedPivotKey = null,
                                   $parentKey = null, $relatedKey = null, $relation = null)
@@ -508,15 +508,15 @@ trait HasRelationships
     /**
      * Instantiate a new BelongsToMany relationship.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $parent
      * @param  string  $table
      * @param  string  $foreignPivotKey
      * @param  string  $relatedPivotKey
      * @param  string  $parentKey
      * @param  string  $relatedKey
      * @param  string|null  $relationName
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\BelongsToMany
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\BelongsToMany
      */
     protected function newBelongsToMany(Builder $query, Model $parent, $table, $foreignPivotKey, $relatedPivotKey,
                                         $parentKey, $relatedKey, $relationName = null)
@@ -535,7 +535,7 @@ trait HasRelationships
      * @param  string|null  $parentKey
      * @param  string|null  $relatedKey
      * @param  bool  $inverse
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\MorphToMany
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphToMany
      */
     public function morphToMany($related, $name, $table = null, $foreignPivotKey = null,
                                 $relatedPivotKey = null, $parentKey = null,
@@ -573,8 +573,8 @@ trait HasRelationships
     /**
      * Instantiate a new MorphToMany relationship.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $parent
      * @param  string  $name
      * @param  string  $table
      * @param  string  $foreignPivotKey
@@ -583,7 +583,7 @@ trait HasRelationships
      * @param  string  $relatedKey
      * @param  string|null  $relationName
      * @param  bool  $inverse
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\MorphToMany
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphToMany
      */
     protected function newMorphToMany(Builder $query, Model $parent, $name, $table, $foreignPivotKey,
                                       $relatedPivotKey, $parentKey, $relatedKey,
@@ -603,7 +603,7 @@ trait HasRelationships
      * @param  string|null  $relatedPivotKey
      * @param  string|null  $parentKey
      * @param  string|null  $relatedKey
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\MorphToMany
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\MorphToMany
      */
     public function morphedByMany($related, $name, $table = null, $foreignPivotKey = null,
                                   $relatedPivotKey = null, $parentKey = null, $relatedKey = null)
@@ -642,7 +642,7 @@ trait HasRelationships
      * Get the joining table name for a many-to-many relation.
      *
      * @param  string  $related
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model|null  $instance
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model|null  $instance
      * @return string
      */
     public function joiningTable($related, $instance = null)

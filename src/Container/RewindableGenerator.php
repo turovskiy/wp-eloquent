@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Container;
+namespace Turovskiy\WpEloquent\Container;
 
 use Countable;
 use IteratorAggregate;

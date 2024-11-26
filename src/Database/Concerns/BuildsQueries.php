@@ -1,10 +1,10 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Concerns;
+namespace Turovskiy\WpEloquent\Database\Concerns;
 
-use Prappo\WpEloquent\Container\Container;
-use Prappo\WpEloquent\Pagination\LengthAwarePaginator;
-use Prappo\WpEloquent\Pagination\Paginator;
+use Turovskiy\WpEloquent\Container\Container;
+use Turovskiy\WpEloquent\Pagination\LengthAwarePaginator;
+use Turovskiy\WpEloquent\Pagination\Paginator;
 
 trait BuildsQueries
 {
@@ -140,7 +140,7 @@ trait BuildsQueries
      * Execute the query and get the first result.
      *
      * @param  array|string  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|object|static|null
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|object|static|null
      */
     public function first($columns = ['*'])
     {
@@ -199,12 +199,12 @@ trait BuildsQueries
     /**
      * Create a new length-aware paginator instance.
      *
-     * @param  \Prappo\WpEloquent\Support\Collection  $items
+     * @param  \Turovskiy\WpEloquent\Support\Collection  $items
      * @param  int  $total
      * @param  int  $perPage
      * @param  int  $currentPage
      * @param  array  $options
-     * @return \Prappo\WpEloquent\Pagination\LengthAwarePaginator
+     * @return \Turovskiy\WpEloquent\Pagination\LengthAwarePaginator
      */
     protected function paginator($items, $total, $perPage, $currentPage, $options)
     {
@@ -216,11 +216,11 @@ trait BuildsQueries
     /**
      * Create a new simple paginator instance.
      *
-     * @param  \Prappo\WpEloquent\Support\Collection  $items
+     * @param  \Turovskiy\WpEloquent\Support\Collection  $items
      * @param  int  $perPage
      * @param  int  $currentPage
      * @param  array  $options
-     * @return \Prappo\WpEloquent\Pagination\Paginator
+     * @return \Turovskiy\WpEloquent\Pagination\Paginator
      */
     protected function simplePaginator($items, $perPage, $currentPage, $options)
     {

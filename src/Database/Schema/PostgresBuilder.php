@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Schema;
+namespace Turovskiy\WpEloquent\Database\Schema;
 
 class PostgresBuilder extends Builder
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Contracts\Events;
+namespace Turovskiy\WpEloquent\Contracts\Events;
 
 interface Dispatcher
 {

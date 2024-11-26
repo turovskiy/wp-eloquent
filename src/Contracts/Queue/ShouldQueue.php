@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Contracts\Queue;
+namespace Turovskiy\WpEloquent\Contracts\Queue;
 
 interface ShouldQueue
 {

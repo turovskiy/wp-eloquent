@@ -1,8 +1,8 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent\Relations\Concerns;
+namespace Turovskiy\WpEloquent\Database\Eloquent\Relations\Concerns;
 
-use Prappo\WpEloquent\Database\Eloquent\Model;
+use Turovskiy\WpEloquent\Database\Eloquent\Model;
 
 trait SupportsDefaultModels
 {
@@ -18,8 +18,8 @@ trait SupportsDefaultModels
     /**
      * Make a new related instance for the given model.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $parent
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     abstract protected function newRelatedInstanceFor(Model $parent);
 
@@ -39,8 +39,8 @@ trait SupportsDefaultModels
     /**
      * Get the default value for this relation.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|null
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $parent
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|null
      */
     protected function getDefaultFor(Model $parent)
     {

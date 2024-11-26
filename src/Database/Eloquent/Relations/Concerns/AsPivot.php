@@ -1,17 +1,17 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent\Relations\Concerns;
+namespace Turovskiy\WpEloquent\Database\Eloquent\Relations\Concerns;
 
-use Prappo\WpEloquent\Database\Eloquent\Builder;
-use Prappo\WpEloquent\Database\Eloquent\Model;
-use Prappo\WpEloquent\Support\Str;
+use Turovskiy\WpEloquent\Database\Eloquent\Builder;
+use Turovskiy\WpEloquent\Database\Eloquent\Model;
+use Turovskiy\WpEloquent\Support\Str;
 
 trait AsPivot
 {
     /**
      * The parent model of the relationship.
      *
-     * @var \Prappo\WpEloquent\Database\Eloquent\Model
+     * @var \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     public $pivotParent;
 
@@ -32,7 +32,7 @@ trait AsPivot
     /**
      * Create a new pivot model instance.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $parent
      * @param  array  $attributes
      * @param  string  $table
      * @param  bool  $exists
@@ -65,7 +65,7 @@ trait AsPivot
     /**
      * Create a new pivot model from raw values returned from a query.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $parent
      * @param  array  $attributes
      * @param  string  $table
      * @param  bool  $exists
@@ -85,8 +85,8 @@ trait AsPivot
     /**
      * Set the keys for a save update query.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Builder
      */
     protected function setKeysForSaveQuery($query)
     {
@@ -130,7 +130,7 @@ trait AsPivot
     /**
      * Get the query builder for a delete operation on the pivot.
      *
-     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Builder
      */
     protected function getDeleteQuery()
     {
@@ -259,7 +259,7 @@ trait AsPivot
      * Get a new query to restore one or more models by their queueable IDs.
      *
      * @param  int[]|string[]|string  $ids
-     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Builder
      */
     public function newQueryForRestoration($ids)
     {
@@ -282,7 +282,7 @@ trait AsPivot
      * Get a new query to restore multiple models by their queueable IDs.
      *
      * @param  int[]|string[]  $ids
-     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Builder
      */
     protected function newQueryForCollectionRestoration(array $ids)
     {

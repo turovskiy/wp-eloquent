@@ -1,11 +1,11 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent\Relations\Concerns;
+namespace Turovskiy\WpEloquent\Database\Eloquent\Relations\Concerns;
 
-use Prappo\WpEloquent\Database\Eloquent\Collection;
-use Prappo\WpEloquent\Database\Eloquent\Model;
-use Prappo\WpEloquent\Database\Eloquent\Relations\Pivot;
-use Prappo\WpEloquent\Support\Collection as BaseCollection;
+use Turovskiy\WpEloquent\Database\Eloquent\Collection;
+use Turovskiy\WpEloquent\Database\Eloquent\Model;
+use Turovskiy\WpEloquent\Database\Eloquent\Relations\Pivot;
+use Turovskiy\WpEloquent\Support\Collection as BaseCollection;
 
 trait InteractsWithPivotTable
 {
@@ -65,7 +65,7 @@ trait InteractsWithPivotTable
     /**
      * Sync the intermediate tables with a list of IDs without detaching.
      *
-     * @param  \Prappo\WpEloquent\Support\Collection|\Prappo\WpEloquent\Database\Eloquent\Model|array  $ids
+     * @param  \Turovskiy\WpEloquent\Support\Collection|\Turovskiy\WpEloquent\Database\Eloquent\Model|array  $ids
      * @return array
      */
     public function syncWithoutDetaching($ids)
@@ -76,7 +76,7 @@ trait InteractsWithPivotTable
     /**
      * Sync the intermediate tables with a list of IDs or collection of models.
      *
-     * @param  \Prappo\WpEloquent\Support\Collection|\Prappo\WpEloquent\Database\Eloquent\Model|array  $ids
+     * @param  \Turovskiy\WpEloquent\Support\Collection|\Turovskiy\WpEloquent\Database\Eloquent\Model|array  $ids
      * @param  bool  $detaching
      * @return array
      */
@@ -470,7 +470,7 @@ trait InteractsWithPivotTable
     /**
      * Get the pivot models that are currently attached.
      *
-     * @return \Prappo\WpEloquent\Support\Collection
+     * @return \Turovskiy\WpEloquent\Support\Collection
      */
     protected function getCurrentlyAttachedPivots()
     {
@@ -488,7 +488,7 @@ trait InteractsWithPivotTable
      *
      * @param  array  $attributes
      * @param  bool  $exists
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\Pivot
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\Pivot
      */
     public function newPivot(array $attributes = [], $exists = false)
     {
@@ -503,7 +503,7 @@ trait InteractsWithPivotTable
      * Create a new existing pivot model instance.
      *
      * @param  array  $attributes
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\Pivot
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\Pivot
      */
     public function newExistingPivot(array $attributes = [])
     {
@@ -513,7 +513,7 @@ trait InteractsWithPivotTable
     /**
      * Get a new plain query builder for the pivot table.
      *
-     * @return \Prappo\WpEloquent\Database\Query\Builder
+     * @return \Turovskiy\WpEloquent\Database\Query\Builder
      */
     public function newPivotStatement()
     {
@@ -524,7 +524,7 @@ trait InteractsWithPivotTable
      * Get a new pivot statement for a given "other" ID.
      *
      * @param  mixed  $id
-     * @return \Prappo\WpEloquent\Database\Query\Builder
+     * @return \Turovskiy\WpEloquent\Database\Query\Builder
      */
     public function newPivotStatementForId($id)
     {
@@ -534,7 +534,7 @@ trait InteractsWithPivotTable
     /**
      * Create a new query builder for the pivot table.
      *
-     * @return \Prappo\WpEloquent\Database\Query\Builder
+     * @return \Turovskiy\WpEloquent\Database\Query\Builder
      */
     public function newPivotQuery()
     {

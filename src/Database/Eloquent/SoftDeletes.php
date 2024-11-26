@@ -1,11 +1,11 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent;
+namespace Turovskiy\WpEloquent\Database\Eloquent;
 
 /**
- * @method static static|\Prappo\WpEloquent\Database\Eloquent\Builder|\Prappo\WpEloquent\Database\Query\Builder withTrashed()
- * @method static static|\Prappo\WpEloquent\Database\Eloquent\Builder|\Prappo\WpEloquent\Database\Query\Builder onlyTrashed()
- * @method static static|\Prappo\WpEloquent\Database\Eloquent\Builder|\Prappo\WpEloquent\Database\Query\Builder withoutTrashed()
+ * @method static static|\Turovskiy\WpEloquent\Database\Eloquent\Builder|\Turovskiy\WpEloquent\Database\Query\Builder withTrashed()
+ * @method static static|\Turovskiy\WpEloquent\Database\Eloquent\Builder|\Turovskiy\WpEloquent\Database\Query\Builder onlyTrashed()
+ * @method static static|\Turovskiy\WpEloquent\Database\Eloquent\Builder|\Turovskiy\WpEloquent\Database\Query\Builder withoutTrashed()
  */
 trait SoftDeletes
 {

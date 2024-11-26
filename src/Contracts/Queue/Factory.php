@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Contracts\Queue;
+namespace Turovskiy\WpEloquent\Contracts\Queue;
 
 interface Factory
 {
@@ -8,7 +8,7 @@ interface Factory
      * Resolve a queue connection instance.
      *
      * @param  string|null  $name
-     * @return \Prappo\WpEloquent\Contracts\Queue\Queue
+     * @return \Turovskiy\WpEloquent\Contracts\Queue\Queue
      */
     public function connection($name = null);
 }

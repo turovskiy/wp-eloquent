@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Contracts\Container;
+namespace Turovskiy\WpEloquent\Contracts\Container;
 
 interface ContextualBindingBuilder
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Prappo\WpEloquent\Events;
+namespace Turovskiy\WpEloquent\Events;
 
 use Closure;
-use Prappo\WpEloquent\Queue\SerializableClosure;
+use Turovskiy\WpEloquent\Queue\SerializableClosure;
 
 class QueuedClosure
 {

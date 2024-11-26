@@ -1,9 +1,9 @@
 <?php
 
-namespace Prappo\WpEloquent\Support\Traits;
+namespace Turovskiy\WpEloquent\Support\Traits;
 
-use Prappo\WpEloquent\Contracts\Container\Container;
-use Prappo\WpEloquent\Support\Fluent;
+use Turovskiy\WpEloquent\Contracts\Container\Container;
+use Turovskiy\WpEloquent\Support\Fluent;
 
 trait CapsuleManagerTrait
 {
@@ -17,14 +17,14 @@ trait CapsuleManagerTrait
     /**
      * The container instance.
      *
-     * @var \Prappo\WpEloquent\Contracts\Container\Container
+     * @var \Turovskiy\WpEloquent\Contracts\Container\Container
      */
     protected $container;
 
     /**
      * Setup the IoC container instance.
      *
-     * @param  \Prappo\WpEloquent\Contracts\Container\Container  $container
+     * @param  \Turovskiy\WpEloquent\Contracts\Container\Container  $container
      * @return void
      */
     protected function setupContainer(Container $container)
@@ -49,7 +49,7 @@ trait CapsuleManagerTrait
     /**
      * Get the IoC container instance.
      *
-     * @return \Prappo\WpEloquent\Contracts\Container\Container
+     * @return \Turovskiy\WpEloquent\Contracts\Container\Container
      */
     public function getContainer()
     {
@@ -59,7 +59,7 @@ trait CapsuleManagerTrait
     /**
      * Set the IoC container instance.
      *
-     * @param  \Prappo\WpEloquent\Contracts\Container\Container  $container
+     * @param  \Turovskiy\WpEloquent\Contracts\Container\Container  $container
      * @return void
      */
     public function setContainer(Container $container)

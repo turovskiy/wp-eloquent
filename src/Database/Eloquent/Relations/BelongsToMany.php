@@ -1,13 +1,13 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent\Relations;
+namespace Turovskiy\WpEloquent\Database\Eloquent\Relations;
 
-use Prappo\WpEloquent\Contracts\Support\Arrayable;
-use Prappo\WpEloquent\Database\Eloquent\Builder;
-use Prappo\WpEloquent\Database\Eloquent\Collection;
-use Prappo\WpEloquent\Database\Eloquent\Model;
-use Prappo\WpEloquent\Database\Eloquent\ModelNotFoundException;
-use Prappo\WpEloquent\Support\Str;
+use Turovskiy\WpEloquent\Contracts\Support\Arrayable;
+use Turovskiy\WpEloquent\Database\Eloquent\Builder;
+use Turovskiy\WpEloquent\Database\Eloquent\Collection;
+use Turovskiy\WpEloquent\Database\Eloquent\Model;
+use Turovskiy\WpEloquent\Database\Eloquent\ModelNotFoundException;
+use Turovskiy\WpEloquent\Support\Str;
 use InvalidArgumentException;
 
 class BelongsToMany extends Relation
@@ -136,8 +136,8 @@ class BelongsToMany extends Relation
     /**
      * Create a new belongs to many relationship instance.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $parent
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $parent
      * @param  string  $table
      * @param  string  $foreignPivotKey
      * @param  string  $relatedPivotKey
@@ -201,7 +201,7 @@ class BelongsToMany extends Relation
     /**
      * Set the join clause for the relation query.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder|null  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder|null  $query
      * @return $this
      */
     protected function performJoin($query = null)
@@ -270,7 +270,7 @@ class BelongsToMany extends Relation
      * Match the eagerly loaded results to their parents.
      *
      * @param  array  $models
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Collection  $results
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Collection  $results
      * @param  string  $relation
      * @return array
      */
@@ -295,7 +295,7 @@ class BelongsToMany extends Relation
     /**
      * Build model dictionary keyed by the relation's foreign key.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Collection  $results
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Collection  $results
      * @return array
      */
     protected function buildDictionary(Collection $results)
@@ -566,7 +566,7 @@ class BelongsToMany extends Relation
      *
      * @param  mixed  $id
      * @param  array  $columns
-     * @return \Prappo\WpEloquent\Support\Collection|\Prappo\WpEloquent\Database\Eloquent\Model
+     * @return \Turovskiy\WpEloquent\Support\Collection|\Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     public function findOrNew($id, $columns = ['*'])
     {
@@ -581,7 +581,7 @@ class BelongsToMany extends Relation
      * Get the first related model record matching the attributes or instantiate it.
      *
      * @param  array  $attributes
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     public function firstOrNew(array $attributes)
     {
@@ -598,7 +598,7 @@ class BelongsToMany extends Relation
      * @param  array  $attributes
      * @param  array  $joining
      * @param  bool  $touch
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     public function firstOrCreate(array $attributes, array $joining = [], $touch = true)
     {
@@ -616,7 +616,7 @@ class BelongsToMany extends Relation
      * @param  array  $values
      * @param  array  $joining
      * @param  bool  $touch
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     public function updateOrCreate(array $attributes, array $values = [], array $joining = [], $touch = true)
     {
@@ -636,7 +636,7 @@ class BelongsToMany extends Relation
      *
      * @param  mixed  $id
      * @param  array  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|\Prappo\WpEloquent\Database\Eloquent\Collection|null
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|\Turovskiy\WpEloquent\Database\Eloquent\Collection|null
      */
     public function find($id, $columns = ['*'])
     {
@@ -652,9 +652,9 @@ class BelongsToMany extends Relation
     /**
      * Find multiple related models by their primary keys.
      *
-     * @param  \Prappo\WpEloquent\Contracts\Support\Arrayable|array  $ids
+     * @param  \Turovskiy\WpEloquent\Contracts\Support\Arrayable|array  $ids
      * @param  array  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Collection
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Collection
      */
     public function findMany($ids, $columns = ['*'])
     {
@@ -674,9 +674,9 @@ class BelongsToMany extends Relation
      *
      * @param  mixed  $id
      * @param  array  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|\Prappo\WpEloquent\Database\Eloquent\Collection
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|\Turovskiy\WpEloquent\Database\Eloquent\Collection
      *
-     * @throws \Prappo\WpEloquent\Database\Eloquent\ModelNotFoundException
+     * @throws \Turovskiy\WpEloquent\Database\Eloquent\ModelNotFoundException
      */
     public function findOrFail($id, $columns = ['*'])
     {
@@ -702,7 +702,7 @@ class BelongsToMany extends Relation
      * @param  mixed  $operator
      * @param  mixed  $value
      * @param  string  $boolean
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|static
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|static
      */
     public function firstWhere($column, $operator = null, $value = null, $boolean = 'and')
     {
@@ -726,9 +726,9 @@ class BelongsToMany extends Relation
      * Execute the query and get the first result or throw an exception.
      *
      * @param  array  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|static
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|static
      *
-     * @throws \Prappo\WpEloquent\Database\Eloquent\ModelNotFoundException
+     * @throws \Turovskiy\WpEloquent\Database\Eloquent\ModelNotFoundException
      */
     public function firstOrFail($columns = ['*'])
     {
@@ -755,7 +755,7 @@ class BelongsToMany extends Relation
      * Execute the query as a "select" statement.
      *
      * @param  array  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Collection
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Collection
      */
     public function get($columns = ['*'])
     {
@@ -820,7 +820,7 @@ class BelongsToMany extends Relation
      * @param  array  $columns
      * @param  string  $pageName
      * @param  int|null  $page
-     * @return \Prappo\WpEloquent\Contracts\Pagination\LengthAwarePaginator
+     * @return \Turovskiy\WpEloquent\Contracts\Pagination\LengthAwarePaginator
      */
     public function paginate($perPage = null, $columns = ['*'], $pageName = 'page', $page = null)
     {
@@ -838,7 +838,7 @@ class BelongsToMany extends Relation
      * @param  array  $columns
      * @param  string  $pageName
      * @param  int|null  $page
-     * @return \Prappo\WpEloquent\Contracts\Pagination\Paginator
+     * @return \Turovskiy\WpEloquent\Contracts\Pagination\Paginator
      */
     public function simplePaginate($perPage = null, $columns = ['*'], $pageName = 'page', $page = null)
     {
@@ -914,7 +914,7 @@ class BelongsToMany extends Relation
     /**
      * Get a lazy collection for the given query.
      *
-     * @return \Prappo\WpEloquent\Support\LazyCollection
+     * @return \Turovskiy\WpEloquent\Support\LazyCollection
      */
     public function cursor()
     {
@@ -948,7 +948,7 @@ class BelongsToMany extends Relation
     /**
      * Get the pivot attributes from a model.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $model
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $model
      * @return array
      */
     protected function migratePivotAttributes(Model $model)
@@ -1031,7 +1031,7 @@ class BelongsToMany extends Relation
     /**
      * Get all of the IDs for the related models.
      *
-     * @return \Prappo\WpEloquent\Support\Collection
+     * @return \Turovskiy\WpEloquent\Support\Collection
      */
     public function allRelatedIds()
     {
@@ -1041,10 +1041,10 @@ class BelongsToMany extends Relation
     /**
      * Save a new model and attach it to the parent model.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $model
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $model
      * @param  array  $pivotAttributes
      * @param  bool  $touch
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     public function save(Model $model, array $pivotAttributes = [], $touch = true)
     {
@@ -1058,7 +1058,7 @@ class BelongsToMany extends Relation
     /**
      * Save an array of new models and attach them to the parent model.
      *
-     * @param  \Prappo\WpEloquent\Support\Collection|array  $models
+     * @param  \Turovskiy\WpEloquent\Support\Collection|array  $models
      * @param  array  $pivotAttributes
      * @return array
      */
@@ -1079,7 +1079,7 @@ class BelongsToMany extends Relation
      * @param  array  $attributes
      * @param  array  $joining
      * @param  bool  $touch
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     public function create(array $attributes = [], array $joining = [], $touch = true)
     {
@@ -1118,10 +1118,10 @@ class BelongsToMany extends Relation
     /**
      * Add the constraints for a relationship query.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $parentQuery
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Builder
      */
     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])
     {
@@ -1137,10 +1137,10 @@ class BelongsToMany extends Relation
     /**
      * Add the constraints for a relationship query on the same table.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $query
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Builder  $parentQuery
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Builder
      */
     public function getRelationExistenceQueryForSelfJoin(Builder $query, Builder $parentQuery, $columns = ['*'])
     {

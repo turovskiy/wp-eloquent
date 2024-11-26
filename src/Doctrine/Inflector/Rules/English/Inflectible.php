@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Prappo\WpEloquent\Doctrine\Inflector\Rules\English;
+namespace Turovskiy\WpEloquent\Doctrine\Inflector\Rules\English;
 
-use Prappo\WpEloquent\Doctrine\Inflector\Rules\Pattern;
-use Prappo\WpEloquent\Doctrine\Inflector\Rules\Substitution;
-use Prappo\WpEloquent\Doctrine\Inflector\Rules\Transformation;
-use Prappo\WpEloquent\Doctrine\Inflector\Rules\Word;
+use Turovskiy\WpEloquent\Doctrine\Inflector\Rules\Pattern;
+use Turovskiy\WpEloquent\Doctrine\Inflector\Rules\Substitution;
+use Turovskiy\WpEloquent\Doctrine\Inflector\Rules\Transformation;
+use Turovskiy\WpEloquent\Doctrine\Inflector\Rules\Word;
 
 class Inflectible
 {

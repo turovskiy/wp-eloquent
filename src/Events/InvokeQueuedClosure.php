@@ -1,13 +1,13 @@
 <?php
 
-namespace Prappo\WpEloquent\Events;
+namespace Turovskiy\WpEloquent\Events;
 
 class InvokeQueuedClosure
 {
     /**
      * Handle the event.
      *
-     * @param  \Prappo\WpEloquent\Queue\SerializableClosure  $closure
+     * @param  \Turovskiy\WpEloquent\Queue\SerializableClosure  $closure
      * @param  array  $arguments
      * @return void
      */
@@ -19,7 +19,7 @@ class InvokeQueuedClosure
     /**
      * Handle a job failure.
      *
-     * @param  \Prappo\WpEloquent\Queue\SerializableClosure  $closure
+     * @param  \Turovskiy\WpEloquent\Queue\SerializableClosure  $closure
      * @param  array  $arguments
      * @param  array  $catchCallbacks
      * @param  \Throwable  $exception

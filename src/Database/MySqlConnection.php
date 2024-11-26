@@ -1,14 +1,14 @@
 <?php
 
-namespace Prappo\WpEloquent\Database;
+namespace Turovskiy\WpEloquent\Database;
 
 use Doctrine\DBAL\Driver\PDOMySql\Driver as DoctrineDriver;
-use Prappo\WpEloquent\Database\Query\Grammars\MySqlGrammar as QueryGrammar;
-use Prappo\WpEloquent\Database\Query\Processors\MySqlProcessor;
-use Prappo\WpEloquent\Database\Schema\Grammars\MySqlGrammar as SchemaGrammar;
-use Prappo\WpEloquent\Database\Schema\MySqlBuilder;
-use Prappo\WpEloquent\Database\Schema\MySqlSchemaState;
-use Prappo\WpEloquent\Filesystem\Filesystem;
+use Turovskiy\WpEloquent\Database\Query\Grammars\MySqlGrammar as QueryGrammar;
+use Turovskiy\WpEloquent\Database\Query\Processors\MySqlProcessor;
+use Turovskiy\WpEloquent\Database\Schema\Grammars\MySqlGrammar as SchemaGrammar;
+use Turovskiy\WpEloquent\Database\Schema\MySqlBuilder;
+use Turovskiy\WpEloquent\Database\Schema\MySqlSchemaState;
+use Turovskiy\WpEloquent\Filesystem\Filesystem;
 use PDO;
 
 class MySqlConnection extends Connection
@@ -26,7 +26,7 @@ class MySqlConnection extends Connection
     /**
      * Get the default query grammar instance.
      *
-     * @return \Prappo\WpEloquent\Database\Query\Grammars\MySqlGrammar
+     * @return \Turovskiy\WpEloquent\Database\Query\Grammars\MySqlGrammar
      */
     protected function getDefaultQueryGrammar()
     {
@@ -36,7 +36,7 @@ class MySqlConnection extends Connection
     /**
      * Get a schema builder instance for the connection.
      *
-     * @return \Prappo\WpEloquent\Database\Schema\MySqlBuilder
+     * @return \Turovskiy\WpEloquent\Database\Schema\MySqlBuilder
      */
     public function getSchemaBuilder()
     {
@@ -50,7 +50,7 @@ class MySqlConnection extends Connection
     /**
      * Get the default schema grammar instance.
      *
-     * @return \Prappo\WpEloquent\Database\Schema\Grammars\MySqlGrammar
+     * @return \Turovskiy\WpEloquent\Database\Schema\Grammars\MySqlGrammar
      */
     protected function getDefaultSchemaGrammar()
     {
@@ -60,9 +60,9 @@ class MySqlConnection extends Connection
     /**
      * Get the schema state for the connection.
      *
-     * @param  \Prappo\WpEloquent\Filesystem\Filesystem|null  $files
+     * @param  \Turovskiy\WpEloquent\Filesystem\Filesystem|null  $files
      * @param  callable|null  $processFactory
-     * @return \Prappo\WpEloquent\Database\Schema\MySqlSchemaState
+     * @return \Turovskiy\WpEloquent\Database\Schema\MySqlSchemaState
      */
     public function getSchemaState(Filesystem $files = null, callable $processFactory = null)
     {
@@ -72,7 +72,7 @@ class MySqlConnection extends Connection
     /**
      * Get the default post processor instance.
      *
-     * @return \Prappo\WpEloquent\Database\Query\Processors\MySqlProcessor
+     * @return \Turovskiy\WpEloquent\Database\Query\Processors\MySqlProcessor
      */
     protected function getDefaultPostProcessor()
     {

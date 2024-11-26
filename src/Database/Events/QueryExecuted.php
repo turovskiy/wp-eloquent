@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Events;
+namespace Turovskiy\WpEloquent\Database\Events;
 
 class QueryExecuted
 {
@@ -28,7 +28,7 @@ class QueryExecuted
     /**
      * The database connection instance.
      *
-     * @var \Prappo\WpEloquent\Database\Connection
+     * @var \Turovskiy\WpEloquent\Database\Connection
      */
     public $connection;
 
@@ -45,7 +45,7 @@ class QueryExecuted
      * @param  string  $sql
      * @param  array  $bindings
      * @param  float|null  $time
-     * @param  \Prappo\WpEloquent\Database\Connection  $connection
+     * @param  \Turovskiy\WpEloquent\Database\Connection  $connection
      * @return void
      */
     public function __construct($sql, $bindings, $time, $connection)

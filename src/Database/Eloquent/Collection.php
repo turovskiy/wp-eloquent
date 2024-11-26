@@ -1,13 +1,13 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent;
+namespace Turovskiy\WpEloquent\Database\Eloquent;
 
-use Prappo\WpEloquent\Contracts\Queue\QueueableCollection;
-use Prappo\WpEloquent\Contracts\Queue\QueueableEntity;
-use Prappo\WpEloquent\Contracts\Support\Arrayable;
-use Prappo\WpEloquent\Support\Arr;
-use Prappo\WpEloquent\Support\Collection as BaseCollection;
-use Prappo\WpEloquent\Support\Str;
+use Turovskiy\WpEloquent\Contracts\Queue\QueueableCollection;
+use Turovskiy\WpEloquent\Contracts\Queue\QueueableEntity;
+use Turovskiy\WpEloquent\Contracts\Support\Arrayable;
+use Turovskiy\WpEloquent\Support\Arr;
+use Turovskiy\WpEloquent\Support\Collection as BaseCollection;
+use Turovskiy\WpEloquent\Support\Str;
 use LogicException;
 
 class Collection extends BaseCollection implements QueueableCollection
@@ -17,7 +17,7 @@ class Collection extends BaseCollection implements QueueableCollection
      *
      * @param  mixed  $key
      * @param  mixed  $default
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|static|null
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|static|null
      */
     public function find($key, $default = null)
     {
@@ -138,7 +138,7 @@ class Collection extends BaseCollection implements QueueableCollection
     /**
      * Load a relationship path if it is not already eager loaded.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Collection  $models
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Collection  $models
      * @param  array  $path
      * @return void
      */
@@ -269,7 +269,7 @@ class Collection extends BaseCollection implements QueueableCollection
      * Run a map over each of the items.
      *
      * @param  callable  $callback
-     * @return \Prappo\WpEloquent\Support\Collection|static
+     * @return \Turovskiy\WpEloquent\Support\Collection|static
      */
     public function map(callable $callback)
     {
@@ -459,7 +459,7 @@ class Collection extends BaseCollection implements QueueableCollection
      *
      * @param  string|array  $value
      * @param  string|null  $key
-     * @return \Prappo\WpEloquent\Support\Collection
+     * @return \Turovskiy\WpEloquent\Support\Collection
      */
     public function pluck($value, $key = null)
     {
@@ -469,7 +469,7 @@ class Collection extends BaseCollection implements QueueableCollection
     /**
      * Get the keys of the collection items.
      *
-     * @return \Prappo\WpEloquent\Support\Collection
+     * @return \Turovskiy\WpEloquent\Support\Collection
      */
     public function keys()
     {
@@ -480,7 +480,7 @@ class Collection extends BaseCollection implements QueueableCollection
      * Zip the collection together with one or more arrays.
      *
      * @param  mixed  ...$items
-     * @return \Prappo\WpEloquent\Support\Collection
+     * @return \Turovskiy\WpEloquent\Support\Collection
      */
     public function zip($items)
     {
@@ -490,7 +490,7 @@ class Collection extends BaseCollection implements QueueableCollection
     /**
      * Collapse the collection of items into a single array.
      *
-     * @return \Prappo\WpEloquent\Support\Collection
+     * @return \Turovskiy\WpEloquent\Support\Collection
      */
     public function collapse()
     {
@@ -501,7 +501,7 @@ class Collection extends BaseCollection implements QueueableCollection
      * Get a flattened array of the items in the collection.
      *
      * @param  int  $depth
-     * @return \Prappo\WpEloquent\Support\Collection
+     * @return \Turovskiy\WpEloquent\Support\Collection
      */
     public function flatten($depth = INF)
     {
@@ -511,7 +511,7 @@ class Collection extends BaseCollection implements QueueableCollection
     /**
      * Flip the items in the collection.
      *
-     * @return \Prappo\WpEloquent\Support\Collection
+     * @return \Turovskiy\WpEloquent\Support\Collection
      */
     public function flip()
     {
@@ -523,7 +523,7 @@ class Collection extends BaseCollection implements QueueableCollection
      *
      * @param  int  $size
      * @param  mixed  $value
-     * @return \Prappo\WpEloquent\Support\Collection
+     * @return \Turovskiy\WpEloquent\Support\Collection
      */
     public function pad($size, $value)
     {
@@ -632,7 +632,7 @@ class Collection extends BaseCollection implements QueueableCollection
     /**
      * Get the Eloquent query builder from the collection.
      *
-     * @return \Prappo\WpEloquent\Database\Eloquent\Builder
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Builder
      *
      * @throws \LogicException
      */

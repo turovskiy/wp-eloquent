@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Prappo\WpEloquent;
+namespace Turovskiy\WpEloquent;
 
-use Prappo\WpEloquent\Events\Dispatcher;
-use Prappo\WpEloquent\Database\Capsule\Manager;
-use Prappo\WpEloquent\Database\WpConnection;
-use Prappo\WpEloquent\Support\Facades\Facade;
+use Turovskiy\WpEloquent\Events\Dispatcher;
+use Turovskiy\WpEloquent\Database\Capsule\Manager;
+use Turovskiy\WpEloquent\Database\WpConnection;
+use Turovskiy\WpEloquent\Support\Facades\Facade;
 
 class Application {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Support;
+namespace Turovskiy\WpEloquent\Support;
 
 use InvalidArgumentException;
 

@@ -1,17 +1,17 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Query\Processors;
+namespace Turovskiy\WpEloquent\Database\Query\Processors;
 
 use Exception;
-use Prappo\WpEloquent\Database\Connection;
-use Prappo\WpEloquent\Database\Query\Builder;
+use Turovskiy\WpEloquent\Database\Connection;
+use Turovskiy\WpEloquent\Database\Query\Builder;
 
 class SqlServerProcessor extends Processor
 {
     /**
      * Process an "insert get ID" query.
      *
-     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Query\Builder  $query
      * @param  string  $sql
      * @param  array  $values
      * @param  string|null  $sequence
@@ -35,7 +35,7 @@ class SqlServerProcessor extends Processor
     /**
      * Process an "insert get ID" query for ODBC.
      *
-     * @param  \Prappo\WpEloquent\Database\Connection  $connection
+     * @param  \Turovskiy\WpEloquent\Database\Connection  $connection
      * @return int
      *
      * @throws \Exception

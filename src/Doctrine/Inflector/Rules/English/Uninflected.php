@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Prappo\WpEloquent\Doctrine\Inflector\Rules\English;
+namespace Turovskiy\WpEloquent\Doctrine\Inflector\Rules\English;
 
-use Prappo\WpEloquent\Doctrine\Inflector\Rules\Pattern;
+use Turovskiy\WpEloquent\Doctrine\Inflector\Rules\Pattern;
 
 final class Uninflected
 {

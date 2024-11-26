@@ -1,16 +1,16 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Schema;
+namespace Turovskiy\WpEloquent\Database\Schema;
 
 use BadMethodCallException;
 use Closure;
-use Prappo\WpEloquent\Database\Connection;
-use Prappo\WpEloquent\Database\Eloquent\Model;
-use Prappo\WpEloquent\Database\Query\Expression;
-use Prappo\WpEloquent\Database\Schema\Grammars\Grammar;
-use Prappo\WpEloquent\Database\SQLiteConnection;
-use Prappo\WpEloquent\Support\Fluent;
-use Prappo\WpEloquent\Support\Traits\Macroable;
+use Turovskiy\WpEloquent\Database\Connection;
+use Turovskiy\WpEloquent\Database\Eloquent\Model;
+use Turovskiy\WpEloquent\Database\Query\Expression;
+use Turovskiy\WpEloquent\Database\Schema\Grammars\Grammar;
+use Turovskiy\WpEloquent\Database\SQLiteConnection;
+use Turovskiy\WpEloquent\Support\Fluent;
+use Turovskiy\WpEloquent\Support\Traits\Macroable;
 
 class Blueprint
 {
@@ -33,14 +33,14 @@ class Blueprint
     /**
      * The columns that should be added to the table.
      *
-     * @var \Prappo\WpEloquent\Database\Schema\ColumnDefinition[]
+     * @var \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition[]
      */
     protected $columns = [];
 
     /**
      * The commands that should be run for the table.
      *
-     * @var \Prappo\WpEloquent\Support\Fluent[]
+     * @var \Turovskiy\WpEloquent\Support\Fluent[]
      */
     protected $commands = [];
 
@@ -93,8 +93,8 @@ class Blueprint
     /**
      * Execute the blueprint against the database.
      *
-     * @param  \Prappo\WpEloquent\Database\Connection  $connection
-     * @param  \Prappo\WpEloquent\Database\Schema\Grammars\Grammar  $grammar
+     * @param  \Turovskiy\WpEloquent\Database\Connection  $connection
+     * @param  \Turovskiy\WpEloquent\Database\Schema\Grammars\Grammar  $grammar
      * @return void
      */
     public function build(Connection $connection, Grammar $grammar)
@@ -107,8 +107,8 @@ class Blueprint
     /**
      * Get the raw SQL statements for the blueprint.
      *
-     * @param  \Prappo\WpEloquent\Database\Connection  $connection
-     * @param  \Prappo\WpEloquent\Database\Schema\Grammars\Grammar  $grammar
+     * @param  \Turovskiy\WpEloquent\Database\Connection  $connection
+     * @param  \Turovskiy\WpEloquent\Database\Schema\Grammars\Grammar  $grammar
      * @return array
      */
     public function toSql(Connection $connection, Grammar $grammar)
@@ -138,7 +138,7 @@ class Blueprint
     /**
      * Ensure the commands on the blueprint are valid for the connection type.
      *
-     * @param  \Prappo\WpEloquent\Database\Connection  $connection
+     * @param  \Turovskiy\WpEloquent\Database\Connection  $connection
      * @return void
      *
      * @throws \BadMethodCallException
@@ -164,7 +164,7 @@ class Blueprint
      * Get all of the commands matching the given names.
      *
      * @param  array  $names
-     * @return \Prappo\WpEloquent\Support\Collection
+     * @return \Turovskiy\WpEloquent\Support\Collection
      */
     protected function commandsNamed(array $names)
     {
@@ -176,7 +176,7 @@ class Blueprint
     /**
      * Add the commands that are implied by the blueprint's state.
      *
-     * @param  \Prappo\WpEloquent\Database\Schema\Grammars\Grammar  $grammar
+     * @param  \Turovskiy\WpEloquent\Database\Schema\Grammars\Grammar  $grammar
      * @return void
      */
     protected function addImpliedCommands(Grammar $grammar)
@@ -229,7 +229,7 @@ class Blueprint
     /**
      * Add the fluent commands specified on any columns.
      *
-     * @param  \Prappo\WpEloquent\Database\Schema\Grammars\Grammar  $grammar
+     * @param  \Turovskiy\WpEloquent\Database\Schema\Grammars\Grammar  $grammar
      * @return void
      */
     public function addFluentCommands(Grammar $grammar)
@@ -266,7 +266,7 @@ class Blueprint
     /**
      * Indicate that the table needs to be created.
      *
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     public function create()
     {
@@ -286,7 +286,7 @@ class Blueprint
     /**
      * Indicate that the table should be dropped.
      *
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     public function drop()
     {
@@ -296,7 +296,7 @@ class Blueprint
     /**
      * Indicate that the table should be dropped if it exists.
      *
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     public function dropIfExists()
     {
@@ -307,7 +307,7 @@ class Blueprint
      * Indicate that the given columns should be dropped.
      *
      * @param  array|mixed  $columns
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     public function dropColumn($columns)
     {
@@ -321,7 +321,7 @@ class Blueprint
      *
      * @param  string  $from
      * @param  string  $to
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     public function renameColumn($from, $to)
     {
@@ -332,7 +332,7 @@ class Blueprint
      * Indicate that the given primary key should be dropped.
      *
      * @param  string|array|null  $index
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     public function dropPrimary($index = null)
     {
@@ -343,7 +343,7 @@ class Blueprint
      * Indicate that the given unique key should be dropped.
      *
      * @param  string|array  $index
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     public function dropUnique($index)
     {
@@ -354,7 +354,7 @@ class Blueprint
      * Indicate that the given index should be dropped.
      *
      * @param  string|array  $index
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     public function dropIndex($index)
     {
@@ -365,7 +365,7 @@ class Blueprint
      * Indicate that the given spatial index should be dropped.
      *
      * @param  string|array  $index
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     public function dropSpatialIndex($index)
     {
@@ -376,7 +376,7 @@ class Blueprint
      * Indicate that the given foreign key should be dropped.
      *
      * @param  string|array  $index
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     public function dropForeign($index)
     {
@@ -388,7 +388,7 @@ class Blueprint
      *
      * @param  string  $from
      * @param  string  $to
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     public function renameIndex($from, $to)
     {
@@ -465,7 +465,7 @@ class Blueprint
      * Rename the table to a given name.
      *
      * @param  string  $to
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     public function rename($to)
     {
@@ -478,7 +478,7 @@ class Blueprint
      * @param  string|array  $columns
      * @param  string|null  $name
      * @param  string|null  $algorithm
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     public function primary($columns, $name = null, $algorithm = null)
     {
@@ -491,7 +491,7 @@ class Blueprint
      * @param  string|array  $columns
      * @param  string|null  $name
      * @param  string|null  $algorithm
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     public function unique($columns, $name = null, $algorithm = null)
     {
@@ -504,7 +504,7 @@ class Blueprint
      * @param  string|array  $columns
      * @param  string|null  $name
      * @param  string|null  $algorithm
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     public function index($columns, $name = null, $algorithm = null)
     {
@@ -516,7 +516,7 @@ class Blueprint
      *
      * @param  string|array  $columns
      * @param  string|null  $name
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     public function spatialIndex($columns, $name = null)
     {
@@ -528,7 +528,7 @@ class Blueprint
      *
      * @param  string  $expression
      * @param  string  $name
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     public function rawIndex($expression, $name)
     {
@@ -540,7 +540,7 @@ class Blueprint
      *
      * @param  string|array  $columns
      * @param  string|null  $name
-     * @return \Prappo\WpEloquent\Database\Schema\ForeignKeyDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ForeignKeyDefinition
      */
     public function foreign($columns, $name = null)
     {
@@ -557,7 +557,7 @@ class Blueprint
      * Create a new auto-incrementing big integer (8-byte) column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function id($column = 'id')
     {
@@ -568,7 +568,7 @@ class Blueprint
      * Create a new auto-incrementing integer (4-byte) column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function increments($column)
     {
@@ -579,7 +579,7 @@ class Blueprint
      * Create a new auto-incrementing integer (4-byte) column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function integerIncrements($column)
     {
@@ -590,7 +590,7 @@ class Blueprint
      * Create a new auto-incrementing tiny integer (1-byte) column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function tinyIncrements($column)
     {
@@ -601,7 +601,7 @@ class Blueprint
      * Create a new auto-incrementing small integer (2-byte) column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function smallIncrements($column)
     {
@@ -612,7 +612,7 @@ class Blueprint
      * Create a new auto-incrementing medium integer (3-byte) column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function mediumIncrements($column)
     {
@@ -623,7 +623,7 @@ class Blueprint
      * Create a new auto-incrementing big integer (8-byte) column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function bigIncrements($column)
     {
@@ -635,7 +635,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  int|null  $length
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function char($column, $length = null)
     {
@@ -649,7 +649,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  int|null  $length
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function string($column, $length = null)
     {
@@ -662,7 +662,7 @@ class Blueprint
      * Create a new text column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function text($column)
     {
@@ -673,7 +673,7 @@ class Blueprint
      * Create a new medium text column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function mediumText($column)
     {
@@ -684,7 +684,7 @@ class Blueprint
      * Create a new long text column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function longText($column)
     {
@@ -697,7 +697,7 @@ class Blueprint
      * @param  string  $column
      * @param  bool  $autoIncrement
      * @param  bool  $unsigned
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function integer($column, $autoIncrement = false, $unsigned = false)
     {
@@ -710,7 +710,7 @@ class Blueprint
      * @param  string  $column
      * @param  bool  $autoIncrement
      * @param  bool  $unsigned
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function tinyInteger($column, $autoIncrement = false, $unsigned = false)
     {
@@ -723,7 +723,7 @@ class Blueprint
      * @param  string  $column
      * @param  bool  $autoIncrement
      * @param  bool  $unsigned
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function smallInteger($column, $autoIncrement = false, $unsigned = false)
     {
@@ -736,7 +736,7 @@ class Blueprint
      * @param  string  $column
      * @param  bool  $autoIncrement
      * @param  bool  $unsigned
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function mediumInteger($column, $autoIncrement = false, $unsigned = false)
     {
@@ -749,7 +749,7 @@ class Blueprint
      * @param  string  $column
      * @param  bool  $autoIncrement
      * @param  bool  $unsigned
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function bigInteger($column, $autoIncrement = false, $unsigned = false)
     {
@@ -761,7 +761,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  bool  $autoIncrement
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function unsignedInteger($column, $autoIncrement = false)
     {
@@ -773,7 +773,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  bool  $autoIncrement
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function unsignedTinyInteger($column, $autoIncrement = false)
     {
@@ -785,7 +785,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  bool  $autoIncrement
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function unsignedSmallInteger($column, $autoIncrement = false)
     {
@@ -797,7 +797,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  bool  $autoIncrement
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function unsignedMediumInteger($column, $autoIncrement = false)
     {
@@ -809,7 +809,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  bool  $autoIncrement
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function unsignedBigInteger($column, $autoIncrement = false)
     {
@@ -820,7 +820,7 @@ class Blueprint
      * Create a new unsigned big integer (8-byte) column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ForeignIdColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ForeignIdColumnDefinition
      */
     public function foreignId($column)
     {
@@ -837,9 +837,9 @@ class Blueprint
     /**
      * Create a foreign ID column for the given model.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model|string  $model
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model|string  $model
      * @param  string|null  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ForeignIdColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ForeignIdColumnDefinition
      */
     public function foreignIdFor($model, $column = null)
     {
@@ -859,7 +859,7 @@ class Blueprint
      * @param  int  $total
      * @param  int  $places
      * @param  bool  $unsigned
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function float($column, $total = 8, $places = 2, $unsigned = false)
     {
@@ -873,7 +873,7 @@ class Blueprint
      * @param  int|null  $total
      * @param  int|null  $places
      * @param  bool  $unsigned
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function double($column, $total = null, $places = null, $unsigned = false)
     {
@@ -887,7 +887,7 @@ class Blueprint
      * @param  int  $total
      * @param  int  $places
      * @param  bool  $unsigned
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function decimal($column, $total = 8, $places = 2, $unsigned = false)
     {
@@ -900,7 +900,7 @@ class Blueprint
      * @param  string  $column
      * @param  int  $total
      * @param  int  $places
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function unsignedFloat($column, $total = 8, $places = 2)
     {
@@ -913,7 +913,7 @@ class Blueprint
      * @param  string  $column
      * @param  int  $total
      * @param  int  $places
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function unsignedDouble($column, $total = null, $places = null)
     {
@@ -926,7 +926,7 @@ class Blueprint
      * @param  string  $column
      * @param  int  $total
      * @param  int  $places
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function unsignedDecimal($column, $total = 8, $places = 2)
     {
@@ -937,7 +937,7 @@ class Blueprint
      * Create a new boolean column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function boolean($column)
     {
@@ -949,7 +949,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  array  $allowed
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function enum($column, array $allowed)
     {
@@ -961,7 +961,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  array  $allowed
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function set($column, array $allowed)
     {
@@ -972,7 +972,7 @@ class Blueprint
      * Create a new json column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function json($column)
     {
@@ -983,7 +983,7 @@ class Blueprint
      * Create a new jsonb column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function jsonb($column)
     {
@@ -994,7 +994,7 @@ class Blueprint
      * Create a new date column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function date($column)
     {
@@ -1006,7 +1006,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  int  $precision
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function dateTime($column, $precision = 0)
     {
@@ -1018,7 +1018,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  int  $precision
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function dateTimeTz($column, $precision = 0)
     {
@@ -1030,7 +1030,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  int  $precision
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function time($column, $precision = 0)
     {
@@ -1042,7 +1042,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  int  $precision
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function timeTz($column, $precision = 0)
     {
@@ -1054,7 +1054,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  int  $precision
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function timestamp($column, $precision = 0)
     {
@@ -1066,7 +1066,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  int  $precision
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function timestampTz($column, $precision = 0)
     {
@@ -1117,7 +1117,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  int  $precision
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function softDeletes($column = 'deleted_at', $precision = 0)
     {
@@ -1129,7 +1129,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  int  $precision
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function softDeletesTz($column = 'deleted_at', $precision = 0)
     {
@@ -1140,7 +1140,7 @@ class Blueprint
      * Create a new year column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function year($column)
     {
@@ -1151,7 +1151,7 @@ class Blueprint
      * Create a new binary column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function binary($column)
     {
@@ -1162,7 +1162,7 @@ class Blueprint
      * Create a new uuid column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function uuid($column)
     {
@@ -1173,7 +1173,7 @@ class Blueprint
      * Create a new UUID column on the table with a foreign key constraint.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ForeignIdColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ForeignIdColumnDefinition
      */
     public function foreignUuid($column)
     {
@@ -1187,7 +1187,7 @@ class Blueprint
      * Create a new IP address column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function ipAddress($column)
     {
@@ -1198,7 +1198,7 @@ class Blueprint
      * Create a new MAC address column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function macAddress($column)
     {
@@ -1209,7 +1209,7 @@ class Blueprint
      * Create a new geometry column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function geometry($column)
     {
@@ -1221,7 +1221,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  int|null  $srid
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function point($column, $srid = null)
     {
@@ -1232,7 +1232,7 @@ class Blueprint
      * Create a new linestring column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function lineString($column)
     {
@@ -1243,7 +1243,7 @@ class Blueprint
      * Create a new polygon column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function polygon($column)
     {
@@ -1254,7 +1254,7 @@ class Blueprint
      * Create a new geometrycollection column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function geometryCollection($column)
     {
@@ -1265,7 +1265,7 @@ class Blueprint
      * Create a new multipoint column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function multiPoint($column)
     {
@@ -1276,7 +1276,7 @@ class Blueprint
      * Create a new multilinestring column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function multiLineString($column)
     {
@@ -1287,7 +1287,7 @@ class Blueprint
      * Create a new multipolygon column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function multiPolygon($column)
     {
@@ -1298,7 +1298,7 @@ class Blueprint
      * Create a new multipolygon column on the table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function multiPolygonZ($column)
     {
@@ -1310,7 +1310,7 @@ class Blueprint
      *
      * @param  string  $column
      * @param  string  $expression
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function computed($column, $expression)
     {
@@ -1416,7 +1416,7 @@ class Blueprint
     /**
      * Adds the `remember_token` column to the table.
      *
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function rememberToken()
     {
@@ -1430,7 +1430,7 @@ class Blueprint
      * @param  string|array  $columns
      * @param  string  $index
      * @param  string|null  $algorithm
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     protected function indexCommand($type, $columns, $index, $algorithm = null)
     {
@@ -1452,7 +1452,7 @@ class Blueprint
      * @param  string  $command
      * @param  string  $type
      * @param  string|array  $index
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     protected function dropIndexCommand($command, $type, $index)
     {
@@ -1488,7 +1488,7 @@ class Blueprint
      * @param  string  $type
      * @param  string  $name
      * @param  array  $parameters
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition
      */
     public function addColumn($type, $name, array $parameters = [])
     {
@@ -1519,7 +1519,7 @@ class Blueprint
      *
      * @param  string  $name
      * @param  array  $parameters
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     protected function addCommand($name, array $parameters = [])
     {
@@ -1533,7 +1533,7 @@ class Blueprint
      *
      * @param  string  $name
      * @param  array  $parameters
-     * @return \Prappo\WpEloquent\Support\Fluent
+     * @return \Turovskiy\WpEloquent\Support\Fluent
      */
     protected function createCommand($name, array $parameters = [])
     {
@@ -1553,7 +1553,7 @@ class Blueprint
     /**
      * Get the columns on the blueprint.
      *
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition[]
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition[]
      */
     public function getColumns()
     {
@@ -1563,7 +1563,7 @@ class Blueprint
     /**
      * Get the commands on the blueprint.
      *
-     * @return \Prappo\WpEloquent\Support\Fluent[]
+     * @return \Turovskiy\WpEloquent\Support\Fluent[]
      */
     public function getCommands()
     {
@@ -1573,7 +1573,7 @@ class Blueprint
     /**
      * Get the columns on the blueprint that should be added.
      *
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition[]
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition[]
      */
     public function getAddedColumns()
     {
@@ -1585,7 +1585,7 @@ class Blueprint
     /**
      * Get the columns on the blueprint that should be changed.
      *
-     * @return \Prappo\WpEloquent\Database\Schema\ColumnDefinition[]
+     * @return \Turovskiy\WpEloquent\Database\Schema\ColumnDefinition[]
      */
     public function getChangedColumns()
     {

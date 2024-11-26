@@ -1,12 +1,12 @@
 <?php
 
-namespace Prappo\WpEloquent\Support;
+namespace Turovskiy\WpEloquent\Support;
 
 use ArrayIterator;
 use Closure;
 use DateTimeInterface;
-use Prappo\WpEloquent\Support\Traits\EnumeratesValues;
-use Prappo\WpEloquent\Support\Traits\Macroable;
+use Turovskiy\WpEloquent\Support\Traits\EnumeratesValues;
+use Turovskiy\WpEloquent\Support\Traits\Macroable;
 use IteratorAggregate;
 use stdClass;
 

@@ -1,17 +1,17 @@
 <?php
 
-namespace Prappo\WpEloquent\Events;
+namespace Turovskiy\WpEloquent\Events;
 
 use Closure;
 use Exception;
-use Prappo\WpEloquent\Container\Container;
-use Prappo\WpEloquent\Contracts\Container\Container as ContainerContract;
-use Prappo\WpEloquent\Contracts\Events\Dispatcher as DispatcherContract;
-use Prappo\WpEloquent\Contracts\Queue\ShouldQueue;
-use Prappo\WpEloquent\Support\Arr;
-use Prappo\WpEloquent\Support\Str;
-use Prappo\WpEloquent\Support\Traits\Macroable;
-use Prappo\WpEloquent\Support\Traits\ReflectsClosures;
+use Turovskiy\WpEloquent\Container\Container;
+use Turovskiy\WpEloquent\Contracts\Container\Container as ContainerContract;
+use Turovskiy\WpEloquent\Contracts\Events\Dispatcher as DispatcherContract;
+use Turovskiy\WpEloquent\Contracts\Queue\ShouldQueue;
+use Turovskiy\WpEloquent\Support\Arr;
+use Turovskiy\WpEloquent\Support\Str;
+use Turovskiy\WpEloquent\Support\Traits\Macroable;
+use Turovskiy\WpEloquent\Support\Traits\ReflectsClosures;
 use ReflectionClass;
 
 class Dispatcher implements DispatcherContract
@@ -21,7 +21,7 @@ class Dispatcher implements DispatcherContract
     /**
      * The IoC container instance.
      *
-     * @var \Prappo\WpEloquent\Contracts\Container\Container
+     * @var \Turovskiy\WpEloquent\Contracts\Container\Container
      */
     protected $container;
 
@@ -56,7 +56,7 @@ class Dispatcher implements DispatcherContract
     /**
      * Create a new event dispatcher instance.
      *
-     * @param  \Prappo\WpEloquent\Contracts\Container\Container|null  $container
+     * @param  \Turovskiy\WpEloquent\Contracts\Container\Container|null  $container
      * @return void
      */
     public function __construct(ContainerContract $container = null)
@@ -560,7 +560,7 @@ class Dispatcher implements DispatcherContract
     /**
      * Get the queue implementation from the resolver.
      *
-     * @return \Prappo\WpEloquent\Contracts\Queue\Queue
+     * @return \Turovskiy\WpEloquent\Contracts\Queue\Queue
      */
     protected function resolveQueue()
     {

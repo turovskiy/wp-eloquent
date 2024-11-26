@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Contracts\Pagination;
+namespace Turovskiy\WpEloquent\Contracts\Pagination;
 
 interface Paginator
 {

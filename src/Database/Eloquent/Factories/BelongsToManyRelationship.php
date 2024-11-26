@@ -1,15 +1,15 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent\Factories;
+namespace Turovskiy\WpEloquent\Database\Eloquent\Factories;
 
-use Prappo\WpEloquent\Database\Eloquent\Model;
+use Turovskiy\WpEloquent\Database\Eloquent\Model;
 
 class BelongsToManyRelationship
 {
     /**
      * The related factory instance.
      *
-     * @var \Prappo\WpEloquent\Database\Eloquent\Factories\Factory
+     * @var \Turovskiy\WpEloquent\Database\Eloquent\Factories\Factory
      */
     protected $factory;
 
@@ -30,7 +30,7 @@ class BelongsToManyRelationship
     /**
      * Create a new attached relationship definition.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Factories\Factory  $factory
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Factories\Factory  $factory
      * @param  callable|array  $pivot
      * @param  string  $relationship
      * @return void
@@ -45,7 +45,7 @@ class BelongsToManyRelationship
     /**
      * Create the attached relationship for the given model.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $model
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $model
      * @return void
      */
     public function createFor(Model $model)

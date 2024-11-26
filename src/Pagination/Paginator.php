@@ -1,13 +1,13 @@
 <?php
 
-namespace Prappo\WpEloquent\Pagination;
+namespace Turovskiy\WpEloquent\Pagination;
 
 use ArrayAccess;
 use Countable;
-use Prappo\WpEloquent\Contracts\Pagination\Paginator as PaginatorContract;
-use Prappo\WpEloquent\Contracts\Support\Arrayable;
-use Prappo\WpEloquent\Contracts\Support\Jsonable;
-use Prappo\WpEloquent\Support\Collection;
+use Turovskiy\WpEloquent\Contracts\Pagination\Paginator as PaginatorContract;
+use Turovskiy\WpEloquent\Contracts\Support\Arrayable;
+use Turovskiy\WpEloquent\Contracts\Support\Jsonable;
+use Turovskiy\WpEloquent\Support\Collection;
 use IteratorAggregate;
 use JsonSerializable;
 
@@ -101,7 +101,7 @@ class Paginator extends AbstractPaginator implements Arrayable, ArrayAccess, Cou
      *
      * @param  string|null  $view
      * @param  array  $data
-     * @return \Prappo\WpEloquent\Contracts\Support\Htmlable
+     * @return \Turovskiy\WpEloquent\Contracts\Support\Htmlable
      */
     public function render($view = null, $data = [])
     {

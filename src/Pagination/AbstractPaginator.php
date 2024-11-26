@@ -1,16 +1,16 @@
 <?php
 
-namespace Prappo\WpEloquent\Pagination;
+namespace Turovskiy\WpEloquent\Pagination;
 
 use Closure;
-use Prappo\WpEloquent\Contracts\Support\Htmlable;
-use Prappo\WpEloquent\Support\Arr;
-use Prappo\WpEloquent\Support\Collection;
-use Prappo\WpEloquent\Support\Str;
-use Prappo\WpEloquent\Support\Traits\ForwardsCalls;
+use Turovskiy\WpEloquent\Contracts\Support\Htmlable;
+use Turovskiy\WpEloquent\Support\Arr;
+use Turovskiy\WpEloquent\Support\Collection;
+use Turovskiy\WpEloquent\Support\Str;
+use Turovskiy\WpEloquent\Support\Traits\ForwardsCalls;
 
 /**
- * @mixin \Prappo\WpEloquent\Support\Collection
+ * @mixin \Turovskiy\WpEloquent\Support\Collection
  */
 abstract class AbstractPaginator implements Htmlable
 {
@@ -19,7 +19,7 @@ abstract class AbstractPaginator implements Htmlable
     /**
      * All of the items being paginated.
      *
-     * @var \Prappo\WpEloquent\Support\Collection
+     * @var \Turovskiy\WpEloquent\Support\Collection
      */
     protected $items;
 
@@ -525,7 +525,7 @@ abstract class AbstractPaginator implements Htmlable
     /**
      * Get an instance of the view factory from the resolver.
      *
-     * @return \Prappo\WpEloquent\Contracts\View\Factory
+     * @return \Turovskiy\WpEloquent\Contracts\View\Factory
      */
     public static function viewFactory()
     {
@@ -642,7 +642,7 @@ abstract class AbstractPaginator implements Htmlable
     /**
      * Get the paginator's underlying collection.
      *
-     * @return \Prappo\WpEloquent\Support\Collection
+     * @return \Turovskiy\WpEloquent\Support\Collection
      */
     public function getCollection()
     {
@@ -652,7 +652,7 @@ abstract class AbstractPaginator implements Htmlable
     /**
      * Set the paginator's underlying collection.
      *
-     * @param  \Prappo\WpEloquent\Support\Collection  $collection
+     * @param  \Turovskiy\WpEloquent\Support\Collection  $collection
      * @return $this
      */
     public function setCollection(Collection $collection)

@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Database;
+namespace Turovskiy\WpEloquent\Database;
 
 use PDO;
 class WpPdoStatement extends \PDOStatement

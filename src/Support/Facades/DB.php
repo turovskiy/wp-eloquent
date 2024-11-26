@@ -1,11 +1,11 @@
 <?php
 
-namespace Prappo\WpEloquent\Support\Facades;
+namespace Turovskiy\WpEloquent\Support\Facades;
 
 /**
- * @method static \Prappo\WpEloquent\Database\ConnectionInterface connection(string $name = null)
- * @method static \Prappo\WpEloquent\Database\Query\Builder table(string $table, string $as = null)
- * @method static \Prappo\WpEloquent\Database\Query\Expression raw($value)
+ * @method static \Turovskiy\WpEloquent\Database\ConnectionInterface connection(string $name = null)
+ * @method static \Turovskiy\WpEloquent\Database\Query\Builder table(string $table, string $as = null)
+ * @method static \Turovskiy\WpEloquent\Database\Query\Expression raw($value)
  * @method static array prepareBindings(array $bindings)
  * @method static array pretend(\Closure $callback)
  * @method static array select(string $query, array $bindings = [], bool $useReadPdo = true)
@@ -25,8 +25,8 @@ namespace Prappo\WpEloquent\Support\Facades;
  * @method static void rollBack(int $toLevel = null)
  * @method static void setDefaultConnection(string $name)
  *
- * @see \Prappo\WpEloquent\Database\DatabaseManager
- * @see \Prappo\WpEloquent\Database\Connection
+ * @see \Turovskiy\WpEloquent\Database\DatabaseManager
+ * @see \Turovskiy\WpEloquent\Database\Connection
  */
 class DB extends Facade
 {

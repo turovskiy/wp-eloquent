@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent\Factories;
+namespace Turovskiy\WpEloquent\Database\Eloquent\Factories;
 
 trait HasFactory
 {
@@ -8,7 +8,7 @@ trait HasFactory
      * Get a new factory instance for the model.
      *
      * @param  mixed  $parameters
-     * @return \Prappo\WpEloquent\Database\Eloquent\Factories\Factory
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Factories\Factory
      */
     public static function factory(...$parameters)
     {
@@ -22,7 +22,7 @@ trait HasFactory
     /**
      * Create a new factory instance for the model.
      *
-     * @return \Prappo\WpEloquent\Database\Eloquent\Factories\Factory
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Factories\Factory
      */
     protected static function newFactory()
     {

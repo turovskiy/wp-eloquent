@@ -1,13 +1,13 @@
 <?php
 
-namespace Prappo\WpEloquent\Contracts\Database\Eloquent;
+namespace Turovskiy\WpEloquent\Contracts\Database\Eloquent;
 
 interface SerializesCastableAttributes
 {
     /**
      * Serialize the attribute when converting the model to an array.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $model
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $model
      * @param  string  $key
      * @param  mixed  $value
      * @param  array  $attributes

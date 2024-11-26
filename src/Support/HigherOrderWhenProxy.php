@@ -1,16 +1,16 @@
 <?php
 
-namespace Prappo\WpEloquent\Support;
+namespace Turovskiy\WpEloquent\Support;
 
 /**
- * @mixin \Prappo\WpEloquent\Support\Enumerable
+ * @mixin \Turovskiy\WpEloquent\Support\Enumerable
  */
 class HigherOrderWhenProxy
 {
     /**
      * The collection being operated on.
      *
-     * @var \Prappo\WpEloquent\Support\Enumerable
+     * @var \Turovskiy\WpEloquent\Support\Enumerable
      */
     protected $collection;
 
@@ -24,7 +24,7 @@ class HigherOrderWhenProxy
     /**
      * Create a new proxy instance.
      *
-     * @param  \Prappo\WpEloquent\Support\Enumerable  $collection
+     * @param  \Turovskiy\WpEloquent\Support\Enumerable  $collection
      * @param  bool  $condition
      * @return void
      */

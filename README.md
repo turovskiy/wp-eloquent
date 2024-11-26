@@ -1,4 +1,4 @@
-# Prappo WpEloquent
+# Turovskiy WpEloquent
 
 > This package extract from laravel 8.9
 
@@ -7,7 +7,7 @@ The WpEloquent component is a full database toolkit for PHP, providing an expres
 ## Installing
 
 ```SH
-composer require prappo/wp-eloquent
+composer require turovskiy/wp-eloquent
 ```
 
 ## Usage Instructions
@@ -16,13 +16,13 @@ First, boot Application with a connection.
 
 **Use $wpdb connection**
 ```PHP
-use Prappo\WpEloquent\Application;
+use Turovskiy\WpEloquent\Application;
 
 Application::bootWp();
 ````
 **Use separated connection**
 ```PHP
-use Prappo\WpEloquent\Application;
+use Turovskiy\WpEloquent\Application;
 
 Application::boot([
     'driver'    => 'mysql',
@@ -41,19 +41,19 @@ Once the Application booted. You may use it like so:
 **Using The Query Builder**
 
 ```PHP
-use Prappo\WpEloquent\Support\Facades\DB;
+use Turovskiy\WpEloquent\Support\Facades\DB;
 $users = DB::table('users')->where('votes', '>', 100)->get();
 ```
 Other core methods may be accessed directly from the Capsule in the same manner as from the DB facade:
 ```PHP
-use Prappo\WpEloquent\Support\Facades\DB;
+use Turovskiy\WpEloquent\Support\Facades\DB;
 $results = DB::select('select * from users where id = ?', [1]);
 ```
 
 **Using The Schema Builder**
 
 ```PHP
-use Prappo\WpEloquent\Support\Facades\Schema;
+use Turovskiy\WpEloquent\Support\Facades\Schema;
 Schema::create('users', function ($table) {
     $table->increments('id');
     $table->string('email')->unique();
@@ -64,7 +64,7 @@ Schema::create('users', function ($table) {
 **Using The Eloquent ORM**
 
 ```PHP
-class User extends Prappo\WpEloquent\Database\Eloquent\Model {}
+class User extends Turovskiy\WpEloquent\Database\Eloquent\Model {}
 
 $users = User::where('votes', '>', 1)->get();
 ```

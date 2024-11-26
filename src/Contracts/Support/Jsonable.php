@@ -1,6 +1,6 @@
 <?php
 
-namespace Prappo\WpEloquent\Contracts\Support;
+namespace Turovskiy\WpEloquent\Contracts\Support;
 
 interface Jsonable
 {

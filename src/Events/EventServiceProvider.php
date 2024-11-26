@@ -1,9 +1,9 @@
 <?php
 
-namespace Prappo\WpEloquent\Events;
+namespace Turovskiy\WpEloquent\Events;
 
-use Prappo\WpEloquent\Contracts\Queue\Factory as QueueFactoryContract;
-use Prappo\WpEloquent\Support\ServiceProvider;
+use Turovskiy\WpEloquent\Contracts\Queue\Factory as QueueFactoryContract;
+use Turovskiy\WpEloquent\Support\ServiceProvider;
 
 class EventServiceProvider extends ServiceProvider
 {

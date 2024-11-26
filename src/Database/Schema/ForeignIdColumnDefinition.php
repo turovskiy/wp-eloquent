@@ -1,22 +1,22 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Schema;
+namespace Turovskiy\WpEloquent\Database\Schema;
 
-use Prappo\WpEloquent\Support\Str;
+use Turovskiy\WpEloquent\Support\Str;
 
 class ForeignIdColumnDefinition extends ColumnDefinition
 {
     /**
      * The schema builder blueprint instance.
      *
-     * @var \Prappo\WpEloquent\Database\Schema\Blueprint
+     * @var \Turovskiy\WpEloquent\Database\Schema\Blueprint
      */
     protected $blueprint;
 
     /**
      * Create a new foreign ID column definition.
      *
-     * @param  \Prappo\WpEloquent\Database\Schema\Blueprint  $blueprint
+     * @param  \Turovskiy\WpEloquent\Database\Schema\Blueprint  $blueprint
      * @param  array  $attributes
      * @return void
      */
@@ -32,7 +32,7 @@ class ForeignIdColumnDefinition extends ColumnDefinition
      *
      * @param  string|null  $table
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Support\Fluent|\Prappo\WpEloquent\Database\Schema\ForeignKeyDefinition
+     * @return \Turovskiy\WpEloquent\Support\Fluent|\Turovskiy\WpEloquent\Database\Schema\ForeignKeyDefinition
      */
     public function constrained($table = null, $column = 'id')
     {
@@ -43,7 +43,7 @@ class ForeignIdColumnDefinition extends ColumnDefinition
      * Specify which column this foreign ID references on another table.
      *
      * @param  string  $column
-     * @return \Prappo\WpEloquent\Support\Fluent|\Prappo\WpEloquent\Database\Schema\ForeignKeyDefinition
+     * @return \Turovskiy\WpEloquent\Support\Fluent|\Turovskiy\WpEloquent\Database\Schema\ForeignKeyDefinition
      */
     public function references($column)
     {

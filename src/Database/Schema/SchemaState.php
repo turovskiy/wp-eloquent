@@ -1,9 +1,9 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Schema;
+namespace Turovskiy\WpEloquent\Database\Schema;
 
-use Prappo\WpEloquent\Database\Connection;
-use Prappo\WpEloquent\Filesystem\Filesystem;
+use Turovskiy\WpEloquent\Database\Connection;
+use Turovskiy\WpEloquent\Filesystem\Filesystem;
 use Symfony\Component\Process\Process;
 
 abstract class SchemaState
@@ -11,14 +11,14 @@ abstract class SchemaState
     /**
      * The connection instance.
      *
-     * @var \Prappo\WpEloquent\Database\Connection
+     * @var \Turovskiy\WpEloquent\Database\Connection
      */
     protected $connection;
 
     /**
      * The filesystem instance.
      *
-     * @var \Prappo\WpEloquent\Filesystem\Filesystem
+     * @var \Turovskiy\WpEloquent\Filesystem\Filesystem
      */
     protected $files;
 
@@ -39,8 +39,8 @@ abstract class SchemaState
     /**
      * Create a new dumper instance.
      *
-     * @param  \Prappo\WpEloquent\Database\Connection  $connection
-     * @param  \Prappo\WpEloquent\Filesystem\Filesystem  $files
+     * @param  \Turovskiy\WpEloquent\Database\Connection  $connection
+     * @param  \Turovskiy\WpEloquent\Filesystem\Filesystem  $files
      * @param  callable  $processFactory
      * @return void
      */

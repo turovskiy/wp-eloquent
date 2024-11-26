@@ -1,15 +1,15 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Query\Processors;
+namespace Turovskiy\WpEloquent\Database\Query\Processors;
 
-use Prappo\WpEloquent\Database\Query\Builder;
+use Turovskiy\WpEloquent\Database\Query\Builder;
 
 class Processor
 {
     /**
      * Process the results of a "select" query.
      *
-     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Query\Builder  $query
      * @param  array  $results
      * @return array
      */
@@ -21,7 +21,7 @@ class Processor
     /**
      * Process an  "insert get ID" query.
      *
-     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Query\Builder  $query
      * @param  string  $sql
      * @param  array  $values
      * @param  string|null  $sequence

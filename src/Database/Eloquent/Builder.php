@@ -1,25 +1,25 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Eloquent;
+namespace Turovskiy\WpEloquent\Database\Eloquent;
 
 use BadMethodCallException;
 use Closure;
 use Exception;
-use Prappo\WpEloquent\Contracts\Support\Arrayable;
-use Prappo\WpEloquent\Database\Concerns\BuildsQueries;
-use Prappo\WpEloquent\Database\Eloquent\Relations\Relation;
-use Prappo\WpEloquent\Database\Query\Builder as QueryBuilder;
-use Prappo\WpEloquent\Pagination\Paginator;
-use Prappo\WpEloquent\Support\Arr;
-use Prappo\WpEloquent\Support\Str;
-use Prappo\WpEloquent\Support\Traits\ForwardsCalls;
+use Turovskiy\WpEloquent\Contracts\Support\Arrayable;
+use Turovskiy\WpEloquent\Database\Concerns\BuildsQueries;
+use Turovskiy\WpEloquent\Database\Eloquent\Relations\Relation;
+use Turovskiy\WpEloquent\Database\Query\Builder as QueryBuilder;
+use Turovskiy\WpEloquent\Pagination\Paginator;
+use Turovskiy\WpEloquent\Support\Arr;
+use Turovskiy\WpEloquent\Support\Str;
+use Turovskiy\WpEloquent\Support\Traits\ForwardsCalls;
 use ReflectionClass;
 use ReflectionMethod;
 
 /**
  * @property-read HigherOrderBuilderProxy $orWhere
  *
- * @mixin \Prappo\WpEloquent\Database\Query\Builder
+ * @mixin \Turovskiy\WpEloquent\Database\Query\Builder
  */
 class Builder
 {
@@ -28,14 +28,14 @@ class Builder
     /**
      * The base query builder instance.
      *
-     * @var \Prappo\WpEloquent\Database\Query\Builder
+     * @var \Turovskiy\WpEloquent\Database\Query\Builder
      */
     protected $query;
 
     /**
      * The model being queried.
      *
-     * @var \Prappo\WpEloquent\Database\Eloquent\Model
+     * @var \Turovskiy\WpEloquent\Database\Eloquent\Model
      */
     protected $model;
 
@@ -94,7 +94,7 @@ class Builder
     /**
      * Create a new Eloquent query builder instance.
      *
-     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Query\Builder  $query
      * @return void
      */
     public function __construct(QueryBuilder $query)
@@ -106,7 +106,7 @@ class Builder
      * Create and return an un-saved model instance.
      *
      * @param  array  $attributes
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|static
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|static
      */
     public function make(array $attributes = [])
     {
@@ -117,7 +117,7 @@ class Builder
      * Register a new global scope.
      *
      * @param  string  $identifier
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Scope|\Closure  $scope
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Scope|\Closure  $scope
      * @return $this
      */
     public function withGlobalScope($identifier, $scope)
@@ -134,7 +134,7 @@ class Builder
     /**
      * Remove a registered global scope.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Scope|string  $scope
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Scope|string  $scope
      * @return $this
      */
     public function withoutGlobalScope($scope)
@@ -250,7 +250,7 @@ class Builder
      * @param  mixed  $operator
      * @param  mixed  $value
      * @param  string  $boolean
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|static
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|static
      */
     public function firstWhere($column, $operator = null, $value = null, $boolean = 'and')
     {
@@ -312,7 +312,7 @@ class Builder
      * Create a collection of models from plain arrays.
      *
      * @param  array  $items
-     * @return \Prappo\WpEloquent\Database\Eloquent\Collection
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Collection
      */
     public function hydrate(array $items)
     {
@@ -328,7 +328,7 @@ class Builder
      *
      * @param  string  $query
      * @param  array  $bindings
-     * @return \Prappo\WpEloquent\Database\Eloquent\Collection
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Collection
      */
     public function fromQuery($query, $bindings = [])
     {
@@ -342,7 +342,7 @@ class Builder
      *
      * @param  mixed  $id
      * @param  array  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|\Prappo\WpEloquent\Database\Eloquent\Collection|static[]|static|null
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|\Turovskiy\WpEloquent\Database\Eloquent\Collection|static[]|static|null
      */
     public function find($id, $columns = ['*'])
     {
@@ -356,9 +356,9 @@ class Builder
     /**
      * Find multiple models by their primary keys.
      *
-     * @param  \Prappo\WpEloquent\Contracts\Support\Arrayable|array  $ids
+     * @param  \Turovskiy\WpEloquent\Contracts\Support\Arrayable|array  $ids
      * @param  array  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Collection
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Collection
      */
     public function findMany($ids, $columns = ['*'])
     {
@@ -376,9 +376,9 @@ class Builder
      *
      * @param  mixed  $id
      * @param  array  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|\Prappo\WpEloquent\Database\Eloquent\Collection|static|static[]
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|\Turovskiy\WpEloquent\Database\Eloquent\Collection|static|static[]
      *
-     * @throws \Prappo\WpEloquent\Database\Eloquent\ModelNotFoundException
+     * @throws \Turovskiy\WpEloquent\Database\Eloquent\ModelNotFoundException
      */
     public function findOrFail($id, $columns = ['*'])
     {
@@ -404,7 +404,7 @@ class Builder
      *
      * @param  mixed  $id
      * @param  array  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|static
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|static
      */
     public function findOrNew($id, $columns = ['*'])
     {
@@ -420,7 +420,7 @@ class Builder
      *
      * @param  array  $attributes
      * @param  array  $values
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|static
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|static
      */
     public function firstOrNew(array $attributes = [], array $values = [])
     {
@@ -436,7 +436,7 @@ class Builder
      *
      * @param  array  $attributes
      * @param  array  $values
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|static
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|static
      */
     public function firstOrCreate(array $attributes = [], array $values = [])
     {
@@ -454,7 +454,7 @@ class Builder
      *
      * @param  array  $attributes
      * @param  array  $values
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|static
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|static
      */
     public function updateOrCreate(array $attributes, array $values = [])
     {
@@ -467,9 +467,9 @@ class Builder
      * Execute the query and get the first result or throw an exception.
      *
      * @param  array  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|static
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|static
      *
-     * @throws \Prappo\WpEloquent\Database\Eloquent\ModelNotFoundException
+     * @throws \Turovskiy\WpEloquent\Database\Eloquent\ModelNotFoundException
      */
     public function firstOrFail($columns = ['*'])
     {
@@ -485,7 +485,7 @@ class Builder
      *
      * @param  \Closure|array  $columns
      * @param  \Closure|null  $callback
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|static|mixed
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|static|mixed
      */
     public function firstOr($columns = ['*'], Closure $callback = null)
     {
@@ -519,7 +519,7 @@ class Builder
      * Execute the query as a "select" statement.
      *
      * @param  array|string  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Collection|static[]
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Collection|static[]
      */
     public function get($columns = ['*'])
     {
@@ -539,7 +539,7 @@ class Builder
      * Get the hydrated models without eager loading.
      *
      * @param  array|string  $columns
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model[]|static[]
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model[]|static[]
      */
     public function getModels($columns = ['*'])
     {
@@ -600,7 +600,7 @@ class Builder
      * Get the relation instance for the given relation name.
      *
      * @param  string  $name
-     * @return \Prappo\WpEloquent\Database\Eloquent\Relations\Relation
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Relations\Relation
      */
     public function getRelation($name)
     {
@@ -664,7 +664,7 @@ class Builder
     /**
      * Get a lazy collection for the given query.
      *
-     * @return \Prappo\WpEloquent\Support\LazyCollection
+     * @return \Turovskiy\WpEloquent\Support\LazyCollection
      */
     public function cursor()
     {
@@ -690,7 +690,7 @@ class Builder
      *
      * @param  string  $column
      * @param  string|null  $key
-     * @return \Prappo\WpEloquent\Support\Collection
+     * @return \Turovskiy\WpEloquent\Support\Collection
      */
     public function pluck($column, $key = null)
     {
@@ -717,7 +717,7 @@ class Builder
      * @param  array  $columns
      * @param  string  $pageName
      * @param  int|null  $page
-     * @return \Prappo\WpEloquent\Contracts\Pagination\LengthAwarePaginator
+     * @return \Turovskiy\WpEloquent\Contracts\Pagination\LengthAwarePaginator
      *
      * @throws \InvalidArgumentException
      */
@@ -744,7 +744,7 @@ class Builder
      * @param  array  $columns
      * @param  string  $pageName
      * @param  int|null  $page
-     * @return \Prappo\WpEloquent\Contracts\Pagination\Paginator
+     * @return \Turovskiy\WpEloquent\Contracts\Pagination\Paginator
      */
     public function simplePaginate($perPage = null, $columns = ['*'], $pageName = 'page', $page = null)
     {
@@ -767,7 +767,7 @@ class Builder
      * Save a new model and return the instance.
      *
      * @param  array  $attributes
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|$this
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|$this
      */
     public function create(array $attributes = [])
     {
@@ -780,7 +780,7 @@ class Builder
      * Save a new model and return the instance. Allow mass-assignment.
      *
      * @param  array  $attributes
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|$this
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|$this
      */
     public function forceCreate(array $attributes)
     {
@@ -1019,7 +1019,7 @@ class Builder
     /**
      * Nest where conditions by slicing them at the given where count.
      *
-     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Query\Builder  $query
      * @param  int  $originalWhereCount
      * @return void
      */
@@ -1044,7 +1044,7 @@ class Builder
     /**
      * Slice where conditions at the given offset and add them to the query as a nested condition.
      *
-     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Query\Builder  $query
      * @param  array  $whereSlice
      * @return void
      */
@@ -1119,7 +1119,7 @@ class Builder
      * Create a new instance of the model being queried.
      *
      * @param  array  $attributes
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|static
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|static
      */
     public function newModelInstance($attributes = [])
     {
@@ -1219,7 +1219,7 @@ class Builder
     /**
      * Get the underlying query builder instance.
      *
-     * @return \Prappo\WpEloquent\Database\Query\Builder
+     * @return \Turovskiy\WpEloquent\Database\Query\Builder
      */
     public function getQuery()
     {
@@ -1229,7 +1229,7 @@ class Builder
     /**
      * Set the underlying query builder instance.
      *
-     * @param  \Prappo\WpEloquent\Database\Query\Builder  $query
+     * @param  \Turovskiy\WpEloquent\Database\Query\Builder  $query
      * @return $this
      */
     public function setQuery($query)
@@ -1242,7 +1242,7 @@ class Builder
     /**
      * Get a base query builder instance.
      *
-     * @return \Prappo\WpEloquent\Database\Query\Builder
+     * @return \Turovskiy\WpEloquent\Database\Query\Builder
      */
     public function toBase()
     {
@@ -1285,7 +1285,7 @@ class Builder
     /**
      * Get the model instance being queried.
      *
-     * @return \Prappo\WpEloquent\Database\Eloquent\Model|static
+     * @return \Turovskiy\WpEloquent\Database\Eloquent\Model|static
      */
     public function getModel()
     {
@@ -1295,7 +1295,7 @@ class Builder
     /**
      * Set a model instance for the model being queried.
      *
-     * @param  \Prappo\WpEloquent\Database\Eloquent\Model  $model
+     * @param  \Turovskiy\WpEloquent\Database\Eloquent\Model  $model
      * @return $this
      */
     public function setModel(Model $model)

@@ -1,13 +1,13 @@
 <?php
 
-namespace Prappo\WpEloquent\Database\Capsule;
+namespace Turovskiy\WpEloquent\Database\Capsule;
 
-use Prappo\WpEloquent\Container\Container;
-use Prappo\WpEloquent\Contracts\Events\Dispatcher;
-use Prappo\WpEloquent\Database\Connectors\ConnectionFactory;
-use Prappo\WpEloquent\Database\DatabaseManager;
-use Prappo\WpEloquent\Database\Eloquent\Model as Eloquent;
-use Prappo\WpEloquent\Support\Traits\CapsuleManagerTrait;
+use Turovskiy\WpEloquent\Container\Container;
+use Turovskiy\WpEloquent\Contracts\Events\Dispatcher;
+use Turovskiy\WpEloquent\Database\Connectors\ConnectionFactory;
+use Turovskiy\WpEloquent\Database\DatabaseManager;
+use Turovskiy\WpEloquent\Database\Eloquent\Model as Eloquent;
+use Turovskiy\WpEloquent\Support\Traits\CapsuleManagerTrait;
 use PDO;
 
 class Manager
@@ -17,14 +17,14 @@ class Manager
     /**
      * The database manager instance.
      *
-     * @var \Prappo\WpEloquent\Database\DatabaseManager
+     * @var \Turovskiy\WpEloquent\Database\DatabaseManager
      */
     protected $manager;
 
     /**
      * Create a new database capsule manager.
      *
-     * @param  \Prappo\WpEloquent\Container\Container|null  $container
+     * @param  \Turovskiy\WpEloquent\Container\Container|null  $container
      * @return void
      */
     public function __construct(Container $container = null)
@@ -67,7 +67,7 @@ class Manager
      * Get a connection instance from the global manager.
      *
      * @param  string|null  $connection
-     * @return \Prappo\WpEloquent\Database\Connection
+     * @return \Turovskiy\WpEloquent\Database\Connection
      */
     public static function connection($connection = null)
     {
@@ -77,10 +77,10 @@ class Manager
     /**
      * Get a fluent query builder instance.
      *
-     * @param  \Closure|\Prappo\WpEloquent\Database\Query\Builder|string  $table
+     * @param  \Closure|\Turovskiy\WpEloquent\Database\Query\Builder|string  $table
      * @param  string|null  $as
      * @param  string|null  $connection
-     * @return \Prappo\WpEloquent\Database\Query\Builder
+     * @return \Turovskiy\WpEloquent\Database\Query\Builder
      */
     public static function table($table, $as = null, $connection = null)
     {
@@ -91,7 +91,7 @@ class Manager
      * Get a schema builder instance.
      *
      * @param  string|null  $connection
-     * @return \Prappo\WpEloquent\Database\Schema\Builder
+     * @return \Turovskiy\WpEloquent\Database\Schema\Builder
      */
     public static function schema($connection = null)
     {
@@ -102,7 +102,7 @@ class Manager
      * Get a registered connection instance.
      *
      * @param  string|null  $name
-     * @return \Prappo\WpEloquent\Database\Connection
+     * @return \Turovskiy\WpEloquent\Database\Connection
      */
     public function getConnection($name = null)
     {
@@ -158,7 +158,7 @@ class Manager
     /**
      * Get the database manager instance.
      *
-     * @return \Prappo\WpEloquent\Database\DatabaseManager
+     * @return \Turovskiy\WpEloquent\Database\DatabaseManager
      */
     public function getDatabaseManager()
     {
@@ -168,7 +168,7 @@ class Manager
     /**
      * Get the current event dispatcher instance.
      *
-     * @return \Prappo\WpEloquent\Contracts\Events\Dispatcher|null
+     * @return \Turovskiy\WpEloquent\Contracts\Events\Dispatcher|null
      */
     public function getEventDispatcher()
     {
@@ -180,7 +180,7 @@ class Manager
     /**
      * Set the event dispatcher instance to be used by connections.
      *
-     * @param  \Prappo\WpEloquent\Contracts\Events\Dispatcher  $dispatcher
+     * @param  \Turovskiy\WpEloquent\Contracts\Events\Dispatcher  $dispatcher
      * @return void
      */
     public function setEventDispatcher(Dispatcher $dispatcher)

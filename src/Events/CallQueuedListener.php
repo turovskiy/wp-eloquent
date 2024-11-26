@@ -1,12 +1,12 @@
 <?php
 
-namespace Prappo\WpEloquent\Events;
+namespace Turovskiy\WpEloquent\Events;
 
-use Prappo\WpEloquent\Bus\Queueable;
-use Prappo\WpEloquent\Container\Container;
-use Prappo\WpEloquent\Contracts\Queue\Job;
-use Prappo\WpEloquent\Contracts\Queue\ShouldQueue;
-use Prappo\WpEloquent\Queue\InteractsWithQueue;
+use Turovskiy\WpEloquent\Bus\Queueable;
+use Turovskiy\WpEloquent\Container\Container;
+use Turovskiy\WpEloquent\Contracts\Queue\Job;
+use Turovskiy\WpEloquent\Contracts\Queue\ShouldQueue;
+use Turovskiy\WpEloquent\Queue\InteractsWithQueue;
 
 class CallQueuedListener implements ShouldQueue
 {
@@ -79,7 +79,7 @@ class CallQueuedListener implements ShouldQueue
     /**
      * Handle the queued job.
      *
-     * @param  \Prappo\WpEloquent\Container\Container  $container
+     * @param  \Turovskiy\WpEloquent\Container\Container  $container
      * @return void
      */
     public function handle(Container $container)
@@ -98,7 +98,7 @@ class CallQueuedListener implements ShouldQueue
     /**
      * Set the job instance of the given class if necessary.
      *
-     * @param  \Prappo\WpEloquent\Contracts\Queue\Job  $job
+     * @param  \Turovskiy\WpEloquent\Contracts\Queue\Job  $job
      * @param  mixed  $instance
      * @return mixed
      */
